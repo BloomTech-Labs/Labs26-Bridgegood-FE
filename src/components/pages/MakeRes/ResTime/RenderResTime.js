@@ -1,33 +1,52 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from 'antd';
+import 'antd/dist/antd.css';
+import { Radio, Button } from 'antd';
+
+const initialValue = {
+  value: 2,
+};
 
 function ResTime() {
-  const [time, setTime] = useState();
+  const [timeAmount, setTimeAmount] = useState(initialValue);
 
-  const onTimeChange = () => {
-    return null;
+  const onChange = e => {
+    console.log('radio checked', e.target.value);
+    setTimeAmount({
+      value: e.target.value,
+    });
   };
+
+  const radioStyle = {
+    display: 'block',
+    height: '30px',
+    lineHeight: '30px',
+  };
+
+  const { value } = timeAmount;
 
   return (
     <div>
       <h>How much time will you need at the Community Co-Working space?</h>
-
       <div>
-        <p>
-          <input type="radio" value="1-2" name="time" /> 1-2 Hours
-        </p>
-        <p>
-          <input type="radio" value="3-4" name="time" /> 3-4 Hours
-        </p>
-        <p>
-          <input type="radio" value="6" name="time" /> 6 Hours
-        </p>
+        <Radio.Group onChange={onChange} value={value}>
+          <Radio style={radioStyle} value={1}>
+            1-2 Hours
+          </Radio>
+          <Radio style={radioStyle} value={2}>
+            3-4 Hours
+          </Radio>
+          <Radio style={radioStyle} value={3}>
+            6 Hours
+          </Radio>
+        </Radio.Group>
       </div>
 
-      <Button>
-        <Link to="/make-res">Next</Link>
-      </Button>
+      <div>
+        <Button>
+          <Link to="/make-res">Next</Link>
+        </Button>
+      </div>
     </div>
   );
 }
