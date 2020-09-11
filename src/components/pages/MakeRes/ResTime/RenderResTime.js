@@ -3,27 +3,8 @@ import { Link } from 'react-router-dom';
 import 'antd/dist/antd.css';
 import { Radio, Button } from 'antd';
 
-const initialValue = {
-  value: 2,
-};
-
-function ResTime() {
-  const [timeAmount, setTimeAmount] = useState(initialValue);
-
-  const onChange = e => {
-    console.log('radio checked', e.target.value);
-    setTimeAmount({
-      value: e.target.value,
-    });
-  };
-
-  const radioStyle = {
-    display: 'block',
-    height: '30px',
-    lineHeight: '30px',
-  };
-
-  const { value } = timeAmount;
+function ResTime(props) {
+  const { onChange, radioStyle, value } = props;
 
   return (
     <div>

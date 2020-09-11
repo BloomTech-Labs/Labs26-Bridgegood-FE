@@ -1,1 +1,1 @@
-export { default as ResTimePage } from './RenderResTime';
+export { default as ResTimePage } from './ResTimeContainer';
