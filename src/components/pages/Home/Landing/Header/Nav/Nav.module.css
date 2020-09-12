@@ -1,0 +1,18 @@
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  list-style: none;
+}
+
+.Nav li a {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.Nav li a span {
+  text-transform: lowercase;
+}
