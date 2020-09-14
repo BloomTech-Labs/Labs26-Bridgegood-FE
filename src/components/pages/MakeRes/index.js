@@ -1,1 +1,1 @@
-export { default as MakeResPage } from './RenderMakeRes';
+export { default as MakeResPage } from './MakeResContainer';
