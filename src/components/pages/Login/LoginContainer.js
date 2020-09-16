@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import OktaSignIn from '@okta/okta-signin-widget';
 import '@okta/okta-signin-widget/dist/css/okta-sign-in.min.css';
+// import { SignUp } from react
 
 import { config } from '../../../utils/oktaConfig';
 
@@ -12,6 +13,7 @@ const LoginContainer = () => {
       baseUrl: issuer ? issuer.split('/oauth2')[0] : '',
       clientId,
       redirectUri,
+      // takes a few different hooks, the config options
       registration: {
         // there is more we can do to handle some errors here.
       },
@@ -21,7 +23,7 @@ const LoginContainer = () => {
       // add your custom logo to your signing/register widget here.
       i18n: {
         en: {
-          'primaryauth.title': 'Welcome to Labs Basic SPA Please sign in',
+          'primaryauth.title': 'LOG IN TO RESERVE',
           // change title for your app
         },
       },
@@ -46,6 +48,15 @@ const LoginContainer = () => {
       }
     );
   }, []);
+
+  // return (
+  //   <div>
+  //     <header title="BridgeGood" />
+  //     <section className="main-container">
+
+  //     </section>
+  //   </div>
+  // )
 
   return <div id="sign-in-widget" />;
 };
