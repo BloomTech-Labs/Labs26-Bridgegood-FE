@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'antd';
+// import '../../../css/index.css';
 
 function RenderHomePage(props) {
   const { userInfo, authService } = props;
@@ -20,6 +21,11 @@ function RenderHomePage(props) {
         </p>
         <p>
           <Link to="/datavis">Data Visualizations Example</Link>
+        </p>
+        <p>
+          <Button type="secondary">
+            <Link to="/make-res-amount">Make a reservation</Link>
+          </Button>
         </p>
         <p>
           <Button type="primary" onClick={() => authService.logout()}>

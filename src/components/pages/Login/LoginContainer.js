@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import OktaSignIn from '@okta/okta-signin-widget';
 import '@okta/okta-signin-widget/dist/css/okta-sign-in.min.css';
-// import { SignUp } from react
-
 import { config } from '../../../utils/oktaConfig';
+
+import Header from '../../common/Header.js';
+import './LoginContainer.less';
 
 const LoginContainer = () => {
   useEffect(() => {
@@ -19,7 +20,7 @@ const LoginContainer = () => {
       },
       features: { registration: false },
       // turning this feature on allows your widget to use Okta for user registration
-      logo: 'path-to-your-logo',
+      logo: '',
       // add your custom logo to your signing/register widget here.
       i18n: {
         en: {
@@ -49,16 +50,15 @@ const LoginContainer = () => {
     );
   }, []);
 
-  // return (
-  //   <div>
-  //     <header title="BridgeGood" />
-  //     <section className="main-container">
-
-  //     </section>
-  //   </div>
-  // )
-
-  return <div id="sign-in-widget" />;
+  return (
+    <div>
+      <Header />
+      <section className="main-container">
+        <div className="welcome-text"></div>
+        <div id="sign-in-widget" />
+      </section>
+    </div>
+  );
 };
 
 export default LoginContainer;
