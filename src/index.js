@@ -8,6 +8,10 @@ import {
 } from 'react-router-dom';
 import { Security, LoginCallback, SecureRoute } from '@okta/okta-react';
 
+import { createStore, applyMiddleware } from 'redux';
+import { connect, Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+
 import 'antd/dist/antd.less';
 
 import { NotFoundPage } from './components/pages/NotFound';
@@ -21,10 +25,15 @@ import { LoadingComponent } from './components/common';
 import { MakeResPage } from './components/pages/MakeRes';
 import { ResTimePage } from './components/pages/MakeRes/ResTime';
 
+import { Reducer as reducer } from './state/reducers/index';
+const store = createStore(reducer, applyMiddleware(thunk));
+
 ReactDOM.render(
   <Router>
     <React.StrictMode>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </React.StrictMode>
   </Router>,
   document.getElementById('root')
