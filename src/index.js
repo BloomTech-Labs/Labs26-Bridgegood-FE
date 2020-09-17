@@ -16,6 +16,8 @@ import { LoginPage } from './components/pages/Login';
 import { HomePage } from './components/pages/Home';
 import { config } from './utils/oktaConfig';
 import { LoadingComponent } from './components/common';
+import { MakeResPage } from './components/pages/MakeRes';
+import { ResTimePage } from './components/pages/MakeRes/ResTime';
 
 // Yasir
 import './index.module.css';
@@ -54,7 +56,8 @@ function App() {
           component={() => <HomePage LoadingComponent={LoadingComponent} />}
         />
         <SecureRoute path="/profile-list" component={ProfileListPage} />
-
+        <SecureRoute path="/make-res-amount" component={ResTimePage} />
+        <SecureRoute path="/make-res" component={MakeResPage} />
         <Route component={NotFoundPage} />
       </Switch>
     </Security>
