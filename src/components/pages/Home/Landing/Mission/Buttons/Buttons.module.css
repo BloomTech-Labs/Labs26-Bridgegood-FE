@@ -1,0 +1,38 @@
+.Btns {
+  padding-bottom: 20px;
+}
+
+.Btns button {
+  width: 50%;
+  margin: 20px;
+  text-transform: capitalize;
+  border-radius: 4px;
+  width: 210px;
+  height: 80px;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.Reserve {
+  background: #002171;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: white;
+}
+
+.Reserve:hover {
+  background: #ffffff;
+  color: #000;
+  border: 1px solid #000000;
+}
+
+.LearnMore {
+  color: #000;
+}
+
+.LearnMore:hover {
+  background: #002171;
+  color: #fff;
+  border: 1px solid #000000;
+}
