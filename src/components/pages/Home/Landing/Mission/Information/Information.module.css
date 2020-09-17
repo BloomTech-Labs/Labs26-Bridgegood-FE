@@ -1,0 +1,56 @@
+.Information {
+  margin: 0 auto;
+  height: 425px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Information div {
+  padding: 30px;
+}
+.ourMission {
+  width: 45%;
+  border-right: 1px solid #000;
+}
+
+.payForward {
+  width: 55%;
+}
+.Tob {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.Tob h2 {
+  margin-top: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  font-weight: 500;
+}
+.Bottom {
+  padding: 20px 0;
+}
+
+.Bottom h1 {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.payForward .Tob p {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 26px;
+  margin: 20px;
+}
+
+.payForward .Bottom {
+  display: flex;
+}
+
+.payForward .Bottom button {
+  width: 210px;
+  height: 84.5px;
+  background: #c79100;
+  border-radius: 4px;
+}
