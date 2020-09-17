@@ -21,6 +21,7 @@ const getAuthHeader = authState => {
   return { Authorization: `Bearer ${authState.idToken}` };
 };
 
+// we may need it in the future
 const getDSData = (url, authState) => {
   // here's another way you can compose together your API calls.
   // Note the use of GetAuthHeader here is a little different than in the getProfileData call.
