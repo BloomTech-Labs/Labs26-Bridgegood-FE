@@ -1,0 +1,27 @@
+.Supporters {
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.Supporters h3 {
+  color: #000;
+  font-weight: bold;
+}
+.Logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Logos div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Logos div img {
+  width: 100%;
+}
