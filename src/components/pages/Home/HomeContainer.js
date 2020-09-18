@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useOktaAuth } from '@okta/okta-react';
-import Landing from './Landing/index';
 
 import RenderHomePage from './RenderHomePage';
 
@@ -37,7 +36,6 @@ function HomeContainer({ LoadingComponent }) {
       {authState.isAuthenticated && userInfo && (
         <RenderHomePage userInfo={userInfo} authService={authService} />
       )}
-      <Landing />
     </>
   );
 }

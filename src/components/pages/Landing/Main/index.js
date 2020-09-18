@@ -1,5 +1,5 @@
 import React from 'react';
-import heroImg from '../../../../../assets/images/hero.png';
+import heroImg from '../../../../assets/images/hero.png';
 import classes from './Main.module.css';
 const Main = props => {
   return (
