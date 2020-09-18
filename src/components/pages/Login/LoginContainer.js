@@ -3,8 +3,7 @@ import OktaSignIn from '@okta/okta-signin-widget';
 import '@okta/okta-signin-widget/dist/css/okta-sign-in.min.css';
 import { config } from '../../../utils/oktaConfig';
 
-import Header from '../../common/Header/index';
-import Footer from '../../common/Footer/Footer';
+import Header from '../../common/Header.js';
 import './LoginContainer.less';
 
 const LoginContainer = () => {
@@ -58,7 +57,6 @@ const LoginContainer = () => {
         <div className="welcome-text"></div>
         <div id="sign-in-widget" />
       </section>
-      <Footer />
     </div>
   );
 };

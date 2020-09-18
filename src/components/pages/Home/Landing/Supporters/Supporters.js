@@ -1,9 +1,9 @@
 import React from 'react';
 import classes from './Supporters.module.css';
-import TwitterLogo from '../../../../assets/images/Twitter.png';
-import GoogleLogo from '../../../../assets/images/Google.png';
-import Adobe from '../../../../assets/images/Adobe.png';
-import GoldenStateLogo from '../../../../assets/images/Golden_State.png';
+import TwitterLogo from '../../../../../assets/images/Twitter.png';
+import GoogleLogo from '../../../../../assets/images/Google.png';
+import Adobe from '../../../../../assets/images/Adobe.png';
+import GoldenStateLogo from '../../../../../assets/images/Golden_State.png';
 const Supporters = props => {
   return (
     <>

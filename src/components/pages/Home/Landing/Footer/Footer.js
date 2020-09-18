@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button } from 'antd';
 import classes from './Footer.module.css';
-import PhoneIcon from '../../../assets/images/phoneIcon.png';
-import MsgIcon from '../../../assets/images/msgIcon.png';
-import TimeIcon from '../../../assets/images/timeIcon.png';
-import LocationIcon from '../../../assets/images/locationIcon.png';
-import HeartIcon from '../../../assets/images/heartIcon.png';
+import PhoneIcon from '../../../../../assets/images/phoneIcon.png';
+import MsgIcon from '../../../../../assets/images/msgIcon.png';
+import TimeIcon from '../../../../../assets/images/timeIcon.png';
+import LocationIcon from '../../../../../assets/images/locationIcon.png';
+import HeartIcon from '../../../../../assets/images/heartIcon.png';
 
 const Footer = props => {
   return (

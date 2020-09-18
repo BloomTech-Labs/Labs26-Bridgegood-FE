@@ -10,7 +10,6 @@ import { Security, LoginCallback, SecureRoute } from '@okta/okta-react';
 
 import 'antd/dist/antd.less';
 
-import { LandingPage } from './components/pages/Landing/index';
 import { NotFoundPage } from './components/pages/NotFound';
 import { ProfileListPage } from './components/pages/ProfileList';
 import { LoginPage } from './components/pages/Login';
@@ -20,6 +19,7 @@ import { LoadingComponent } from './components/common';
 import { MakeResPage } from './components/pages/MakeRes';
 import { ResTimePage } from './components/pages/MakeRes/ResTime';
 
+// Yasir
 import './index.module.css';
 
 ReactDOM.render(
@@ -45,7 +45,8 @@ function App() {
   return (
     <Security {...config} onAuthRequired={authHandler}>
       <Switch>
-        <Route path="/landing" component={LandingPage} />
+        {/* Yasir*/}
+        <Route path="/home" component={HomePage} />
         <Route exact path="/login" component={LoginPage} />
         <Route path="/implicit/callback" component={LoginCallback} />
         {/* any of the routes you need secured should be registered as SecureRoutes */}

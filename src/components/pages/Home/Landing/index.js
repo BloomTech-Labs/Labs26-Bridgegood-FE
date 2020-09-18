@@ -1,11 +1,10 @@
 import React from 'react';
+import Header from './Header/index';
 import Main from './Main/index';
 import Mission from './Mission/Mission';
 import FAQ from './FAQ/FAQ';
 import Supporters from './Supporters/Supporters';
-
-import { Header } from '../../common/index';
-import { Footer } from '../../common/index';
+import Footer from './Footer/Footer';
 
 const WhiteSpace = () => (
   <div
