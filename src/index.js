@@ -18,7 +18,7 @@ import { config } from './utils/oktaConfig';
 import { LoadingComponent } from './components/common';
 import { MakeResPage } from './components/pages/MakeRes';
 import { ResTimePage } from './components/pages/MakeRes/ResTime';
-
+import Header from './components/pages/Home/Landing/Header/';
 // Yasir
 import './index.module.css';
 
@@ -44,6 +44,7 @@ function App() {
 
   return (
     <Security {...config} onAuthRequired={authHandler}>
+      <Header />
       <Switch>
         {/* Yasir*/}
         <Route path="/home" component={HomePage} />
