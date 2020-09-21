@@ -11,23 +11,27 @@ import WhiteSpace from '../../../common/WhiteSpace';
 
 const Landing = () => {
   return (
-    <div
-      style={{
-        width: '1440px',
-        margin: '0 auto',
-      }}
-    >
+    <>
       <Main />
-      <Mission />
-      <WhiteSpace />
-      <WhoWeServe />
-      <WhiteSpace />
-      <FAQ />
-      <WhiteSpace />
-      <Supporters />
-      <WhiteSpace />
+
+      <div
+        style={{
+          width: '1440px',
+          margin: ' 0 auto',
+        }}
+      >
+        <Mission />
+        <WhiteSpace />
+        <WhoWeServe />
+        <WhiteSpace />
+        <FAQ />
+        <WhiteSpace />
+        <Supporters />
+        <WhiteSpace />
+      </div>
+
       <Footer />
-    </div>
+    </>
   );
 };
 
