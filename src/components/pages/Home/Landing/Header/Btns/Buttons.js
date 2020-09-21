@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'antd';
+import Button from '../../../../../common/Button';
 import classes from './Buttons.module.css';
 const Buttons = props => {
   return (
