@@ -18,7 +18,8 @@ import { config } from './utils/oktaConfig';
 import { LoadingComponent } from './components/common';
 import { MakeResPage } from './components/pages/MakeRes';
 import { ResTimePage } from './components/pages/MakeRes/ResTime';
-
+import ReserveBoard from './components/pages/ReserveBoard/ReserveBoard';
+import Header from './components/pages/Home/Landing/Header/';
 // Yasir
 import './index.module.css';
 
@@ -44,6 +45,7 @@ function App() {
 
   return (
     <Security {...config} onAuthRequired={authHandler}>
+      <Header />
       <Switch>
         {/* Yasir*/}
         <Route path="/home" component={HomePage} />
@@ -55,6 +57,7 @@ function App() {
           exact
           component={() => <HomePage LoadingComponent={LoadingComponent} />}
         />
+        <Route path="/welcome-board" component={ReserveBoard} />        
         <SecureRoute path="/profile-list" component={ProfileListPage} />
         <SecureRoute path="/make-res-amount" component={ResTimePage} />
         <SecureRoute path="/make-res" component={MakeResPage} />
