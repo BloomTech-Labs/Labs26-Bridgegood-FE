@@ -57,7 +57,7 @@ function App() {
           exact
           component={() => <HomePage LoadingComponent={LoadingComponent} />}
         />
-        <SecureRoute path="/welcome-board" component={WelcomeBoard} />        
+        <Route path="/welcome-board" component={WelcomeBoard} />        
         <SecureRoute path="/profile-list" component={ProfileListPage} />
         <SecureRoute path="/make-res-amount" component={ResTimePage} />
         <SecureRoute path="/make-res" component={MakeResPage} />
