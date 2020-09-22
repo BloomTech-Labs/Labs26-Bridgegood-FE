@@ -1,19 +1,16 @@
 .dashboard {
-    border: 2px solid pink;
-    background-image: url('./../../../assets/images/BG-Team.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 829px;
-    left: -109px;
-    top: -40px;
+
+    background-image: url('./../../../assets/images/bgteam.svg');
+    height: 638px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .dashboard p {
-    position: absolute;
     width: 488px;
     height: 47px;
-    left: 490px;
-    top: 266px;
     color:#4E4E4E;
     font-family: Roboto;
     font-style: normal;
@@ -23,11 +20,8 @@
 }
 
 .dashboard button {
-    position: absolute;
     width: 456px;
     height: 83px;
-    left: 505px;
-    top: 382px;
     background: #C79100;
     border-radius: 4px;
     color: #FFFFFF;
