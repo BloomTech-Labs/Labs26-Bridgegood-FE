@@ -1,5 +1,5 @@
 import React from 'react';
-import './WelcomeBoard.css';
+import './WelcomeBoard.less';
 import { useHistory } from 'react-router-dom';
 
 
