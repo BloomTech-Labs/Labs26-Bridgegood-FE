@@ -21,3 +21,19 @@
     font-size: 40px;
     line-height: 47px;
 }
+
+.dashboard button {
+    position: absolute;
+    width: 456px;
+    height: 83px;
+    left: 505px;
+    top: 382px;
+    background: #C79100;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+}
