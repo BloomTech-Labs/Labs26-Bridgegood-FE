@@ -20,6 +20,7 @@ import { MakeResPage } from './components/pages/MakeRes';
 import { ResTimePage } from './components/pages/MakeRes/ResTime';
 import WelcomeBoard from './components/pages/WelcomeBoard';
 import Header from './components/pages/Home/Landing/Header/';
+import Footer from './components/pages/Home/Landing/Footer/Footer';
 // Yasir
 import './index.module.css';
 
@@ -57,12 +58,13 @@ function App() {
           exact
           component={() => <HomePage LoadingComponent={LoadingComponent} />}
         />
-        <Route path="/welcome-board" component={WelcomeBoard} />        
+        <SecureRoute path="/welcome-board" component={WelcomeBoard} />        
         <SecureRoute path="/profile-list" component={ProfileListPage} />
         <SecureRoute path="/make-res-amount" component={ResTimePage} />
         <SecureRoute path="/make-res" component={MakeResPage} />
         <Route component={NotFoundPage} />
       </Switch>
+      <Footer />
     </Security>
   );
 }
