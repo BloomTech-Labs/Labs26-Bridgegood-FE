@@ -1,0 +1,9 @@
+.dashboard {
+    border: 2px solid pink;
+    background-image: url('./../../../assets/images/BG-Team.png');
+    background-repeat: no-repeat;
+    width: 1658px;
+    height: 1106px;
+    left: -109px;
+    top: -40px;
+}
