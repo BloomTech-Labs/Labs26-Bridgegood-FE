@@ -1,4 +1,7 @@
 import { UPDATE_DURATION } from '../actions/DurationAction'
+import { UPDATE_DATE } from '../actions/CalActions'
+import { UPDATE_ROOM } from '../actions/RoomActions'
+import { UPDATE_TIMESLOT } from '../actions/TimeSlotActions'
 
 export const initialState = {
     duration: 1,
@@ -15,6 +18,21 @@ export const makeResReducer = (state = initialState, action) => {
             return {
                 ...state,
                 duration: action.payload, 
+            };
+        case UPDATE_DATE:
+            return {
+                ...state,
+                date: action.payload
+            };
+        case UPDATE_ROOM:
+            return {
+                ...state,
+                date: action.payload
+            };
+        case UPDATE_TIMESLOT:
+            return {
+                ...state,
+                date: action.payload
             };
         default:
             return state;
