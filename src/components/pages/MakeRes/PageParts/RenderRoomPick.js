@@ -4,8 +4,8 @@ import { Button, Col } from 'antd';
 function RenderRoomPick() {
   return (
     <Col span={1}>
-      <Button>Front Room</Button>
-      <Button>Back Room</Button>
+      <Button>CoWorking Room</Button>
+      <Button>Media Room</Button>
     </Col>
   );
 }
