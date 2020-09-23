@@ -4,9 +4,6 @@ import { Button } from 'antd';
 import '@okta/okta-signin-widget/dist/css/okta-sign-in.min.css';
 import { config } from '../../../utils/oktaConfig';
 
-import Header from '../../pages/Home/Landing/Header/index.js';
-import Footer from '../../pages/Home/Landing/Footer/Footer.js';
-
 const LoginContainer = () => {
   console.log('Footer');
   useEffect(() => {
@@ -54,11 +51,9 @@ const LoginContainer = () => {
 
   return (
     <div>
-      <Header />
       <section className="main-container">
         <div className="welcome-text"></div>
         <div id="sign-in-widget" />
-        <Footer />
       </section>
     </div>
   );

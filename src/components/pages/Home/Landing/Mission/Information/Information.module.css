@@ -1,56 +1,64 @@
 .Information {
-  margin: 0 auto;
   height: 425px;
+  width: 100%;
   display: flex;
   justify-content: space-around;
 }
-
 .Information div {
   padding: 30px;
 }
-.ourMission {
-  width: 45%;
-  border-right: 1px solid #000;
-}
 
-.payForward {
-  width: 55%;
-}
-.Tob {
-  margin-top: 20px;
-  margin-bottom: 50px;
-}
-.Tob h2 {
-  margin-top: 50px;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 16px;
-  font-weight: 500;
-}
-.Bottom {
-  padding: 20px 0;
-}
-
-.Bottom h1 {
-  font-style: italic;
-  font-weight: 500;
-  font-size: 30px;
-}
-
-.payForward .Tob p {
-  font-size: 22px;
-  font-weight: 300;
-  line-height: 26px;
-  margin: 20px;
-}
-
-.payForward .Bottom {
+.Information .Right {
+  width: 900px;
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-
-.payForward .Bottom button {
+.Information .Right p {
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+.Information .Right section {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+.Information .Right section button {
   width: 210px;
+  margin-right: 10px;
   height: 84.5px;
+  font-weight: bold;
+  font-size: 22px;
+  color: #ffffff;
   background: #c79100;
   border-radius: 4px;
+  border: 1px solid #c79100;
+}
+.Information .Right section span {
+  margin-left: 10px;
+  color: #c79100;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.Information .Left {
+  height: 400px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-right: 1px solid rgb(167, 162, 162);
+}
+.Information .Left p {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+.Information .Left h1 {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
 }
