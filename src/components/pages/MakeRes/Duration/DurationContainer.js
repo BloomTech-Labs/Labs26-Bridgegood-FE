@@ -7,7 +7,7 @@ import Header from '../../Home/Landing/Header/index';
 import Footer from '../../Home/Landing/Footer/Footer';
 
 const DurationContainer = props => {
-  const [newDuration, setNewDuration] = useState(1);
+  const [newDuration, setNewDuration] = useState();
 
   const onChange = e => {
     console.log('radio checked', e.target.value);
@@ -20,7 +20,7 @@ const DurationContainer = props => {
     lineHeight: '30px',
   };
 
-  const { value } = props.durationOnProps
+  const value = newDuration
 
   return (
     <>

@@ -1,7 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import 'antd/dist/antd.css';
 import { Layout, Radio, Button } from 'antd';
+import { updateDuration } from '../../../../state/actions/DurationAction'
 
 const { Content } = Layout;
 
@@ -22,17 +24,18 @@ function RenderDuration(props) {
         <Content style={{ padding: '50px 150px', margin: 'auto auto' }}>
           <div>
             <Radio.Group onChange={onChange} value={value}>
-              <Radio style={radioStyle} value={1}>
+              <Radio style={radioStyle} value={1} onClick={() => props.updateDuration(value)}>
                 1 - 2 Hours
               </Radio>
-              <Radio style={radioStyle} value={2}>
+              <Radio style={radioStyle} value={2} onClick={() => props.updateDuration(value)}>
                 3 - 4 Hours
               </Radio>
-              <Radio style={radioStyle} value={3}>
+              <Radio style={radioStyle} value={3} onClick={() => props.updateDuration(value)}>
                 6 Hours
               </Radio>
             </Radio.Group>
           </div>
+          {/* <h2>THE DURATION IS = {props.durationOnProps}</h2> */}
           <div style={{ padding: '50px 10px' }}>
             <Button>
               <Link to="/make-res">Next</Link>
@@ -44,4 +47,11 @@ function RenderDuration(props) {
   );
 }
 
-export default RenderDuration;
+const mapStateToProps = state => {
+  console.log("STATE",state);
+  return {
+    durationOnProps: state.duration
+  }
+}
+
+export default connect(mapStateToProps, {updateDuration})(RenderDuration);

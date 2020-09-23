@@ -7,7 +7,7 @@ export const initialState = {
     duration: 1,
     date: '10-1-20',
     room: 'front',
-    timeslot: 10 
+    timeslot: ""
     // Examples of times 10,11,12,13,14,15,16,17 (10am - 5pm)
 };
 
