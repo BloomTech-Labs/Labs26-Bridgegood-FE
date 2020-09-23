@@ -9,7 +9,7 @@ import HeartIcon from '../../../../../assets/images/heartIcon.png';
 
 const Footer = () => {
   return (
-    <footer classes={classes.Footer}>
+    <footer className={classes.Footer}>
       <div className={classes.Top}>
         <section className={classes.Left}>
           <div className={classes.Icon}>
