@@ -52,7 +52,6 @@ const LoginContainer = () => {
 
   return (
     <div>
-      <Header />
       <section className="main-container">
         <div className="welcome-text"></div>
         <div id="sign-in-widget" />

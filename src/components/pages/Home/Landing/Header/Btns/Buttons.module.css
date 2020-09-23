@@ -1,6 +1,7 @@
 .Buttons {
   margin-right: 5%;
   display: flex;
+  color: #000;
 }
 
 .Buttons button {
@@ -16,6 +17,7 @@
 .btn_login {
   border: 1px solid #7e7a7a;
   background-color: #fff;
+  color: #000;
 }
 
 .btn_donate {
