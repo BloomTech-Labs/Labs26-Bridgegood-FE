@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'antd';
+import { Link } from 'react-router-dom';
 import classes from './Footer.module.css';
 import PhoneIcon from '../../../../../assets/images/phoneIcon.png';
 import MsgIcon from '../../../../../assets/images/msgIcon.png';
@@ -57,8 +57,12 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <Button>Login</Button>
-            <Button>Donate</Button>
+            <Link to="/login">
+              <button>Login</button>
+            </Link>
+            <Link>
+              <button>Donate</button>
+            </Link>
             <div className={classes.Icon}>
               <img src={HeartIcon} alt="icon" />
               <p>Proudly rooted in Oakland</p>
