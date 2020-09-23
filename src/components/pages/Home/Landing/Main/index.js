@@ -7,7 +7,7 @@ import classes from './Main.module.css';
 const Main = props => {
   return (
     <div className={classes.Main}>
-      <Header />
+      {/* <Header /> */}
       {/* <img src={heroImg} alt="hero image" /> */}
     </div>
   );
