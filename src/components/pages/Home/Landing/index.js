@@ -4,7 +4,6 @@ import Mission from './Mission/Mission';
 import WhoWeServe from './WhoWeServe/WhoWeServe';
 import FAQ from './FAQ/FAQ';
 import Supporters from './Supporters/Supporters';
-import Footer from './Footer/Footer';
 
 // add white space between components
 import WhiteSpace from '../../../common/WhiteSpace';
@@ -29,8 +28,6 @@ const Landing = () => {
         <Supporters />
         <WhiteSpace />
       </div>
-
-      {/* <Footer /> */}
     </>
   );
 };

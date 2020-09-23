@@ -7,7 +7,7 @@ import TimeIcon from '../../../../../assets/images/timeIcon.png';
 import LocationIcon from '../../../../../assets/images/locationIcon.png';
 import HeartIcon from '../../../../../assets/images/heartIcon.png';
 
-const Footer = props => {
+const Footer = () => {
   return (
     <footer classes={classes.Footer}>
       <div className={classes.Top}>
