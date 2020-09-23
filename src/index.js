@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-  BrowserRouter as Router,
-  Route,
-  useHistory,
-  Switch,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, useHistory,Switch } from 'react-router-dom';
 import { Security, LoginCallback, SecureRoute } from '@okta/okta-react';
-
 import 'antd/dist/antd.less';
+
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import { makeResReducer as reducer} from './state/reducers/MakeResReducer';
+import { Provider } from 'react-redux'
 
 import { NotFoundPage } from './components/pages/NotFound';
 import { ProfileListPage } from './components/pages/ProfileList';
@@ -17,15 +16,18 @@ import { HomePage } from './components/pages/Home';
 import { config } from './utils/oktaConfig';
 import { LoadingComponent } from './components/common';
 import { MakeResPage } from './components/pages/MakeRes';
-import { ResTimePage } from './components/pages/MakeRes/ResTime';
-
-// Yasir
+import { DurationPage } from './components/pages/MakeRes/Duration';
 import './index.module.css';
+
+export const store = createStore(reducer, applyMiddleware(thunk));
+console.log("CURRENT STATE from src/index =====>", store.getState())
 
 ReactDOM.render(
   <Router>
     <React.StrictMode>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </React.StrictMode>
   </Router>,
   document.getElementById('root')
@@ -56,7 +58,7 @@ function App() {
           component={() => <HomePage LoadingComponent={LoadingComponent} />}
         />
         <SecureRoute path="/profile-list" component={ProfileListPage} />
-        <SecureRoute path="/make-res-amount" component={ResTimePage} />
+        <SecureRoute path="/make-res-amount" component={DurationPage} />
         <SecureRoute path="/make-res" component={MakeResPage} />
         <Route component={NotFoundPage} />
       </Switch>
