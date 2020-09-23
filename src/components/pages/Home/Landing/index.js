@@ -30,7 +30,7 @@ const Landing = () => {
         <WhiteSpace />
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
