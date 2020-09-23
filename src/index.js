@@ -21,7 +21,6 @@ import { ResTimePage } from './components/pages/MakeRes/ResTime';
 import WelcomeBoard from './components/pages/WelcomeBoard';
 import Header from './components/pages/Home/Landing/Header/';
 import Footer from './components/pages/Home/Landing/Footer/Footer';
-// Yasir
 import './index.module.css';
 
 ReactDOM.render(
@@ -48,9 +47,8 @@ function App() {
     <Security {...config} onAuthRequired={authHandler}>
       <Header />
       <Switch>
-        {/* Yasir*/}
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/login" component={LoginPage} />
+        <Route path="/login" component={LoginPage} />
         <Route path="/implicit/callback" component={LoginCallback} />
         {/* any of the routes you need secured should be registered as SecureRoutes */}
         <SecureRoute
@@ -58,7 +56,7 @@ function App() {
           exact
           component={() => <HomePage LoadingComponent={LoadingComponent} />}
         />
-        <SecureRoute path="/welcome-board" component={WelcomeBoard} />        
+        <SecureRoute path="/welcome-board" component={WelcomeBoard} />
         <SecureRoute path="/profile-list" component={ProfileListPage} />
         <SecureRoute path="/make-res-amount" component={ResTimePage} />
         <SecureRoute path="/make-res" component={MakeResPage} />
