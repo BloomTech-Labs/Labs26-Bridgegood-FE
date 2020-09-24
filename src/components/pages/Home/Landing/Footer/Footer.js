@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'antd';
+import { Link } from 'react-router-dom';
 import classes from './Footer.module.css';
 import PhoneIcon from '../../../../../assets/images/phoneIcon.png';
 import MsgIcon from '../../../../../assets/images/msgIcon.png';
@@ -7,9 +7,9 @@ import TimeIcon from '../../../../../assets/images/timeIcon.png';
 import LocationIcon from '../../../../../assets/images/locationIcon.png';
 import HeartIcon from '../../../../../assets/images/heartIcon.png';
 
-const Footer = props => {
+const Footer = () => {
   return (
-    <footer classes={classes.Footer}>
+    <footer className={classes.Footer}>
       <div className={classes.Top}>
         <section className={classes.Left}>
           <div className={classes.Icon}>
@@ -57,8 +57,12 @@ const Footer = props => {
             </ul>
           </div>
           <div>
-            <Button>Login</Button>
-            <Button>Donate</Button>
+            <Link to="/login">
+              <button>Login</button>
+            </Link>
+            <Link>
+              <button>Donate</button>
+            </Link>
             <div className={classes.Icon}>
               <img src={HeartIcon} alt="icon" />
               <p>Proudly rooted in Oakland</p>

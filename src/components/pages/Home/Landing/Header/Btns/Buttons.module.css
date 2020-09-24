@@ -1,6 +1,7 @@
 .Buttons {
   margin-right: 5%;
   display: flex;
+  color: #000;
 }
 
 .Buttons button {
@@ -10,22 +11,22 @@
   border-radius: 4px;
   text-transform: uppercase;
   margin: 10px;
-  cursor: pointer;
+  transition: all 0.4s;
 }
 .btn_login {
   border: 1px solid #7e7a7a;
   background-color: #fff;
+  color: #000;
 }
 
 .btn_donate {
   border: 1px solid #000000;
   background-color: #002171;
   color: #fff;
-}
-
-.btn_donate:hover {
+  background: #002171;
   border: 1px solid #000000;
-  color: #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 
 .btn_login:hover {
