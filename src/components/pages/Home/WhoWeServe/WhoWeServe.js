@@ -1,8 +1,8 @@
 import React from 'react';
 import classes from './WhoWeServe.module.css';
-import CreativesImg from '../../../../../assets/images/creatives.png';
-import FrameImg from '../../../../../assets/images/Frame.png';
-import SchoolImgLoc from '../../../../../assets/images/schoolLocation.png';
+import CreativesImg from '../../../../assets/images/creatives.png';
+import FrameImg from '../../../../assets/images/Frame.png';
+import SchoolImgLoc from '../../../../assets/images/schoolLocation.png';
 
 const WhoWeServer = props => {
   return (
