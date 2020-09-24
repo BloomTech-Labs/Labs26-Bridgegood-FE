@@ -21,6 +21,8 @@ import { ResTimePage } from './components/pages/MakeRes/ResTime';
 import WelcomeBoard from './components/pages/WelcomeBoard';
 import Header from './components/pages/Home/Landing/Header/';
 import Footer from './components/pages/Home/Landing/Footer/Footer';
+import { DonatePage } from './components/pages/Donate';
+
 // Yasir
 import './index.module.css';
 
@@ -48,18 +50,16 @@ function App() {
     <Security {...config} onAuthRequired={authHandler}>
       <Header />
       <Switch>
-        {/* Yasir*/}
-        <Route path="/home" component={HomePage} />
-        <Route exact path="/login" component={LoginPage} />
-        <Route path="/implicit/callback" component={LoginCallback} />
-        {/* any of the routes you need secured should be registered as SecureRoutes */}
-        <SecureRoute
+        <Route
           path="/"
           exact
           component={() => <HomePage LoadingComponent={LoadingComponent} />}
         />
-        <SecureRoute path="/welcome-board" component={WelcomeBoard} />
-        <SecureRoute path="/profile-list" component={ProfileListPage} />
+        <Route path="/login" component={LoginPage} />
+        <Route path="/implicit/callback" component={LoginCallback} />
+        <Route path="/donate" component={DonatePage} />
+        <SecureRoute path="/welcome" component={WelcomeBoard} />
+        <SecureRoute path="/profile" component={ProfileListPage} />
         <SecureRoute path="/make-res-amount" component={ResTimePage} />
         <SecureRoute path="/make-res" component={MakeResPage} />
         <Route component={NotFoundPage} />
