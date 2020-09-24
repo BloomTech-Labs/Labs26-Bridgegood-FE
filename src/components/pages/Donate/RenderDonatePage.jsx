@@ -13,7 +13,7 @@ const { Header, Content, Footer, Sider } = Layout;
 export default function RenderDonatePage() {
   return (
     <Layout className="layout">
-      <Header className="header">
+      {/* <Header className="header">
         <div className="logo" />
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
           <Menu.Item key="1">nav 1</Menu.Item>
@@ -71,7 +71,7 @@ export default function RenderDonatePage() {
       </Content>
       <Footer style={{ textAlign: 'center' }}>
         Ant Design ©2018 Created by Ant UED
-      </Footer>
+      </Footer> */}
     </Layout>
   );
 }
