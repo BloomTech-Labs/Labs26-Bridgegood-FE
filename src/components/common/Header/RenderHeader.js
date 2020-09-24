@@ -5,7 +5,7 @@ import Buttons from './Btns/Buttons';
 
 import classes from './Header.module.css';
 
-const Header = () => {
+const RenderHeader = () => {
   return (
     <header className={classes.Header}>
       <Logo />
@@ -15,4 +15,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default RenderHeader;
