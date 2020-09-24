@@ -1,72 +1,7 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import { connect } from 'react-redux';
-
-// class SignUpContainer extends React.Component {
-// 	constructor() {
-//     super();
-
-// 		this.state = {
-// 			isLoading: false,
-// 			credentials: {
-//         firstName: '',
-//         lastName: '',
-//         schoolEnrolled: '',
-//         username: '',
-//         email: '',
-//         phoneNumber: '',
-// 				password: ''
-// 			}
-// 		};
-// 	}
-// 	handleChange = (event) => {
-// 		this.setState({
-// 			credentials: {
-// 				...this.state.credentials,
-// 				[event.target.name]: event.target.value
-// 			}
-// 		});
-//     };
-
-//     // returns a token to be added to the header of all other requests
-//     // Pass in the following credentials as the body of the request: : { username: 'Lambda School', password: 'i<3Lambd4' }
-// 	handleSubmit = (event) => {
-// 		event.preventDefault();
-// 		this.setState({ ...this.state, isLoading: true });
-// 		axiosWithAuth()
-// 			.post('/api/login', this.state.credentials)
-// 			.then((res) => {
-
-// 				window.localStorage.setItem('token', res.data.payload);
-// 				this.setState({ ...this.state, isLoading: false });
-// 				this.props.history.push('/');
-// 			})
-// 			.catch((err) => console.log(err));
-// 	};
-
-// 	render() {
-// 		return (
-// 			<div>
-// 				<form onSubmit={this.handleSubmit}>
-// 					<input name="First Name" onChange={this.handleChange} />
-// 					<input name="Last Name" onChange={this.handleChange} />
-//           <input name="School Enrolled" onChange={this.handleChange} />
-//           <input name="BridgeGood username" onChange={this.handleChange} />
-//           <input name="Email" onChange={this.handleChange} />
-//           <input name="Phone Number" onChange={this.handleChange} />
-//           <input name="Password" onChange={this.handleChange} />
-// 					<button>Create Account</button>
-// 				</form>
-// 			</div>
-// 		);
-// 	}
-// }
-
-// export default SignUpContainer
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Checkbox } from 'antd';
 
 import { userActions } from '../_actions';
 
@@ -90,6 +25,10 @@ class SignUpContainer extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  // onChange(e) {
+  //   console.log(`checked = ${e.target.checked}`);
+  // }
 
   handleChange(event) {
     const { name, value } = event.target;
@@ -249,10 +188,11 @@ class SignUpContainer extends React.Component {
             )}
           </div>
           <div className="form-group">
-            {/* const Checkbox = props => (
-                             <input type="checkbox" {...props} />
-                             ) */}
-
+            return (
+            {/* <div>
+                  <input type="checkbox" name="check1" checked={this.state.check1} />
+                </div>
+              )                */}
             <button className="btn btn-primary">Create Account</button>
             {registering && (
               <img src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
@@ -275,6 +215,8 @@ function mapState(state) {
 const actionCreators = {
   register: userActions.register,
 };
+
+// ReactDOM.render(<Checkbox onChange={onChange}>Checkbox</Checkbox>, mountNode);
 
 const connectedRegisterPage = connect(
   mapState,
