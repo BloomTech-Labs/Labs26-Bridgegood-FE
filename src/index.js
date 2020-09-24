@@ -50,11 +50,6 @@ function App() {
     <Security {...config} onAuthRequired={authHandler}>
       <Header />
       <Switch>
-        <Route path="/donate" component={DonatePage} />
-        <SecureRoute path="/welcome" component={WelcomeBoard} />
-        <SecureRoute path="/profile" component={ProfileListPage} />
-        <SecureRoute path="/make-res-amount" component={ResTimePage} />
-        <SecureRoute path="/make-res" component={MakeResPage} />
         <Route
           path="/"
           exact
@@ -62,6 +57,11 @@ function App() {
         />
         <Route path="/login" component={LoginPage} />
         <Route path="/implicit/callback" component={LoginCallback} />
+        <Route path="/donate" component={DonatePage} />
+        <SecureRoute path="/welcome" component={WelcomeBoard} />
+        <SecureRoute path="/profile" component={ProfileListPage} />
+        <SecureRoute path="/make-res-amount" component={ResTimePage} />
+        <SecureRoute path="/make-res" component={MakeResPage} />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer />
