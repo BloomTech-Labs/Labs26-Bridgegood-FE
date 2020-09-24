@@ -1,32 +1,44 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Row, Col } from 'antd';
+
 import RenderCalendar from './PageParts/RenderCalendar';
 import RenderRoomPick from './PageParts/RenderRoomPick';
 import RenderTimeSlot from './PageParts/RenderTimeSlot';
 import Header from '../Home/Landing/Header/index';
 import Footer from '../Home/Landing/Footer/Footer';
+import './MakeRes.css'
 
-function ResContainer() {
+function ResContainer(props) {
+
   return (
     <>
       <Header />
-      <h1>Make a Reservation </h1>
+      <div className='bigbox'>
       <Row>
         <Col span={8}>
           <h2>Select a Date</h2>
-          <RenderCalendar />
+          <div className='components'>
+            <RenderCalendar 
+            />
+          </div>
         </Col>
         <Col span={8}>
           <h2>Select a Room</h2>
-          <RenderRoomPick />
+          <div className='components'>
+            <RenderRoomPick 
+            />
+          </div>
         </Col>
         <Col span={8}>
           <h2>Select Time</h2>
-          <RenderTimeSlot />
+          <div className='components'>
+            <RenderTimeSlot 
+            />
+          </div>
         </Col>
       </Row>
-
+      </div>
       <Button>
         <Link to="/">Back To Home</Link>
       </Button>

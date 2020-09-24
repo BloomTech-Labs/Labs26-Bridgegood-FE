@@ -1,13 +1,13 @@
 import { UPDATE_DURATION } from '../actions/DurationAction'
 import { UPDATE_DATE } from '../actions/CalActions'
 import { UPDATE_ROOM } from '../actions/RoomActions'
-import { UPDATE_TIMESLOT } from '../actions/TimeSlotActions'
+import { UPDATE_TIME_SLOT } from '../actions/TimeSlotActions'
 
 export const initialState = {
-    duration: 1,
-    date: '10-1-20',
-    room: 'front',
-    timeslot: ""
+    duration: 0,
+    date: '2011-11-11',
+    room: 'None', 
+    time_slot: "None"
     // Examples of times 10,11,12,13,14,15,16,17 (10am - 5pm)
 };
 
@@ -27,12 +27,12 @@ export const makeResReducer = (state = initialState, action) => {
         case UPDATE_ROOM:
             return {
                 ...state,
-                date: action.payload
+                room: action.payload
             };
-        case UPDATE_TIMESLOT:
+        case UPDATE_TIME_SLOT:
             return {
                 ...state,
-                date: action.payload
+                time_slot: action.payload
             };
         default:
             return state;

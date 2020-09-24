@@ -58,7 +58,7 @@ function App() {
           component={() => <HomePage LoadingComponent={LoadingComponent} />}
         />
         <SecureRoute path="/profile-list" component={ProfileListPage} />
-        <SecureRoute path="/make-res-amount" component={DurationPage} />
+        <SecureRoute path="/res-duration" component={DurationPage} />
         <SecureRoute path="/make-res" component={MakeResPage} />
         <Route component={NotFoundPage} />
       </Switch>

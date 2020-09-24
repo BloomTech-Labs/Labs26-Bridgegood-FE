@@ -20,17 +20,14 @@ const DurationContainer = props => {
     lineHeight: '30px',
   };
 
-  const value = newDuration
-
   return (
     <>
       <Header />
       <RenderDuration
         type='radio'
         onChange={onChange}
-        onClick={() => props.updateDuration(newDuration)}
         radioStyle={radioStyle}
-        value={value}
+        value={newDuration}
       />
       <Footer />
     </>
