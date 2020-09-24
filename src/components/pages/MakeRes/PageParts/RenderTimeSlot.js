@@ -1,26 +1,29 @@
 import React from 'react';
-import { Button, Row, Col } from 'antd';
+import { Button } from 'antd';
 import { connect } from 'react-redux';
 import { updateTimeSlot } from '../../../../state/actions/TimeSlotActions';
+import '../MakeRes.css'
 
 function RenderTimeSlot(props) {
   return (
     <>
-      <Row>
-        <Col span={4}>
-          <Button onClick={()=> props.updateTimeSlot('10')}>10:00am</Button>
-          <Button onClick={()=> props.updateTimeSlot('11')}>11:00am</Button>
-          <Button onClick={()=> props.updateTimeSlot('12')}>12:00pm</Button>
-          <Button onClick={()=> props.updateTimeSlot('13')}>01:00pm</Button>
-        </Col>
-        <Col span={4}>
-          <Button onClick={()=> props.updateTimeSlot('14')}>2:00pm</Button>
-          <Button onClick={()=> props.updateTimeSlot('15')}>3:00pm</Button>
-          <Button onClick={()=> props.updateTimeSlot('16')}>4:00pm</Button>
-          <Button onClick={()=> props.updateTimeSlot('17')}>5:00pm</Button>
-        </Col>
-      </Row>
-      <h2> You've Selected = {props.timeSlotOnProps}</h2>
+      <div className='timeSlotBox'>
+        <div className='row'>
+          <div className='col'>
+            <div onClick={()=> props.updateTimeSlot('10')} className='tsbtn'>10:00am</div>
+            <div onClick={()=> props.updateTimeSlot('11')} className='tsbtn'>11:00am</div>
+            <divn onClick={()=> props.updateTimeSlot('12')} className='tsbtn'>12:00pm</divn>
+            <div onClick={()=> props.updateTimeSlot('13')} className='tsbtn'>01:00pm</div>
+          </div>
+          <div className='col'>
+            <div onClick={()=> props.updateTimeSlot('14')} className='tsbtn'>2:00pm</div>
+            <div onClick={()=> props.updateTimeSlot('15')} className='tsbtn'>3:00pm</div>
+            <div onClick={()=> props.updateTimeSlot('16')} className='tsbtn'>4:00pm</div>
+            <div onClick={()=> props.updateTimeSlot('17')} className='tsbtn'>5:00pm</div>
+          </div>
+        </div>   
+      </div>
+    <h2> You've Selected = {props.timeSlotOnProps}</h2>
     </>
   );
 }

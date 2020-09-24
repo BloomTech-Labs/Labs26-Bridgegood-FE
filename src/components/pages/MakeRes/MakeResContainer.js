@@ -31,7 +31,7 @@ function ResContainer(props) {
           </div>
         </Col>
         <Col span={8}>
-          <h2>Select Time</h2>
+          <h2>Select Opening</h2>
           <div className='components'>
             <RenderTimeSlot 
             />

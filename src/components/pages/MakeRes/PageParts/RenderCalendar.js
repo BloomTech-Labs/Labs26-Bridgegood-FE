@@ -17,7 +17,7 @@ function RenderCalendar(props) {
 
   return (
     <>
-      <div style={{ width: 500, border: '1px solid #d9d9d9', borderRadius: 4 }}>
+      <div style={{ width: 500, border: '1px solid #4E4E4E' }}>
         <Calendar 
           fullscreen={false} 
           onPanelChange={onPanelChange}

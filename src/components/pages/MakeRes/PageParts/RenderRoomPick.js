@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Col } from 'antd';
+import { Button } from 'antd';
 import { connect } from 'react-redux';
 import { updateRoom } from '../../../../state/actions/RoomActions';
 import '../MakeRes.css'
@@ -9,19 +9,19 @@ function RenderRoomPick(props) {
   return (
     <>
       <div className='roomBox'>
-          <Button
+          <div
             onClick={()=> props.updateRoom('CoWorking Room')}
             className='roomBtn'
           >
               CoWorking Room
-          </Button>
+          </div>
 
-          <Button
+          <div
           onClick={()=> props.updateRoom('Media Room')}
           className='roomBtn'
           >
             Media Room
-          </Button>
+          </div>
         
       </div>
         <h2> You've Selected = {props.roomOnProps}</h2>

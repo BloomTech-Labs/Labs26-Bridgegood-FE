@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2%;
 }
 
 .components {
@@ -23,14 +24,67 @@
 /* ===== RenderRoomPick.js ===== */
 
 .roomBox {
-    border: 1px lightgrey solid;
+    border: 1px#4E4E4E solid;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 75%;
-    padding: 9rem 0
+    width: 17rem;
+    padding: 5rem 0 5rem
 }
 
 .roomBtn {
     width: 10rem;
+    border: 1px #4E4E4E solid;
+    border-radius: 20px;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+}
+
+.roomBtn:hover {
+    color: #40a9ff;
+    border: 1px #40a9ff solid;;
+}
+
+.roomBtn:active {
+    color: #FFFFFF;
+    border: 1px #4e4e4e solid;
+    background-color: #002171;
+}
+
+/* ===== RenderTimeSlots.js ===== */
+
+.timeSlotBox {
+    border: 1px #4E4E4E solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    padding: 3.8rem 0
+}
+.row {
+    display: flex;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.tsbtn {
+    margin: .5rem .75rem;
+    padding: .75rem 1.5rem;
+    border: 1px #4E4E4E solid;
+    border-radius: 20px;
+}
+
+.tsbtn:hover {
+    color: #40a9ff;
+    border: 1px #40a9ff solid;
+}
+
+.tsbtn:active {
+    color: #FFFFFF;
+    border: 1px #4e4e4e solid;
+    background-color: #002171;
 }
