@@ -1,0 +1,36 @@
+/* ===== MakeResContainer.js ===== */
+
+.bigbox {
+    width: 80%;
+    margin: 5% 10%
+
+}
+
+.ant-col h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.components {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%
+}
+
+/* ===== RenderRoomPick.js ===== */
+
+.roomBox {
+    border: 1px lightgrey solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    padding: 9rem 0
+}
+
+.roomBtn {
+    width: 10rem;
+}
