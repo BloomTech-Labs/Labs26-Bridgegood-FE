@@ -10,10 +10,18 @@ import {
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
 
-export default function RenderDonatePage() {
+export default function DonatePage({ isLoggedIn, userInfo, authService }) {
+  // const { userInfo, authService } = props;
   return (
-    <Layout className="layout">
-      {/* <Header className="header">
+    <>
+      <Layout className="layout">
+        {!isLoggedIn && <h1>Not logged in</h1>}
+
+        {isLoggedIn && !userInfo && <h1>Loading Profile</h1>}
+
+        {isLoggedIn && userInfo && <h1>Logged In and Profile Available</h1>}
+
+        {/* <Header className="header">
         <div className="logo" />
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
           <Menu.Item key="1">nav 1</Menu.Item>
@@ -72,6 +80,7 @@ export default function RenderDonatePage() {
       <Footer style={{ textAlign: 'center' }}>
         Ant Design ©2018 Created by Ant UED
       </Footer> */}
-    </Layout>
+      </Layout>
+    </>
   );
 }
