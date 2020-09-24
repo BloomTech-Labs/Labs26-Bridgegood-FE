@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
 import classes from './Information.module.css';
-import ImgIcon from '../../../../../../assets/images/Polygon.png';
+import ImgIcon from '../../../../../assets/images/Polygon.png';
 
 const Information = props => {
   return (
