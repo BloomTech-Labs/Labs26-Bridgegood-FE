@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.less';
 import {
   BrowserRouter as Router,
   Route,
@@ -23,9 +24,6 @@ import {
   WelcomeBoard,
 } from './components/pages';
 import HomeContainer from './components/common/HomeContainer';
-
-// Yasir
-import './index.module.css';
 
 ReactDOM.render(
   <Router>
