@@ -1,9 +1,9 @@
 import React from 'react';
 import heroImg from '../../../../assets/images/hero.png';
-import classes from './Main.module.css';
+import './Main.less';
 const Main = props => {
   return (
-    <div className={classes.Main}>
+    <div className="Main">
       <img src={heroImg} alt="hero image" />
     </div>
   );
