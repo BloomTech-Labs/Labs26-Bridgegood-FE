@@ -41,13 +41,13 @@ export default function HomeContainer({ PageContent }) {
   return (
     <>
       <Layout>
-        <Header>
-          <RenderHeader
-            isLoggedIn={authState.isAuthenticated}
-            userInfo={userInfo}
-            authService={authService}
-          />
-        </Header>
+        {/* <Header> */}
+        <RenderHeader
+          isLoggedIn={authState.isAuthenticated}
+          userInfo={userInfo}
+          authService={authService}
+        />
+        {/* </Header> */}
         <Content>
           <PageContent
             isLoggedIn={authState.isAuthenticated}
