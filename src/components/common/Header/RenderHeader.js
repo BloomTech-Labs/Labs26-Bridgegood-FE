@@ -7,16 +7,24 @@ const RenderHeader = () => {
   return (
     <header className="header">
       <div className="Logo">
-        <img src={Logo} alt="bridge good logo" />
+        <Link to="/">
+          <img src={Logo} alt="bridge good logo" />
+        </Link>
       </div>
       <nav>
         <Link>About us</Link>
         <Link>pay it forward</Link>
-        <Link>bridgegood.org</Link>
+        <Link>
+          bridgegood.<span>org</span>
+        </Link>
       </nav>
       <div className="Btns">
-        <button className="login-btn">Log in</button>
-        <button className="donate-btn">donate</button>
+        <button className="login-btn">
+          <Link to="/login">Login</Link>
+        </button>
+        <button className="donate-btn">
+          <Link>donate</Link>
+        </button>
       </div>
     </header>
   );

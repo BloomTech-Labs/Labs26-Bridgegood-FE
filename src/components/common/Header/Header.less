@@ -9,6 +9,17 @@
   align-items: center;
   margin-bottom: 200px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  a {
+    color: #000;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    span {
+      text-transform: lowercase;
+    }
+  }
   .Logo {
     width: 575px;
     img {
@@ -19,13 +30,6 @@
     width: 30%;
     display: flex;
     justify-content: space-around;
-    a {
-      color: #000;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 19px;
-    }
   }
   .Btns {
     button {
@@ -38,7 +42,6 @@
       font-size: 16px;
       line-height: 19px;
       text-transform: uppercase;
-      background-color: #fff;
       border: 1px solid #000000;
       transition: ease-in-out 0.4s;
     }
@@ -47,13 +50,18 @@
       border: 1px solid #7e7a7a;
       &:hover {
         background: #002171;
-        color: #fff;
+
         border: 1px solid #000000;
+        a {
+          color: #fff;
+        }
       }
     }
     .donate-btn {
       background: #002171;
-      color: #fff;
+      a {
+        color: #fff;
+      }
     }
   }
 }
