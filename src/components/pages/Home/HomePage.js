@@ -1,11 +1,9 @@
 import React from 'react';
-// import Header from '../../common/Header/';
 import Main from './Main/index';
 import Mission from './Mission/Mission';
 import WhoWeServe from './WhoWeServe/WhoWeServe';
 import FAQ from './FAQ/FAQ';
 import Supporters from './Supporters/Supporters';
-// import Footer from '../../common/Footer';
 
 const WhiteSpace = () => (
   <div
@@ -14,7 +12,6 @@ const WhiteSpace = () => (
     }}
   ></div>
 );
-
 const HomePage = () => {
   return (
     <div
@@ -23,7 +20,6 @@ const HomePage = () => {
         margin: '0 auto',
       }}
     >
-      {/* <Header /> */}
       <Main />
       <WhiteSpace />
       <Mission />
@@ -34,7 +30,6 @@ const HomePage = () => {
       <WhiteSpace />
       <Supporters />
       <WhiteSpace />
-      {/* <Footer /> */}
     </div>
   );
 };
