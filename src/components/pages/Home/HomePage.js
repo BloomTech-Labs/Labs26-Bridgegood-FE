@@ -1,5 +1,5 @@
 import React from 'react';
-import Main from './Main/index';
+import Main from './Main/Main';
 import Mission from './Mission/Mission';
 import WhoWeServe from './WhoWeServe/WhoWeServe';
 import FAQ from './FAQ/FAQ';
@@ -14,12 +14,7 @@ const WhiteSpace = () => (
 );
 const HomePage = () => {
   return (
-    <div
-      style={{
-        width: '1440px',
-        margin: '0 auto',
-      }}
-    >
+    <>
       <Main />
       <WhiteSpace />
       <Mission />
@@ -30,7 +25,7 @@ const HomePage = () => {
       <WhiteSpace />
       <Supporters />
       <WhiteSpace />
-    </div>
+    </>
   );
 };
 

@@ -40,24 +40,25 @@ export default function HomeContainer({ PageContent }) {
 
   return (
     <>
-      <Layout>
-        {/* <Header> */}
+      <Layout
+        style={{
+          position: 'relative',
+          width: '1440',
+          background: '#fff',
+        }}
+      >
         <RenderHeader
           isLoggedIn={authState.isAuthenticated}
           userInfo={userInfo}
           authService={authService}
         />
-        {/* </Header> */}
-        <Content>
-          <PageContent
-            isLoggedIn={authState.isAuthenticated}
-            userInfo={userInfo}
-            authService={authService}
-          />
-        </Content>
-        <Footer>
-          <RenderFooter />
-        </Footer>
+
+        <PageContent
+          isLoggedIn={authState.isAuthenticated}
+          userInfo={userInfo}
+          authService={authService}
+        />
+        <RenderFooter />
       </Layout>
     </>
   );
