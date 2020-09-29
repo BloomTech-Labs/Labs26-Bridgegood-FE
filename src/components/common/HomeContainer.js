@@ -40,11 +40,10 @@ export default function HomeContainer({ PageContent }) {
 
   return (
     <>
-      <Layout
+      <div
         style={{
-          position: 'relative',
-          width: '1440',
-          background: '#fff',
+          height: '1440px',
+          margin: '0 auto',
         }}
       >
         <RenderHeader
@@ -58,8 +57,9 @@ export default function HomeContainer({ PageContent }) {
           userInfo={userInfo}
           authService={authService}
         />
-        <RenderFooter />
-      </Layout>
+
+        {/* <RenderFooter /> */}
+      </div>
     </>
   );
 }

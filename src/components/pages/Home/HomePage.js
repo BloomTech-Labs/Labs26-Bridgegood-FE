@@ -15,16 +15,22 @@ const WhiteSpace = () => (
 const HomePage = () => {
   return (
     <>
-      <Main />
-      <WhiteSpace />
-      <Mission />
-      <WhiteSpace />
-      <WhoWeServe />
-      <WhiteSpace />
-      <FAQ />
-      <WhiteSpace />
-      <Supporters />
-      <WhiteSpace />
+      <div
+        style={{
+          width: '1440px',
+          margin: '0 auto',
+        }}
+      >
+        <Main />
+        <Mission />
+        <WhiteSpace />
+        <WhoWeServe />
+        <WhiteSpace />
+        <FAQ />
+        <WhiteSpace />
+        <Supporters />
+        <WhiteSpace />
+      </div>
     </>
   );
 };
