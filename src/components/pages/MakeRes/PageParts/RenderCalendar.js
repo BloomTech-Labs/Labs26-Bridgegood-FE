@@ -1,31 +1,24 @@
 import React, { useState } from 'react';
-import { Calendar, Button } from 'antd';
+import { Calendar } from 'antd';
 import { connect } from 'react-redux';
 import { updateDate } from '../../../../state/actions/CalActions';
 
 function RenderCalendar(props) {
-  function onPanelChange(value, mode) {
-    console.log(value.format('YYYY-MM-DD'), mode);
-  }
   const [ newDate, setNewDate] = useState()
 
   function onSelectChange(value) {
-    console.log(value.format('YYYY-MM-DD'))
     setNewDate(value.format('YYYY-MM-DD'));
   }
   const value = newDate;
+  const ud = props.updateDate(value)
 
   return (
     <>
-      <div style={{ width: 500, border: '1px solid #4E4E4E' }}>
+      <div style={{ width: 500, border: '1px solid #4E4E4E', paddingBottom: '2.15rem' }}>
         <Calendar 
-          fullscreen={false} 
-          onPanelChange={onPanelChange}
+          fullscreen={false}
           onSelect={onSelectChange}
         />
-        <Button onClick={() => props.updateDate(value)}>
-          Select Date
-        </Button>
       </div>
       <h2> You've Selected = {props.dateOnProps}</h2>
     </>
@@ -33,7 +26,6 @@ function RenderCalendar(props) {
 };
 
 const mapStateToProps = state => {
-  console.log("STATE", state);
   return {
     dateOnProps: state.date
   };

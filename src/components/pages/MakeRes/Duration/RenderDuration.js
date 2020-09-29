@@ -1,32 +1,31 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import 'antd/dist/antd.css';
-import { Layout, Radio, Button } from 'antd';
+import { Radio } from 'antd';
 import { updateDuration } from '../../../../state/actions/DurationAction';
-
-const { Content } = Layout;
+import { updateStep } from '../../../../state/actions/StepsActions'
+import '../MakeRes.css';
 
 function RenderDuration(props) {
   const { onChange, radioStyle, value } = props;
-  console.log("Value from Duration ", value);
 
-  const noDuraction = props.durationOnProps
-  console.log(props.durationOnProps)
+  const ud = props.updateDuration(value)
+
+  const clicked = props.durationOnProps
+  console.log(clicked)
+
+const nextStep = () => {
+  if(clicked === '1-2 Hours'||'3-4 Hours'||'6 Hours') {
+    props.updateStep(1)
+  }
+}
 
   return (
-    <Layout className="layout" style={{ background: 'white' }}>
-      <Content
-        style={{
-          padding: '50px 50px',
-          margin: '5% auto',
-          border: '1px solid lightgrey',
-          background: 'white',
-        }}
-      >
-        <h1 style={{ fontSize: '25px' }}>How much time will you need at the <br/> Community Co-Working Space? </h1>
-        <Content style={{ padding: '50px 150px', margin: 'auto auto' }}>
-          <div>
+    <div className="duration-page" >
+      <div className='radio-box'>
+        <h1>How much time will you need at the <br/> Community Co-Working Space? </h1>
+        <div>
+          <div className='radio-group'>
             <Radio.Group onChange={onChange}>
               <Radio style={radioStyle} value={'1-2 Hours'} onClick={() => props.updateDuration(value)}>
                 1 - 2 Hours
@@ -40,22 +39,22 @@ function RenderDuration(props) {
             </Radio.Group>
           </div>
           <h2>THE DURATION IS = {props.durationOnProps}</h2>
-          <div style={{ padding: '50px 10px' }}>
-            <Button onClick={() => props.updateDuration(value)}>
-                <Link to="/make-res">Next</Link>
-            </Button>
+          <div className ='radioBtn'>
+            <div onClick={ud, nextStep}>
+                Next
+            </div>
           </div>
-        </Content>
-      </Content>
-    </Layout>
+        </div>
+      </div>
+    </div>
   );
 };
 
 const mapStateToProps = state => {
-  console.log("STATE", state);
   return {
-    durationOnProps: state.duration
+    durationOnProps: state.duration,
+    stepOnProps: state.currentStep
   };
 };
 
-export default connect(mapStateToProps, {updateDuration})(RenderDuration);
+export default connect(mapStateToProps, {updateDuration, updateStep})(RenderDuration);

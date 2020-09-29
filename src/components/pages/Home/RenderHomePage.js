@@ -24,7 +24,7 @@ function RenderHomePage(props) {
         </p>
         <p>
           <Button type="secondary">
-            <Link to="/res-duration">Make a reservation</Link>
+            <Link to="/make-res">Make a reservation</Link>
           </Button>
         </p>
         <p>

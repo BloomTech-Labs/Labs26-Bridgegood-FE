@@ -16,7 +16,6 @@ import { HomePage } from './components/pages/Home';
 import { config } from './utils/oktaConfig';
 import { LoadingComponent } from './components/common';
 import { MakeResPage } from './components/pages/MakeRes';
-import { DurationPage } from './components/pages/MakeRes/Duration';
 import './index.module.css';
 
 export const store = createStore(reducer, applyMiddleware(thunk));
@@ -58,7 +57,6 @@ function App() {
           component={() => <HomePage LoadingComponent={LoadingComponent} />}
         />
         <SecureRoute path="/profile-list" component={ProfileListPage} />
-        <SecureRoute path="/res-duration" component={DurationPage} />
         <SecureRoute path="/make-res" component={MakeResPage} />
         <Route component={NotFoundPage} />
       </Switch>

@@ -1,16 +1,22 @@
 /* ===== MakeResContainer.js ===== */
 
-.bigbox {
-    width: 80%;
-    margin: 5% 10%
-
+.big-box {
+    margin: 1rem 5rem 2rem
 }
 
-.ant-col h2 {
+.row {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #7E7A7A;
+}
+
+.col-1 h2,
+.col-2 h2,
+.col-3 h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2%;
+    margin: .5rem 0;
 }
 
 .components {
@@ -20,7 +26,18 @@
     align-items: center;
     width: 100%
 }
+.steps-box {
+    width: 100%;
+    background: rgba(196, 196, 196, 0.25);
+    padding: .5rem;
+    margin: -.6rem 0 0 0
+}
 
+.steps {
+    width: 30rem;
+    margin: 0 auto;
+    
+}
 /* ===== RenderRoomPick.js ===== */
 
 .roomBox {
@@ -33,23 +50,28 @@
 }
 
 .roomBtn {
-    width: 10rem;
     border: 1px #4E4E4E solid;
     border-radius: 20px;
     text-align: center;
     padding: 1.5rem 0;
     margin-bottom: 2rem;
+    width: 10rem;
 }
 
 .roomBtn:hover {
     color: #40a9ff;
-    border: 1px #40a9ff solid;;
+    border: 1px #40a9ff solid;
 }
 
-.roomBtn:active {
+.roomBtnActive {
     color: #FFFFFF;
     border: 1px #4e4e4e solid;
     background-color: #002171;
+    border-radius: 20px;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    width: 10rem;
 }
 
 /* ===== RenderTimeSlots.js ===== */
@@ -59,32 +81,122 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 75%;
-    padding: 3.8rem 0
+    padding: 2.5rem 1rem 2.35rem;
 }
-.row {
+.row-ts {
     display: flex;
 }
 
-.col {
+.col-ts {
     display: flex;
     flex-direction: column;
 }
 
-.tsbtn {
+.tsBtn {
     margin: .5rem .75rem;
     padding: .75rem 1.5rem;
     border: 1px #4E4E4E solid;
     border-radius: 20px;
 }
 
-.tsbtn:hover {
+.tsBtn:hover {
     color: #40a9ff;
     border: 1px #40a9ff solid;
 }
 
-.tsbtn:active {
+.tsBtn:active {
     color: #FFFFFF;
     border: 1px #4e4e4e solid;
     background-color: #002171;
+}
+
+.tsBtnActive {
+    margin: .5rem .75rem;
+    padding: .75rem 1.5rem;
+    border: 1px #4E4E4E solid;
+    border-radius: 20px;
+    color: #FFFFFF;
+    border: 1px #4e4e4e solid;
+    background-color: #002171;
+}
+
+.greyOut {
+    border: 1px solid #E5E5E5;
+    border-radius: 20px;
+    color: #E5E5E5;
+    margin: .5rem .75rem;
+    padding: .75rem 1.5rem;
+}
+
+.finalBtn {
+    border: 2px #C5922C solid;
+    border-radius: 4px;
+    background-color: #C5922C;
+    color: #FFFFFF;
+    margin-top: 1rem;
+    padding: .3rem 1.5rem;
+}
+
+.finalBtn a{
+    color: #FFFFFF;
+}
+
+/* ===== ResSteps ===== */
+
+.step-def{
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    margin: .5rem 0 0 -1rem;
+    width: 38rem;
+}
+
+.step-2 {
+    margin-left: 3rem;
+}
+
+.step-3 {
+    margin-right: 2rem;
+}
+
+.ant-steps-item-title::after {
+    background-color: #C4C4C4;
+}
+
+/* ===== RenderDuration ===== */
+
+.duration-page {
+    background: url("../../../assets/images/bridgegoodesignstudio2.jpg") center 0 no-repeat;
+    background-size: contain;
+    height: 35rem;
+    display: flex;
+}
+
+.radio-box {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 32rem;
+    margin: 4.5rem auto 7rem;
+}
+
+.radio-box h1{
+    font-size: 26px;
+    margin: 1.5rem 3rem 1rem;
+}
+
+.radio-group {
+    margin: 2rem 12rem 0; 
+}
+
+
+
+.radioBtn {
+    border: 2px solid #E5E5E5;
+    background: #C4C4C4;
+    padding: 1.2rem 2rem;
+    color: #FFFFFF;
+    width: 10rem;
+    margin: 2.5rem auto 1rem;
+    text-align: center;
+    font-size: 18px;
 }
