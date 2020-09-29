@@ -15,7 +15,7 @@ const WhiteSpace = () => (
   ></div>
 );
 
-const HomePage = () => {
+const HomePage = ({ LoadingComponent }) => {
   return (
     <div
       style={{
