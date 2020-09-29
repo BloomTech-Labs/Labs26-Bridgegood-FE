@@ -5,7 +5,7 @@ import Buttons from './Btns/Buttons';
 
 import classes from './Header.module.css';
 
-const RenderHeader = () => {
+function RenderHeader() {
   return (
     <header className={classes.Header}>
       <Logo />
@@ -13,6 +13,6 @@ const RenderHeader = () => {
       <Buttons />
     </header>
   );
-};
+}
 
 export default RenderHeader;
