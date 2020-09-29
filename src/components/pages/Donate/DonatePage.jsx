@@ -1,85 +1,71 @@
 // The Donate page content goes here
 import React from 'react';
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Image, Space, Row, Col, Menu, Breadcrumb } from 'antd';
 import {
   UserOutlined,
   LaptopOutlined,
   NotificationOutlined,
 } from '@ant-design/icons';
 
+import VenmoPay from './VenmoPay';
+
+import img from '../../../assets/images/bridgegood_group_1.png';
+import './DonatePage.css';
+
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
+
+// const style = { background: '#0092ff', padding: '8px 0' };
+// const style = { background: '#0092ff' };
+
+// const style = { disabled: null };
 
 export default function DonatePage({ isLoggedIn, userInfo, authService }) {
   // const { userInfo, authService } = props;
   return (
     <>
       <Layout className="layout">
-        {!isLoggedIn && <h1>Not logged in</h1>}
-
-        {isLoggedIn && !userInfo && <h1>Loading Profile</h1>}
-
-        {isLoggedIn && userInfo && <h1>Logged In and Profile Available</h1>}
-
-        {/* <Header className="header">
-        <div className="logo" />
-        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-          <Menu.Item key="1">nav 1</Menu.Item>
-          <Menu.Item key="2">nav 2</Menu.Item>
-          <Menu.Item key="3">nav 3</Menu.Item>
-        </Menu>
-      </Header>
-
-      <Content style={{ padding: '0 50px' }}>
-        <Breadcrumb style={{ margin: '16px 0' }}>
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
-          <Breadcrumb.Item>List</Breadcrumb.Item>
-          <Breadcrumb.Item>App</Breadcrumb.Item>
-        </Breadcrumb>
-        <Layout
-          className="site-layout-background"
-          style={{ padding: '24px 0' }}
-        >
-          <Sider className="site-layout-background" width={200}>
-            <Menu
-              mode="inline"
-              defaultSelectedKeys={['1']}
-              defaultOpenKeys={['sub1']}
-              style={{ height: '100%' }}
-            >
-              <SubMenu key="sub1" icon={<UserOutlined />} title="subnav 1">
-                <Menu.Item key="1">option1</Menu.Item>
-                <Menu.Item key="2">option2</Menu.Item>
-                <Menu.Item key="3">option3</Menu.Item>
-                <Menu.Item key="4">option4</Menu.Item>
-              </SubMenu>
-              <SubMenu key="sub2" icon={<LaptopOutlined />} title="subnav 2">
-                <Menu.Item key="5">option5</Menu.Item>
-                <Menu.Item key="6">option6</Menu.Item>
-                <Menu.Item key="7">option7</Menu.Item>
-                <Menu.Item key="8">option8</Menu.Item>
-              </SubMenu>
-              <SubMenu
-                key="sub3"
-                icon={<NotificationOutlined />}
-                title="subnav 3"
-              >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
-              </SubMenu>
-            </Menu>
-          </Sider>
-          <Content style={{ padding: '0 24px', minHeight: 280 }}>
-            Content
-          </Content>
-          <div className="site-layout-content">Content</div>
-        </Layout>
-      </Content>
-      <Footer style={{ textAlign: 'center' }}>
-        Ant Design ©2018 Created by Ant UED
-      </Footer> */}
+        <Content>
+          <Row gutter={[16, 16]} justify="space-around" align="middle">
+            <Col span={10}>
+              {!isLoggedIn && <h1>Not logged in</h1>}
+              {isLoggedIn && !userInfo && <h1>Loading Profile</h1>}
+              {isLoggedIn && userInfo && (
+                <h1>Logged In and Profile Available</h1>
+              )}
+              <VenmoPay containerId={Math.ceil(Math.random() * 1000)} />
+            </Col>
+            <Col span={10}>
+              <Row gutter={[2, 16]} justify="space-around" align="middle">
+                <Col span={7}>
+                  <h2 className="donate-title">Funded By The Community</h2>
+                </Col>
+                <Col span={15}>
+                  <p className="donate-content">
+                    100% of your donations help fund the BRIDGEGOOD Community
+                    Studio, which serves the Bay Area students of design.
+                  </p>
+                </Col>
+              </Row>
+              <Row gutter={[2, 16]} justify="space-around" align="middle">
+                <Col span={7}>
+                  <h2 className="donate-title">Funded By The Community</h2>
+                </Col>
+                <Col span={15}>
+                  <p className="donate-content">
+                    100% of your donations help fund the BRIDGEGOOD Community
+                    Studio, which serves the Bay Area students of design.
+                  </p>
+                </Col>
+              </Row>
+              <Row justify="space-around" align="middle">
+                <Col>
+                  <Image src={img} />
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </Content>
       </Layout>
     </>
   );
