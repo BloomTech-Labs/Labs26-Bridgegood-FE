@@ -1,4 +1,6 @@
 .WhoWeServe {
+  width: 1440px;
+  margin: 0 auto;
   height: 562px;
   display: flex;
   flex-direction: column;

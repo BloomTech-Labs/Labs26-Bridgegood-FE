@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
 import OktaSignIn from '@okta/okta-signin-widget';
-import { Button } from 'antd';
 import '@okta/okta-signin-widget/dist/css/okta-sign-in.min.css';
 import { config } from '../../../utils/oktaConfig';
+import img from '../../../assets/images/logo.png';
 
 const LoginContainer = () => {
-  console.log('Footer');
   useEffect(() => {
     const { pkce, issuer, clientId, redirectUri, scopes } = config;
     // destructure your config so that you can pass it into the required fields in your widget.
@@ -19,11 +18,11 @@ const LoginContainer = () => {
       },
       features: { registration: false },
       // turning this feature on allows your widget to use Okta for user registration
-      logo: '',
+      logo: img,
       // add your custom logo to your signing/register widget here.
       i18n: {
         en: {
-          'primaryauth.title': 'LOG IN TO RESERVE',
+          'primaryauth.title': 'LOG IN',
           // change title for your app
         },
       },

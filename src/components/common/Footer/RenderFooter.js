@@ -1,15 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Button } from 'antd';
 import classes from './Footer.module.css';
-import PhoneIcon from '../../../../../assets/images/phoneIcon.png';
-import MsgIcon from '../../../../../assets/images/msgIcon.png';
-import TimeIcon from '../../../../../assets/images/timeIcon.png';
-import LocationIcon from '../../../../../assets/images/locationIcon.png';
-import HeartIcon from '../../../../../assets/images/heartIcon.png';
+import PhoneIcon from '../../../assets/images/phoneIcon.png';
+import MsgIcon from '../../../assets/images/msgIcon.png';
+import TimeIcon from '../../../assets/images/timeIcon.png';
+import LocationIcon from '../../../assets/images/locationIcon.png';
+import HeartIcon from '../../../assets/images/heartIcon.png';
 
-const Footer = () => {
+const Footer = props => {
   return (
-    <footer className={classes.Footer}>
+    <footer classes={classes.Footer}>
       <div className={classes.Top}>
         <section className={classes.Left}>
           <div className={classes.Icon}>
@@ -57,12 +57,8 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <Link to="/login">
-              <button>Login</button>
-            </Link>
-            <Link>
-              <button>Donate</button>
-            </Link>
+            <Button>Login</Button>
+            <Button>Donate</Button>
             <div className={classes.Icon}>
               <img src={HeartIcon} alt="icon" />
               <p>Proudly rooted in Oakland</p>
