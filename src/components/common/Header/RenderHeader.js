@@ -7,11 +7,11 @@ import classes from './Header.module.css';
 
 function RenderHeader({ isLoggedIn, userInfo, authService }) {
   return (
-    <header className={classes.Header}>
+    <div className={classes.Header}>
       <Logo />
       <Nav />
       <Buttons />
-    </header>
+    </div>
   );
 }
 
