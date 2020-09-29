@@ -6,6 +6,7 @@ import { config } from '../../../utils/oktaConfig';
 import img from '../../../assets/images/logo.png';
 import SignUp from '../../common/SignUp';
 import Login from '../../common/Login';
+import './Login.less';
 
 const LoginContainer = () => {
   useEffect(() => {
@@ -52,12 +53,17 @@ const LoginContainer = () => {
   }, []);
 
   return (
-    <div>
-      $('div *').prop('disabled',true);
-      <section className="main-container">
+    <div className="loginBox">
+      <section>
+        <Login enabled={true} />
+      </section>
+      <section>
+        <SignUp enabled={false} />
+      </section>
+      {/* <section className="main-container">
         <div className="welcome-text"></div>
         <div id="sign-in-widget" />
-        <Divider orientation="left">Percentage columns</Divider>
+        <Divider orientation="left"></Divider>
         <Row>
           <Col flex={1}>
             <Login enabled={true} />
@@ -66,8 +72,8 @@ const LoginContainer = () => {
             <SignUp enabled={false} />
           </Col>
         </Row>
-        <Divider orientation="left">Fill rest</Divider>
-      </section>
+        <Divider orientation="left"></Divider>
+      </section> */}
     </div>
   );
 };

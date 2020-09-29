@@ -14,43 +14,9 @@ import {
 // const {  QuestionCircleOutlined  } = icons;
 const { Option } = Select;
 const AutoCompleteOption = AutoComplete.Option;
-const residences = [
-  {
-    value: 'zhejiang',
-    label: 'Zhejiang',
-    children: [
-      {
-        value: 'hangzhou',
-        label: 'Hangzhou',
-        children: [
-          {
-            value: 'xihu',
-            label: 'West Lake',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    value: 'jiangsu',
-    label: 'Jiangsu',
-    children: [
-      {
-        value: 'nanjing',
-        label: 'Nanjing',
-        children: [
-          {
-            value: 'zhonghuamen',
-            label: 'Zhong Hua Men',
-          },
-        ],
-      },
-    ],
-  },
-];
 const formItemLayout = {
   labelCol: {
-    xs: {
+    xl: {
       span: 24,
     },
     sm: {
@@ -68,7 +34,7 @@ const formItemLayout = {
 };
 const tailFormItemLayout = {
   wrapperCol: {
-    xs: {
+    xl: {
       span: 24,
       offset: 0,
     },
@@ -86,18 +52,6 @@ export default function SignUp() {
     console.log('Received values of form: ', values);
   };
 
-  const prefixSelector = (
-    <Form.Item name="prefix" noStyle>
-      <Select
-        style={{
-          width: 70,
-        }}
-      >
-        <Option value="86">+86</Option>
-        <Option value="87">+87</Option>
-      </Select>
-    </Form.Item>
-  );
   const [autoCompleteResult, setAutoCompleteResult] = useState([]);
 
   const onWebsiteChange = value => {
@@ -110,10 +64,6 @@ export default function SignUp() {
     }
   };
 
-  const websiteOptions = autoCompleteResult.map(website => ({
-    label: website,
-    value: website,
-  }));
   return (
     <Form
       {...formItemLayout}
@@ -128,7 +78,7 @@ export default function SignUp() {
         rules={[
           {
             required: true,
-            message: 'Please input your First Name',
+            message: 'Please enter your First Name',
           },
         ]}
       >
@@ -141,7 +91,7 @@ export default function SignUp() {
         rules={[
           {
             required: true,
-            message: 'Please input your Last Name',
+            message: 'Please enter your Last Name',
           },
         ]}
       >
@@ -154,7 +104,7 @@ export default function SignUp() {
         rules={[
           {
             required: true,
-            message: 'Please input your school that your enrolled into',
+            message: 'Please enter your school that your enrolled into',
           },
         ]}
       >
@@ -180,11 +130,11 @@ export default function SignUp() {
         rules={[
           {
             type: 'email',
-            message: 'The input is not valid E-mail',
+            message: 'The email provided is not valid',
           },
           {
             required: true,
-            message: 'Please input your E-mail',
+            message: 'Please enter your E-mail',
           },
         ]}
       >
@@ -231,14 +181,15 @@ export default function SignUp() {
             validator: (_, value) =>
               value
                 ? Promise.resolve()
-                : Promise.reject('Should accept agreement'),
+                : Promise.reject('Please accept agreement'),
           },
         ]}
         {...tailFormItemLayout}
       >
         <Checkbox>
-          By checking this, I confirm that I am 18 years of age and older and I
-          agree to follow the terms for using this space.
+          By checking this, I confirm that I am 18 years of age and older{' '}
+          <br></br>
+          and I agree to follow the terms for using this space.
         </Checkbox>
       </Form.Item>
       <Form.Item {...tailFormItemLayout}>
