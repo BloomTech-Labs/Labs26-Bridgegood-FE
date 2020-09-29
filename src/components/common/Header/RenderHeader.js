@@ -5,7 +5,7 @@ import Buttons from './Btns/Buttons';
 
 import classes from './Header.module.css';
 
-function RenderHeader() {
+function RenderHeader({ isLoggedIn, userInfo, authService }) {
   return (
     <header className={classes.Header}>
       <Logo />
