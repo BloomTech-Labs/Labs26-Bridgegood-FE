@@ -4,7 +4,7 @@ import './FAQ.less';
 const FAQ = props => {
   return (
     <section className="FAQ">
-      <h3>FREQUENTLY ASKED QUESTIONS</h3>
+      <h4>FREQUENTLY ASKED QUESTIONS</h4>
       <div>
         <h2>How do I come to do work at this awesome space?</h2>
         <p>
