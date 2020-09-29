@@ -7,7 +7,7 @@ import TimeIcon from '../../../assets/images/timeIcon.png';
 import LocationIcon from '../../../assets/images/locationIcon.png';
 import HeartIcon from '../../../assets/images/heartIcon.png';
 
-const Footer = props => {
+const RenderFooter = props => {
   return (
     <footer classes={classes.Footer}>
       <div className={classes.Top}>
@@ -75,4 +75,4 @@ const Footer = props => {
     </footer>
   );
 };
-export default Footer;
+export default RenderFooter;
