@@ -8,7 +8,8 @@ const Supporters = props => {
   return (
     <>
       <section className="Supporters">
-        <h3>BRIDGEGOOD SUPPORTERS</h3>
+        <h4>BRIDGEGOOD SUPPORTERS</h4>
+
         <div className="Logos">
           <div>
             <img src={GoldenStateLogo} alt="logon" />
