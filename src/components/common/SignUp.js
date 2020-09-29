@@ -120,10 +120,6 @@ export default function SignUp() {
       form={form}
       name="register"
       onFinish={onFinish}
-      // initialValues={{
-      //   residence: ['zhejiang', 'hangzhou', 'xihu'],
-      //   prefix: '86',
-      // }}
       scrollToFirstError
     >
       <Form.Item
