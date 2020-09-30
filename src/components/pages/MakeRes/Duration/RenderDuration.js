@@ -14,11 +14,11 @@ function RenderDuration(props) {
   const clicked = props.durationOnProps
   console.log(clicked)
 
-const nextStep = () => {
-  if(clicked === '1-2 Hours'||'3-4 Hours'||'6 Hours') {
-    props.updateStep(1)
+  const nextStep = () => {
+    if(clicked ==! '0') {
+      props.updateStep(1)
+    }
   }
-}
 
   return (
     <div className="duration-page" >
@@ -39,10 +39,8 @@ const nextStep = () => {
             </Radio.Group>
           </div>
           <h2>THE DURATION IS = {props.durationOnProps}</h2>
-          <div className ='radioBtn'>
-            <div onClick={ud, nextStep}>
-                Next
-            </div>
+          <div className ='radioBtn' onClick={() =>props.updateStep(1)}>
+            Next
           </div>
         </div>
       </div>

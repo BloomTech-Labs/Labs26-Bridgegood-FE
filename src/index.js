@@ -5,7 +5,6 @@ import { Security, LoginCallback, SecureRoute } from '@okta/okta-react';
 import 'antd/dist/antd.less';
 
 import { config } from './utils/oktaConfig';
-import { LoadingComponent } from './components/common';
 
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
@@ -18,16 +17,13 @@ import {
   NotFoundPage,
   DonatePage,
   MakeResPage,
-  ResTimePage,
   WelcomeBoard,
 } from './components/pages';
 import HomeContainer from './components/common/HomeContainer';
 
-// Yasir
 import './index.module.css';
 
 export const store = createStore(reducer, applyMiddleware(thunk));
-console.log("CURRENT STATE from src/index =====>", store.getState())
 
 ReactDOM.render(
   <Router>
@@ -67,11 +63,7 @@ function App() {
           component={() => <HomeContainer PageContent={HomePage} />}
         />
         <SecureRoute
-          path="/reserve"
-          component={() => <HomeContainer PageContent={ResTimePage} />}
-        />
-        <SecureRoute
-          path="/reserve-2"
+          path="/make-res"
           component={() => <HomeContainer PageContent={MakeResPage} />}
         />
         <Route
@@ -83,12 +75,6 @@ function App() {
           component={() => <HomeContainer PageContent={DonatePage} />}
         />
         <Route component={() => <HomeContainer PageContent={NotFoundPage} />} />
-        {/* <SecureRoute path="/profile" component={ProfileListPage} /> */}
-        {/* <Route
-          path="/"
-          exact
-          component={() => <HomePage LoadingComponent={LoadingComponent} />}
-        /> */}
       </Switch>
     </Security>
   );

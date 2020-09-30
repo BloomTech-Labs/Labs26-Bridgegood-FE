@@ -7,6 +7,20 @@ import '../MakeRes.css'
 function RenderTimeSlot(props) {
   const duration = props.duration
   const clicked = props.timeSlotOnProps
+
+  const passiveState = {
+    duration: '0',
+    date: '2011-11-11',
+    room: 'None',
+    time_slot: "None",
+  }
+
+  const nextStep = () => {
+    if(props.timeSlotOnProps ==! 'None') {
+      props.updateStep(2)
+    }
+  }
+
   if (duration === '1-2 Hours'){
     return (
       <>
@@ -42,8 +56,7 @@ function RenderTimeSlot(props) {
             </div>
           </div> 
           <div className='finalBtn'>
-            <Link to="/"> Finalize Reservation</Link>
-           
+            Finalize Reservation
           </div>  
         </div>
       <h2> You've Selected = {props.timeSlotOnProps}</h2>
@@ -81,7 +94,7 @@ function RenderTimeSlot(props) {
             </div>
           </div> 
           <div className='finalBtn'>
-            <Link to="/"> Finalize Reservation</Link>
+            Finalize Reservation
            
           </div>  
         </div>
@@ -114,7 +127,7 @@ function RenderTimeSlot(props) {
             </div>
           </div> 
           <div className='finalBtn'>
-            <Link to="/"> Finalize Reservation</Link>
+            Finalize Reservation
            
           </div>  
         </div>
