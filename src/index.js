@@ -2,6 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, useHistory,Switch } from 'react-router-dom';
 import { Security, LoginCallback, SecureRoute } from '@okta/okta-react';
+
+import { createStore, applyMiddleware } from 'redux';
+import { connect, Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+
 import 'antd/dist/antd.less';
 
 import { config } from './utils/oktaConfig';
@@ -24,6 +29,9 @@ import HomeContainer from './components/common/HomeContainer';
 import './index.module.css';
 
 export const store = createStore(reducer, applyMiddleware(thunk));
+
+import { Reducer as reducer } from './state/reducers/index';
+const store = createStore(reducer, applyMiddleware(thunk));
 
 ReactDOM.render(
   <Router>
