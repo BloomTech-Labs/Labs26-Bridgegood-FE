@@ -8,15 +8,31 @@ import { useOktaAuth } from '@okta/okta-react';
 import AdminHeader from './AdminHeader';
 import AdminFooter from './AdminFooter';
 
-import { Layout } from 'antd';
+import { Layout, Menu, Breadcrumb } from 'antd';
+import {
+  DesktopOutlined,
+  PieChartOutlined,
+  FileOutlined,
+  TeamOutlined,
+  UserOutlined,
+  LaptopOutlined,
+  NotificationOutlined,
+  AppstoreOutlined,
+  MenuUnfoldOutlined,
+  MenuFoldOutlined,
+  ContainerOutlined,
+  MailOutlined,
+} from '@ant-design/icons';
 
 const { Header, Footer, Sider, Content } = Layout;
+const { SubMenu } = Menu;
 
 export default function AdminContainer({ PageContent }) {
   const { authState, authService } = useOktaAuth();
   const [userInfo, setUserInfo] = useState(null);
   // eslint-disable-next-line
   const [memoAuthService] = useMemo(() => [authService], []);
+  const [sideCollapsed, setSideCollapsed] = useState(false);
 
   useEffect(() => {
     let isSubscribed = true;
@@ -37,6 +53,11 @@ export default function AdminContainer({ PageContent }) {
     return () => (isSubscribed = false);
   }, [memoAuthService]);
 
+  const onSideCollapse = collapsed => {
+    console.log(collapsed);
+    setSideCollapsed(collapsed);
+  };
+
   return (
     <>
       <Layout>
@@ -46,7 +67,21 @@ export default function AdminContainer({ PageContent }) {
           authService={authService}
         />
         <Layout>
-          <Layout.Sider>Sider</Layout.Sider>
+          <Sider width={200} className="site-layout-background">
+            <Menu
+              mode="inline"
+              defaultSelectedKeys={['dashboard']}
+              theme="dark"
+              style={{ height: '100%', borderRight: 5 }}
+            >
+              <Menu.Item key="dashboard" icon={<DesktopOutlined />}>
+                Dashboard
+              </Menu.Item>
+              <Menu.Item key="users" icon={<UserOutlined />}>
+                Users
+              </Menu.Item>
+            </Menu>
+          </Sider>
           <PageContent
             isLoggedIn={authState.isAuthenticated}
             userInfo={userInfo}
