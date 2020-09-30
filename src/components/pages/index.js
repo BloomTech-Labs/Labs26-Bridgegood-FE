@@ -13,7 +13,7 @@ import DonatePage from './Donate/DonatePage';
 import { LoginPage } from './Login';
 import { MakeResPage } from './MakeRes';
 import WelcomeBoard from './WelcomeBoard';
-
+import AdminPage from './Admin/AdminPage';
 export {
   HomePage,
   NotFoundPage,
@@ -21,4 +21,5 @@ export {
   WelcomeBoard,
   MakeResPage,
   DonatePage,
+  AdminPage,
 };

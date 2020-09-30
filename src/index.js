@@ -25,8 +25,10 @@ import {
   DonatePage,
   MakeResPage,
   WelcomeBoard,
+  AdminPage,
 } from './components/pages';
 import HomeContainer from './components/common/HomeContainer';
+import AdminContainer from './components/common/AdminContainer';
 
 const store = createStore(reducer, applyMiddleware(thunk));
 
@@ -79,6 +81,11 @@ function App() {
           path="/donate"
           component={() => <HomeContainer PageContent={DonatePage} />}
         />
+        <Route
+          path="/admin"
+          component={() => <AdminContainer PageContent={AdminPage} />}
+        />
+
         <Route component={() => <HomeContainer PageContent={NotFoundPage} />} />
       </Switch>
     </Security>
