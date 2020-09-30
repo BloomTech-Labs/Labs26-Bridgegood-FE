@@ -1,35 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.less';
 import {
   BrowserRouter as Router,
   Route,
   useHistory,
   Switch,
 } from 'react-router-dom';
+import thunk from 'redux-thunk';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
 import { Security, LoginCallback, SecureRoute } from '@okta/okta-react';
 
 import 'antd/dist/antd.less';
 
-import { NotFoundPage } from './components/pages/NotFound';
-import { ProfileListPage } from './components/pages/ProfileList';
-import { LoginPage } from './components/pages/Login';
-import { HomePage } from './components/pages/Home';
 import { config } from './utils/oktaConfig';
-import { LoadingComponent } from './components/common';
-import { MakeResPage } from './components/pages/MakeRes';
-import { ResTimePage } from './components/pages/MakeRes/ResTime';
-import WelcomeBoard from './components/pages/WelcomeBoard';
-import Header from './components/pages/Home/Landing/Header/';
-import Footer from './components/pages/Home/Landing/Footer/Footer';
-import { DonatePage } from './components/pages/Donate';
 
-// Yasir
-import './index.module.css';
+import { makeResReducer as reducer } from './state/reducers/MakeResReducer';
+
+import {
+  HomePage,
+  LoginPage,
+  NotFoundPage,
+  DonatePage,
+  MakeResPage,
+  WelcomeBoard,
+} from './components/pages';
+import HomeContainer from './components/common/HomeContainer';
+
+const store = createStore(reducer, applyMiddleware(thunk));
 
 ReactDOM.render(
   <Router>
     <React.StrictMode>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </React.StrictMode>
   </Router>,
   document.getElementById('root')
@@ -48,23 +54,33 @@ function App() {
 
   return (
     <Security {...config} onAuthRequired={authHandler}>
-      <Header />
       <Switch>
+        <Route
+          path="/login"
+          component={() => <HomeContainer PageContent={LoginPage} />}
+        />
+
+        {/* <Route path="/login" component={LoginPage} /> */}
+        <Route path="/implicit/callback" component={LoginCallback} />
         <Route
           path="/"
           exact
-          component={() => <HomePage LoadingComponent={LoadingComponent} />}
+          component={() => <HomeContainer PageContent={HomePage} />}
         />
-        <Route path="/login" component={LoginPage} />
-        <Route path="/implicit/callback" component={LoginCallback} />
-        <Route path="/donate" component={DonatePage} />
-        <SecureRoute path="/welcome" component={WelcomeBoard} />
-        <SecureRoute path="/profile" component={ProfileListPage} />
-        <SecureRoute path="/make-res-amount" component={ResTimePage} />
-        <SecureRoute path="/make-res" component={MakeResPage} />
-        <Route component={NotFoundPage} />
+        <SecureRoute
+          path="/make-res"
+          component={() => <HomeContainer PageContent={MakeResPage} />}
+        />
+        <Route
+          path="/welcome"
+          component={() => <HomeContainer PageContent={WelcomeBoard} />}
+        />
+        <Route
+          path="/donate"
+          component={() => <HomeContainer PageContent={DonatePage} />}
+        />
+        <Route component={() => <HomeContainer PageContent={NotFoundPage} />} />
       </Switch>
-      <Footer />
     </Security>
   );
 }
