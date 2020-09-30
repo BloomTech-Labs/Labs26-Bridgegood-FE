@@ -1,217 +1,225 @@
 import React from 'react';
-import { useHistory, Link } from 'react-router-dom';
-import axios from 'axios';
-import { Form, Input, Button } from 'antd';
-import '../../../styles/global.css';
-import join from '../../../media/join.svg';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { Checkbox } from 'antd';
 
-// TO-DO's:
-// - handle POST request to backend API for registration
+import { userActions } from '../_actions';
 
-const SignUp = () => {
-  const newUser = {
-    firstname: '',
-    lastname: '',
-    schoolenrolled: '',
-    bridgegoodusername: '',
-    email: '',
-    phonenumber: '',
-    password: '',
-    created_at: new Date(),
-    updated_at: new Date(),
-  };
+class SignUpContainer extends React.Component {
+  constructor(props) {
+    super(props);
 
-  const history = useHistory();
-  const [form] = Form.useForm();
+    this.state = {
+      user: {
+        firstName: '',
+        lastName: '',
+        schoolEnrolled: '',
+        username: '',
+        email: '',
+        phoneNumber: '',
+        password: '',
+      },
+      submitted: false,
+    };
 
-  // ant design form styling
-  const layout = {
-    wrapperCol: { span: 24 },
-  };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
-  const buttonLayout = {
-    col: { span: 24 },
-  };
+  // onChange(e) {
+  //   console.log(`checked = ${e.target.checked}`);
+  // }
 
-  // submitting form values
-  const handleSubmit = values => {
-    console.log(values);
-    axios
-      .post('', values)
-      .then(res => {
-        console.log(res);
-        history.push('./dashboard');
-      })
-      .catch(err => {
-        console.log(err);
-        alert('There was an error creating an account. Please try again.');
-      });
-  };
+  handleChange(event) {
+    const { name, value } = event.target;
+    const { user } = this.state;
+    this.setState({
+      user: {
+        ...user,
+        [name]: value,
+      },
+    });
+  }
 
-  return (
-    <div className="signup-container">
-      <img src={join} alt=""></img>
+  handleSubmit(event) {
+    event.preventDefault();
 
-      <div className="signup-form">
-        <h1>Sign Up</h1>
+    this.setState({ submitted: true });
+    const { user } = this.state;
+    if (
+      user.firstName &&
+      user.lastName &&
+      user.schoolEnrolled &&
+      user.username &&
+      user.email &&
+      user.phoneNumber &&
+      user.password
+    ) {
+      this.props.register(user);
+    }
+  }
 
-        <Form
-          {...layout}
-          form={form}
-          className="signup-form"
-          name="register"
-          initialValues={{
-            created_at: new Date(),
-            updated_at: new Date(),
-          }}
-          scrollToFirstError
-          onFinish={handleSubmit}
-        >
-          <Form.Item
-            name="firstName"
-            required
-            rules={[
-              {
-                required: true,
-                message: 'Please input your first name!',
-              },
-            ]}
+  render() {
+    const { registering } = this.props;
+    const { user, submitted } = this.state;
+    return (
+      <div className="col-md-6 col-md-offset-3">
+        <h2>CREATE AN ACCOUNT</h2>
+        <form name="form" onSubmit={this.handleSubmit}>
+          <div
+            className={
+              'form-group' + (submitted && !user.firstName ? ' has-error' : '')
+            }
           >
-            <Input placeholder="First Name" />
-          </Form.Item>
-
-          <Form.Item
-            name="lastName"
-            required
-            rules={[
-              {
-                required: true,
-                message: 'Please input your last name!',
-              },
-            ]}
+            <label htmlFor="firstName">First Name</label>
+            <input
+              type="text"
+              className="form-control"
+              name="firstName"
+              value={user.firstName}
+              onChange={this.handleChange}
+            />
+            {submitted && !user.firstName && (
+              <div className="help-block">First Name is required</div>
+            )}
+          </div>
+          <div
+            className={
+              'form-group' + (submitted && !user.lastName ? ' has-error' : '')
+            }
           >
-            <Input placeholder="Last Name" />
-          </Form.Item>
-
-          <Form.Item
-            name="schoolenrolled"
-            required
-            rules={[
-              {
-                type: 'schoolenrolled',
-                message: 'The input is not a valid school!',
-              },
-              {
-                required: true,
-                message: 'Please input the school your enrolled with!',
-              },
-            ]}
+            <label htmlFor="lastName">Last Name</label>
+            <input
+              type="text"
+              className="form-control"
+              name="lastName"
+              value={user.lastName}
+              onChange={this.handleChange}
+            />
+            {submitted && !user.lastName && (
+              <div className="help-block">Last Name is required</div>
+            )}
+          </div>
+          <div
+            className={
+              'form-group' +
+              (submitted && !user.schoolEnrolled ? ' has-error' : '')
+            }
           >
-            <Input placeholder="School Enrolled" />
-          </Form.Item>
-
-          <Form.Item
-            name="bridgegoodusername"
-            required
-            rules={[
-              {
-                type: 'bridgegoodusername',
-              },
-              {
-                required: true,
-                message: 'Please input a bridgegood username!',
-              },
-            ]}
+            <label htmlFor="schoolEnrolled">School Enrolled</label>
+            <input
+              type="text"
+              className="form-control"
+              name="schoolEnrolled"
+              value={user.schoolEnrolled}
+              onChange={this.handleChange}
+            />
+            {submitted && !user.schoolEnrolled && (
+              <div className="help-block">School Enrolled is required</div>
+            )}
+          </div>
+          <div
+            className={
+              'form-group' + (submitted && !user.username ? ' has-error' : '')
+            }
           >
-            <Input placeholder="BRIDGEGOOD username" />
-          </Form.Item>
-
-          <Form.Item
-            name="email"
-            rules={[
-              {
-                type: 'email',
-                message: 'The input is not valid E-mail!',
-              },
-              {
-                required: true,
-                message: 'Please input your E-mail!',
-              },
-            ]}
+            <label htmlFor="username">BRIDGEGOOD username</label>
+            <input
+              type="text"
+              className="form-control"
+              name="username"
+              value={user.username}
+              onChange={this.handleChange}
+            />
+            {submitted && !user.username && (
+              <div className="help-block">Username is required</div>
+            )}
+          </div>
+          <div
+            className={
+              'form-group' + (submitted && !user.email ? ' has-error' : '')
+            }
           >
-            <Input placeholder="Email" />
-          </Form.Item>
-
-          <Form.Item
-            name="phonenumber"
-            rules={[
-              {
-                type: 'phonenumber',
-                message: 'The input is not valid E-mail!',
-              },
-              {
-                required: true,
-                message: 'Please input your E-mail!',
-              },
-            ]}
+            <label htmlFor="email">Email</label>
+            <input
+              type="text"
+              className="form-control"
+              name=""
+              value={user.email}
+              onChange={this.handleChange}
+            />
+            {submitted && !user.email && (
+              <div className="help-block">email is required</div>
+            )}
+          </div>
+          <div
+            className={
+              'form-group' +
+              (submitted && !user.phoneNumber ? ' has-error' : '')
+            }
           >
-            <Input placeholder="Phone Number" />
-          </Form.Item>
-
-          <Form.Item
-            name="password"
-            rules={[
-              {
-                required: true,
-                message: 'Please input your password!',
-              },
-            ]}
-            hasFeedback
+            <label htmlFor="phoneNumber">Phone Number</label>
+            <input
+              type="text"
+              className="form-control"
+              name=""
+              value={user.phoneNumber}
+              onChange={this.handleChange}
+            />
+            {submitted && !user.phoneNumber && (
+              <div className="help-block">Phone Number is required</div>
+            )}
+          </div>
+          <div
+            className={
+              'form-group' + (submitted && !user.password ? ' has-error' : '')
+            }
           >
-            <Input.Password placeholder="Password" />
-          </Form.Item>
-
-          <Form.Item
-            name="confirm"
-            dependencies={['password']}
-            hasFeedback
-            rules={[
-              {
-                required: true,
-                message: 'Please confirm your password!',
-              },
-              ({ getFieldValue }) => ({
-                validator(rule, value) {
-                  if (!value || getFieldValue('password') === value) {
-                    return Promise.resolve();
-                  }
-
-                  return Promise.reject(
-                    'The two passwords that you entered do not match!'
-                  );
-                },
-              }),
-            ]}
-          >
-            <Input.Password placeholder="Confirm Password" />
-          </Form.Item>
-
-          <Form.Item {...buttonLayout}>
-            <Button type="primary" htmlType="submit" block="True">
-              Register
-            </Button>
-          </Form.Item>
-
-          <Form.Item name="created_at" />
-          <Form.Item name="updated_at" />
-        </Form>
-
-        <p>
-          Already have an account? <Link to="/login">Log in</Link>
-        </p>
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              className="form-control"
+              name="password"
+              value={user.password}
+              onChange={this.handleChange}
+            />
+            {submitted && !user.password && (
+              <div className="help-block">Password is required</div>
+            )}
+          </div>
+          <div className="form-group">
+            return (
+            {/* <div>
+                  <input type="checkbox" name="check1" checked={this.state.check1} />
+                </div>
+              )                */}
+            <button className="btn btn-primary">Create Account</button>
+            {registering && (
+              <img src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+            )}
+            <Link to="/login" className="btn btn-link">
+              Cancel
+            </Link>
+          </div>
+        </form>
       </div>
-    </div>
-  );
+    );
+  }
+}
+
+function mapState(state) {
+  const { registering } = state.registration;
+  return { registering };
+}
+
+const actionCreators = {
+  register: userActions.register,
 };
 
-export default SignUp;
+// ReactDOM.render(<Checkbox onChange={onChange}>Checkbox</Checkbox>, mountNode);
+
+const connectedRegisterPage = connect(
+  mapState,
+  actionCreators
+)(SignUpContainer);
+export { connectedRegisterPage as SignUpContainer };
