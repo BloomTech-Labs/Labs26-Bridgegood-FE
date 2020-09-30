@@ -58,7 +58,7 @@ export default function HomeContainer({ PageContent }) {
           authService={authService}
         />
 
-        {/* <RenderFooter /> */}
+        <RenderFooter />
       </div>
     </>
   );
