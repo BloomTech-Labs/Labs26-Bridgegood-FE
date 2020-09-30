@@ -1,6 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, useHistory,Switch } from 'react-router-dom';
+import './index.less';
+import {
+  BrowserRouter as Router,
+  Route,
+  useHistory,
+  Switch,
+} from 'react-router-dom';
 import { Security, LoginCallback, SecureRoute } from '@okta/okta-react';
 
 import { createStore, applyMiddleware } from 'redux';
@@ -26,7 +32,6 @@ import {
 } from './components/pages';
 import HomeContainer from './components/common/HomeContainer';
 
-import './index.module.css';
 
 export const store = createStore(reducer, applyMiddleware(thunk));
 

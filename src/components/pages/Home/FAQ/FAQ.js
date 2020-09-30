@@ -1,10 +1,10 @@
 import React from 'react';
-import classes from './FAQ.module.css';
+import './FAQ.less';
 
 const FAQ = props => {
   return (
-    <section className={classes.FAQ}>
-      <h3>FREQUENTLY ASKED QUESTIONS</h3>
+    <section className="FAQ">
+      <h4>FREQUENTLY ASKED QUESTIONS</h4>
       <div>
         <h2>How do I come to do work at this awesome space?</h2>
         <p>
