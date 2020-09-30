@@ -16,18 +16,24 @@ import thunk from 'redux-thunk';
 import 'antd/dist/antd.less';
 
 import { config } from './utils/oktaConfig';
-import { LoadingComponent } from './components/common';
-// import { ProfileListPage } from './components/pages/ProfileList';
+
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import { makeResReducer as reducer} from './state/reducers/MakeResReducer';
+import { Provider } from 'react-redux'
+
 import {
   HomePage,
   LoginPage,
   NotFoundPage,
   DonatePage,
   MakeResPage,
-  ResTimePage,
   WelcomeBoard,
 } from './components/pages';
 import HomeContainer from './components/common/HomeContainer';
+
+
+export const store = createStore(reducer, applyMiddleware(thunk));
 
 import { Reducer as reducer } from './state/reducers/index';
 const store = createStore(reducer, applyMiddleware(thunk));
@@ -70,11 +76,7 @@ function App() {
           component={() => <HomeContainer PageContent={HomePage} />}
         />
         <SecureRoute
-          path="/reserve"
-          component={() => <HomeContainer PageContent={ResTimePage} />}
-        />
-        <SecureRoute
-          path="/reserve-2"
+          path="/make-res"
           component={() => <HomeContainer PageContent={MakeResPage} />}
         />
         <Route
@@ -86,12 +88,6 @@ function App() {
           component={() => <HomeContainer PageContent={DonatePage} />}
         />
         <Route component={() => <HomeContainer PageContent={NotFoundPage} />} />
-        {/* <SecureRoute path="/profile" component={ProfileListPage} /> */}
-        {/* <Route
-          path="/"
-          exact
-          component={() => <HomePage LoadingComponent={LoadingComponent} />}
-        /> */}
       </Switch>
     </Security>
   );
