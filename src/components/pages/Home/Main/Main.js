@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Main.less';
 import HeroImg from '../../../../assets/images/hero.png';
 import arrowIcon from '../../../../assets/images/arrow.png';
@@ -15,22 +16,29 @@ const Main = props => {
           </h1>
           <div>
             <button>
-              Reserve a spot now{' '}
-              <span>
-                <img src={arrowIcon} alt="arrow icon" />
-              </span>
+              <Link to="/login">
+                Reserve a spot now
+                <span>
+                  <img src={arrowIcon} alt="arrow icon" />
+                </span>
+              </Link>
+            </button>
+
+            <button>
+              <Link to="/donate">
+                Consider a donation
+                <span>
+                  <img src={arrowIcon} alt="arrow icon" />
+                </span>
+              </Link>
             </button>
             <button>
-              Consider a donation{' '}
-              <span>
-                <img src={arrowIcon} alt="arrow icon" />
-              </span>{' '}
-            </button>
-            <button>
-              Learn more about us{' '}
-              <span>
-                <img src={arrowIcon} alt="arrow icon" />
-              </span>
+              <a href="https://bridgegood.org/about/">
+                Learn more about us
+                <span>
+                  <img src={arrowIcon} alt="arrow icon" />
+                </span>
+              </a>
             </button>
           </div>
         </section>
