@@ -53,34 +53,38 @@ function App() {
   };
 
   return (
-    <Security {...config} onAuthRequired={authHandler}>
-      <Switch>
-        <Route
-          path="/login"
-          component={() => <HomeContainer PageContent={LoginPage} />}
-        />
+    <div className="App">
+      <Security {...config} onAuthRequired={authHandler}>
+        <Switch>
+          <Route
+            path="/login"
+            component={() => <HomeContainer PageContent={LoginPage} />}
+          />
 
-        {/* <Route path="/login" component={LoginPage} /> */}
-        <Route path="/implicit/callback" component={LoginCallback} />
-        <Route
-          path="/"
-          exact
-          component={() => <HomeContainer PageContent={HomePage} />}
-        />
-        <SecureRoute
-          path="/make-res"
-          component={() => <HomeContainer PageContent={MakeResPage} />}
-        />
-        <Route
-          path="/welcome"
-          component={() => <HomeContainer PageContent={WelcomeBoard} />}
-        />
-        <Route
-          path="/donate"
-          component={() => <HomeContainer PageContent={DonatePage} />}
-        />
-        <Route component={() => <HomeContainer PageContent={NotFoundPage} />} />
-      </Switch>
-    </Security>
+          {/* <Route path="/login" component={LoginPage} /> */}
+          <Route path="/implicit/callback" component={LoginCallback} />
+          <Route
+            path="/"
+            exact
+            component={() => <HomeContainer PageContent={HomePage} />}
+          />
+          <SecureRoute
+            path="/make-res"
+            component={() => <HomeContainer PageContent={MakeResPage} />}
+          />
+          <Route
+            path="/welcome"
+            component={() => <HomeContainer PageContent={WelcomeBoard} />}
+          />
+          <Route
+            path="/donate"
+            component={() => <HomeContainer PageContent={DonatePage} />}
+          />
+          <Route
+            component={() => <HomeContainer PageContent={NotFoundPage} />}
+          />
+        </Switch>
+      </Security>
+    </div>
   );
 }
