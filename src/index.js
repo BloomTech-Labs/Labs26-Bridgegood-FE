@@ -7,20 +7,16 @@ import {
   useHistory,
   Switch,
 } from 'react-router-dom';
-import { Security, LoginCallback, SecureRoute } from '@okta/okta-react';
-
-import { createStore, applyMiddleware } from 'redux';
-import { connect, Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import { Security, LoginCallback, SecureRoute } from '@okta/okta-react';
 
 import 'antd/dist/antd.less';
 
 import { config } from './utils/oktaConfig';
 
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import { makeResReducer as reducer} from './state/reducers/MakeResReducer';
-import { Provider } from 'react-redux'
+import { makeResReducer as reducer } from './state/reducers/MakeResReducer';
 
 import {
   HomePage,
@@ -32,10 +28,6 @@ import {
 } from './components/pages';
 import HomeContainer from './components/common/HomeContainer';
 
-
-export const store = createStore(reducer, applyMiddleware(thunk));
-
-import { Reducer as reducer } from './state/reducers/index';
 const store = createStore(reducer, applyMiddleware(thunk));
 
 ReactDOM.render(
