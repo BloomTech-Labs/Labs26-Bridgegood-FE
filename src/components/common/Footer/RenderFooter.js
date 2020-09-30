@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.less';
-import PhoneIcon from '../../../assets/images/phoneIcon.png';
-import MsgIcon from '../../../assets/images/msgIcon.png';
-import TimeIcon from '../../../assets/images/timeIcon.png';
-import LocationIcon from '../../../assets/images/locationIcon.png';
-import HeartIcon from '../../../assets/images/heartIcon.png';
+import {
+  Footer_1,
+  Footer_2,
+  Footer_3,
+  Footer_4,
+  Footer_5,
+} from '../../../assets/index';
 const Footer = props => {
   return (
     <footer className="footer">
@@ -14,7 +16,7 @@ const Footer = props => {
           <section className="left-footer">
             <div className="icon">
               <div>
-                <img src={PhoneIcon} alt="icon" />
+                <img src={Footer_1} alt="icon" />
               </div>
               <div>
                 <a href="tel:5104352945">510-435-2945</a>
@@ -23,20 +25,20 @@ const Footer = props => {
 
             <div className="icon">
               <div>
-                <img src={MsgIcon} alt="icon" />
+                <img src={Footer_2} alt="icon" />
               </div>
               <div>info@bridgegood.org</div>
             </div>
             <div className="icon">
               <div>
-                <img src={LocationIcon} alt="icon" />
+                <img src={Footer_3} alt="icon" />
               </div>
               <div>95 Washington St, Oakland CA 94607</div>
             </div>
 
             <div className="icon">
               <div>
-                <img src={TimeIcon} alt="icon" className="time-icon" />
+                <img src={Footer_4} alt="icon" className="time-icon" />
               </div>
               <div>Tuesday - Thursday 10am - 6pm</div>
             </div>
@@ -68,7 +70,7 @@ const Footer = props => {
                 <Link to="/donate">donate</Link>
               </button>
               <div className="Icon">
-                <img src={HeartIcon} alt="icon" />
+                <img src={Footer_5} alt="icon" />
                 <p>Proudly rooted in Oakland</p>
               </div>
             </div>
