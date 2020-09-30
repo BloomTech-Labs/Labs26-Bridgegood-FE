@@ -1,5 +1,5 @@
 {
-  "name": "labs-spa-starter",
+  "name": "bridgegood",
   "version": "0.1.0",
   "private": false,
   "license": "MIT",
@@ -45,6 +45,11 @@
       "prettier-eslint --write"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.js"
@@ -82,6 +87,7 @@
     "jest-environment-jsdom-sixteen": "^1.0.3",
     "jest-prop-type-error": "^1.1.0",
     "lint-staged": "^10.2.11",
+    "husky": "^4.3.0",
     "prettier-eslint-cli": "^5.0.0"
   }
 }
