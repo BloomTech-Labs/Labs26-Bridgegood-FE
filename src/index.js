@@ -7,28 +7,35 @@ import {
   useHistory,
   Switch,
 } from 'react-router-dom';
+import thunk from 'redux-thunk';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
 import { Security, LoginCallback, SecureRoute } from '@okta/okta-react';
 
 import 'antd/dist/antd.less';
 
 import { config } from './utils/oktaConfig';
-import { LoadingComponent } from './components/common';
-// import { ProfileListPage } from './components/pages/ProfileList';
+
+import { makeResReducer as reducer } from './state/reducers/MakeResReducer';
+
 import {
   HomePage,
   LoginPage,
   NotFoundPage,
   DonatePage,
   MakeResPage,
-  ResTimePage,
   WelcomeBoard,
 } from './components/pages';
 import HomeContainer from './components/common/HomeContainer';
 
+const store = createStore(reducer, applyMiddleware(thunk));
+
 ReactDOM.render(
   <Router>
     <React.StrictMode>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </React.StrictMode>
   </Router>,
   document.getElementById('root')
@@ -61,14 +68,10 @@ function App() {
           component={() => <HomeContainer PageContent={HomePage} />}
         />
         <SecureRoute
-          path="/reserve"
-          component={() => <HomeContainer PageContent={ResTimePage} />}
-        />
-        <SecureRoute
-          path="/reserve-2"
+          path="/make-res"
           component={() => <HomeContainer PageContent={MakeResPage} />}
         />
-        <SecureRoute
+        <Route
           path="/welcome"
           component={() => <HomeContainer PageContent={WelcomeBoard} />}
         />
@@ -77,12 +80,6 @@ function App() {
           component={() => <HomeContainer PageContent={DonatePage} />}
         />
         <Route component={() => <HomeContainer PageContent={NotFoundPage} />} />
-        {/* <SecureRoute path="/profile" component={ProfileListPage} /> */}
-        {/* <Route
-          path="/"
-          exact
-          component={() => <HomePage LoadingComponent={LoadingComponent} />}
-        /> */}
       </Switch>
     </Security>
   );

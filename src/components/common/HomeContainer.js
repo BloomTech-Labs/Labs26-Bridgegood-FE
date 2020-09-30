@@ -10,7 +10,6 @@ import RenderFooter from './Footer/RenderFooter';
 
 import { Layout } from 'antd';
 
-// const { Footer, Sider, Content } = Layout;
 const { Header, Footer, Sider, Content } = Layout;
 
 export default function HomeContainer({ PageContent }) {
