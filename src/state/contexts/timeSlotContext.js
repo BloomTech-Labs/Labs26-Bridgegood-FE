@@ -1,0 +1,1 @@
+export const TOGGLE_TIMSLOT = 'TOGGLE_TIMESLOT';

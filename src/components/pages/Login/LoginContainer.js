@@ -1,8 +1,12 @@
 import React, { useEffect } from 'react';
 import OktaSignIn from '@okta/okta-signin-widget';
 import '@okta/okta-signin-widget/dist/css/okta-sign-in.min.css';
-
+import { Row, Col, Divider } from 'antd';
 import { config } from '../../../utils/oktaConfig';
+import img from '../../../assets/images/logo.png';
+import SignUp from '../../common/SignUp';
+import Login from '../../common/Login';
+import './Login.less';
 
 const LoginContainer = () => {
   useEffect(() => {
@@ -12,16 +16,17 @@ const LoginContainer = () => {
       baseUrl: issuer ? issuer.split('/oauth2')[0] : '',
       clientId,
       redirectUri,
+      // takes a few different hooks, the config options
       registration: {
         // there is more we can do to handle some errors here.
       },
       features: { registration: false },
       // turning this feature on allows your widget to use Okta for user registration
-      logo: 'path-to-your-logo',
+      logo: img,
       // add your custom logo to your signing/register widget here.
       i18n: {
         en: {
-          'primaryauth.title': 'Welcome to Labs Basic SPA Please sign in',
+          'primaryauth.title': 'LOG IN',
           // change title for your app
         },
       },
@@ -33,21 +38,44 @@ const LoginContainer = () => {
       },
     });
 
-    widget.renderEl(
-      { el: '#sign-in-widget' },
-      () => {
-        /**
-         * In this flow, the success handler will not be called because we redirect
-         * to the Okta org for the authentication workflow.
-         */
-      },
-      err => {
-        throw err;
-      }
-    );
+    // widget.renderEl(
+    //   { el: '#sign-in-widget' },
+    //   () => {
+    //     /**
+    //      * In this flow, the success handler will not be called because we redirect
+    //      * to the Okta org for the authentication workflow.
+    //      */
+    //   },
+    //   err => {
+    //     throw err;
+    //   }
+    // );
   }, []);
 
-  return <div id="sign-in-widget" />;
+  return (
+    <div className="loginBox">
+      <section>
+        <Login enabled={true} />
+      </section>
+      <section>
+        <SignUp enabled={false} />
+      </section>
+      {/* <section className="main-container">
+        <div className="welcome-text"></div>
+        <div id="sign-in-widget" />
+        <Divider orientation="left"></Divider>
+        <Row>
+          <Col flex={1}>
+            <Login enabled={true} />
+          </Col>
+          <Col flex={1}>
+            <SignUp enabled={false} />
+          </Col>
+        </Row>
+        <Divider orientation="left"></Divider>
+      </section> */}
+    </div>
+  );
 };
 
 export default LoginContainer;

@@ -27,4 +27,5 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-report.20200903.132839.22728.0.001.json
+
+report.*.json

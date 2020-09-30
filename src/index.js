@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.less';
 import {
   BrowserRouter as Router,
   Route,
@@ -14,16 +15,19 @@ import thunk from 'redux-thunk';
 
 import 'antd/dist/antd.less';
 
-import { NotFoundPage } from './components/pages/NotFound';
-import { ExampleListPage } from './components/pages/ExampleList';
-import { ProfileListPage } from './components/pages/ProfileList';
-import { LoginPage } from './components/pages/Login';
-import { HomePage } from './components/pages/Home';
-import { ExampleDataViz } from './components/pages/ExampleDataViz';
 import { config } from './utils/oktaConfig';
 import { LoadingComponent } from './components/common';
-import { MakeResPage } from './components/pages/MakeRes';
-import { ResTimePage } from './components/pages/MakeRes/ResTime';
+// import { ProfileListPage } from './components/pages/ProfileList';
+import {
+  HomePage,
+  LoginPage,
+  NotFoundPage,
+  DonatePage,
+  MakeResPage,
+  ResTimePage,
+  WelcomeBoard,
+} from './components/pages';
+import HomeContainer from './components/common/HomeContainer';
 
 import { Reducer as reducer } from './state/reducers/index';
 const store = createStore(reducer, applyMiddleware(thunk));
@@ -53,20 +57,41 @@ function App() {
   return (
     <Security {...config} onAuthRequired={authHandler}>
       <Switch>
-        <Route path="/login" component={LoginPage} />
+        <Route
+          path="/login"
+          component={() => <HomeContainer PageContent={LoginPage} />}
+        />
+
+        {/* <Route path="/login" component={LoginPage} /> */}
         <Route path="/implicit/callback" component={LoginCallback} />
-        {/* any of the routes you need secured should be registered as SecureRoutes */}
+        <Route
+          path="/"
+          exact
+          component={() => <HomeContainer PageContent={HomePage} />}
+        />
         <SecureRoute
+          path="/reserve"
+          component={() => <HomeContainer PageContent={ResTimePage} />}
+        />
+        <SecureRoute
+          path="/reserve-2"
+          component={() => <HomeContainer PageContent={MakeResPage} />}
+        />
+        <Route
+          path="/welcome"
+          component={() => <HomeContainer PageContent={WelcomeBoard} />}
+        />
+        <Route
+          path="/donate"
+          component={() => <HomeContainer PageContent={DonatePage} />}
+        />
+        <Route component={() => <HomeContainer PageContent={NotFoundPage} />} />
+        {/* <SecureRoute path="/profile" component={ProfileListPage} /> */}
+        {/* <Route
           path="/"
           exact
           component={() => <HomePage LoadingComponent={LoadingComponent} />}
-        />
-        <SecureRoute path="/example-list" component={ExampleListPage} />
-        <SecureRoute path="/profile-list" component={ProfileListPage} />
-        <SecureRoute path="/datavis" component={ExampleDataViz} />
-        <SecureRoute path="/make-res-amount" component={ResTimePage} />
-        <SecureRoute path="/make-res" component={MakeResPage} />
-        <Route component={NotFoundPage} />
+        /> */}
       </Switch>
     </Security>
   );

@@ -3,26 +3,6 @@
 // Actions should be focused to a single purpose.
 // You can have multiple action creators per file if it makes sense to the purpose those action creators are serving.
 // Declare action TYPES at the top of the file
-
-import axios from 'axios';
-
-export const FETCH_DATA = 'FETCH_DATA';
-export const UPDATE_DATA = 'UPDATE_DATA';
-export const SET_ERROR = 'SET_ERROR';
-
-export const getData = () => dispatch => {
-  dispatch({ type: FETCH_DATA });
-  axios
-    .get('')
-    .then(res => {
-      console.log(res);
-      dispatch({ type: UPDATE_DATA, payload: res.data.docs });
-    })
-    .catch(err => {
-      console.log('error fetching data from api, err: ', err);
-      dispatch({
-        type: SET_ERROR,
-        payload: 'error fetching data from api, err: ',
-      });
-    });
-};
+export * from './CalActions';
+export * from './RoomActions';
+export * from './TimeSlotActions';
