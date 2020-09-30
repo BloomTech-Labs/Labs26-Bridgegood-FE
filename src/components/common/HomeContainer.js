@@ -39,25 +39,26 @@ export default function HomeContainer({ PageContent }) {
 
   return (
     <>
-      <Layout>
-        <Header>
-          <RenderHeader
-            isLoggedIn={authState.isAuthenticated}
-            userInfo={userInfo}
-            authService={authService}
-          />
-        </Header>
-        <Content>
-          <PageContent
-            isLoggedIn={authState.isAuthenticated}
-            userInfo={userInfo}
-            authService={authService}
-          />
-        </Content>
-        <Footer>
-          <RenderFooter />
-        </Footer>
-      </Layout>
+      <div
+        style={{
+          height: '1440px',
+          margin: '0 auto',
+        }}
+      >
+        <RenderHeader
+          isLoggedIn={authState.isAuthenticated}
+          userInfo={userInfo}
+          authService={authService}
+        />
+
+        <PageContent
+          isLoggedIn={authState.isAuthenticated}
+          userInfo={userInfo}
+          authService={authService}
+        />
+
+        {/* <RenderFooter /> */}
+      </div>
     </>
   );
 }
