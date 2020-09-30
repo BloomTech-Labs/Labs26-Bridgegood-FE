@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.less';
 import PhoneIcon from '../../../assets/images/phoneIcon.png';
 import MsgIcon from '../../../assets/images/msgIcon.png';
@@ -15,7 +16,9 @@ const Footer = props => {
               <div>
                 <img src={PhoneIcon} alt="icon" />
               </div>
-              <div>(510) 123 4567</div>
+              <div>
+                <a href="tel:5104352945">510-435-2945</a>
+              </div>
             </div>
 
             <div className="icon">
@@ -43,13 +46,13 @@ const Footer = props => {
             <div className="nav">
               <ul>
                 <li>
-                  <a href="/#">About Us</a>
+                  <a href="https://bridgegood.org/about/">About Us</a>
                 </li>
                 <li>
                   <a href="/#">FAQ</a>
                 </li>
                 <li>
-                  <a href="/#">Pay it Forward</a>
+                  <Link to="/donate">Pay it Forward</Link>
                 </li>
                 <li>
                   <a href="/#">BRIDGEGOOD.org</a>
@@ -58,8 +61,12 @@ const Footer = props => {
             </div>
 
             <div className="test">
-              <button>Login</button>
-              <button>Donate</button>
+              <button>
+                <Link to="/login">login in</Link>
+              </button>
+              <button>
+                <Link to="/donate">donate</Link>
+              </button>
               <div className="Icon">
                 <img src={HeartIcon} alt="icon" />
                 <p>Proudly rooted in Oakland</p>
