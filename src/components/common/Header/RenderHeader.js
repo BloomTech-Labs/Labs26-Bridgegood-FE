@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../../../assets/images/logo.png';
 import './Header.less';
 
-const RenderHeader = () => {
+function RenderHeader({ isLoggedIn, userInfo, authService }) {
   return (
     <header className="header">
       <div className="Logo">
@@ -29,6 +29,6 @@ const RenderHeader = () => {
       </div>
     </header>
   );
-};
+}
 
 export default RenderHeader;

@@ -12,7 +12,6 @@ import { NotFoundPage } from './NotFound';
 import DonatePage from './Donate/DonatePage';
 import { LoginPage } from './Login';
 import { MakeResPage } from './MakeRes';
-import { ResTimePage } from './MakeRes/ResTime';
 import WelcomeBoard from './WelcomeBoard';
 
 export {
@@ -21,6 +20,5 @@ export {
   LoginPage,
   WelcomeBoard,
   MakeResPage,
-  ResTimePage,
   DonatePage,
 };
