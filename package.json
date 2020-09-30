@@ -11,6 +11,8 @@
     "@okta/okta-signin-widget": "^4.1.2",
     "antd": "^4.6.4",
     "axios": "^0.19.2",
+    "braintree": "^3.0.0",
+    "braintree-web-drop-in": "^1.24.0",
     "craco-less": "^1.17.0",
     "plotly.js": "^1.54.6",
     "react": "^16.13.1",
