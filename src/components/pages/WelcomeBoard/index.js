@@ -6,7 +6,7 @@ function WelcomeBoard() {
   let history = useHistory();
 
   function handleClick() {
-    history.push('/make-res-amount');
+    history.push('/make-res');
   }
 
   return (
