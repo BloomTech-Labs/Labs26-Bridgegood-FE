@@ -18,7 +18,7 @@ function RenderHeader({ isLoggedIn, userInfo, authService }) {
         <Link to="/donate">pay it forward</Link>
 
         <a href="https://bridgegood.org/">
-          bridgegood.<span>org</span>
+          BRIDGEGOOD.<span>org</span>
         </a>
       </nav>
 

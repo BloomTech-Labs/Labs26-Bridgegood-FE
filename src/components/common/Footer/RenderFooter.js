@@ -57,7 +57,9 @@ const Footer = props => {
                   <Link to="/donate">Pay it Forward</Link>
                 </li>
                 <li>
-                  <a href="/#">BRIDGEGOOD.org</a>
+                  <a href="https://bridgegood.org/">
+                    BRIDGEGOOD.<span>org</span>
+                  </a>
                 </li>
               </ul>
             </div>
