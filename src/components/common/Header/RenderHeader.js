@@ -11,12 +11,15 @@ function RenderHeader({ isLoggedIn, userInfo, authService }) {
           <img src={Logo} alt="bridge good logo" />
         </Link>
       </div>
+
       <nav>
-        <Link>About us</Link>
-        <Link>pay it forward</Link>
-        <Link>
-          bridgegood.<span>org</span>
-        </Link>
+        <a href="https://bridgegood.org/about/">About us</a>
+
+        <Link to="/donate">pay it forward</Link>
+
+        <a href="https://bridgegood.org/">
+          BRIDGEGOOD.<span>org</span>
+        </a>
       </nav>
 
       <div className="Btns">
@@ -24,7 +27,7 @@ function RenderHeader({ isLoggedIn, userInfo, authService }) {
           <Link to="/login">Login</Link>
         </button>
         <button className="donate-btn">
-          <Link>donate</Link>
+          <Link to="/donate">donate</Link>
         </button>
       </div>
     </header>

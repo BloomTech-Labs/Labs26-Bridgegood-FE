@@ -1,78 +1,90 @@
 import React from 'react';
-import { Button } from 'antd';
-import classes from './Footer.module.css';
-import PhoneIcon from '../../../assets/images/phoneIcon.png';
-import MsgIcon from '../../../assets/images/msgIcon.png';
-import TimeIcon from '../../../assets/images/timeIcon.png';
-import LocationIcon from '../../../assets/images/locationIcon.png';
-import HeartIcon from '../../../assets/images/heartIcon.png';
-
-const RenderFooter = props => {
+import { Link } from 'react-router-dom';
+import './Footer.less';
+import {
+  Footer_1,
+  Footer_2,
+  Footer_3,
+  Footer_4,
+  Footer_5,
+} from '../../../assets/index';
+const Footer = props => {
   return (
-    <footer classes={classes.Footer}>
-      <div className={classes.Top}>
-        <section className={classes.Left}>
-          <div className={classes.Icon}>
-            <div>
-              <img src={PhoneIcon} alt="icon" />
+    <footer className="footer">
+      <div className="top">
+        <div className="sub-top">
+          <section className="left-footer">
+            <div className="icon">
+              <div>
+                <img src={Footer_1} alt="icon" />
+              </div>
+              <div>
+                <a href="tel:5104352945">510-435-2945</a>
+              </div>
             </div>
-            <div>(510) 123 4567</div>
-          </div>
 
-          <div className={classes.Icon}>
-            <div>
-              <img src={MsgIcon} alt="icon" />
+            <div className="icon">
+              <div>
+                <img src={Footer_2} alt="icon" />
+              </div>
+              <div>info@bridgegood.org</div>
             </div>
-            <div>info@bridgegood.org</div>
-          </div>
-          <div className={classes.Icon}>
-            <div>
-              <img src={LocationIcon} alt="icon" />
+            <div className="icon">
+              <div>
+                <img src={Footer_3} alt="icon" />
+              </div>
+              <div>95 Washington St, Oakland CA 94607</div>
             </div>
-            <div>95 Washington St, Oakland CA 94607</div>
-          </div>
-          <div className={classes.Icon}>
-            <div>
-              <img src={TimeIcon} alt="icon" />
-            </div>
-            <div>Tuesday - Thursday 10am - 6pm</div>
-          </div>
-        </section>
 
-        <section className={classes.Right}>
-          <div>
-            <ul>
-              <li>
-                <a href="/#">About Us</a>
-              </li>
-              <li>
-                <a href="/#">FAQ</a>
-              </li>
-              <li>
-                <a href="/#">Pay it Forward</a>
-              </li>
-              <li>
-                <a href="/#">BRIDGEGOOD.org</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <Button>Login</Button>
-            <Button>Donate</Button>
-            <div className={classes.Icon}>
-              <img src={HeartIcon} alt="icon" />
-              <p>Proudly rooted in Oakland</p>
+            <div className="icon">
+              <div>
+                <img src={Footer_4} alt="icon" className="time-icon" />
+              </div>
+              <div>Tuesday - Thursday 10am - 6pm</div>
             </div>
-          </div>
-        </section>
+          </section>
+
+          <section className="right-footer">
+            <div className="nav">
+              <ul>
+                <li>
+                  <a href="https://bridgegood.org/about/">About Us</a>
+                </li>
+                <li>
+                  <a href="/#">FAQ</a>
+                </li>
+                <li>
+                  <Link to="/donate">Pay it Forward</Link>
+                </li>
+                <li>
+                  <a href="https://bridgegood.org/">
+                    BRIDGEGOOD.<span>org</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="test">
+              <button>
+                <Link to="/login">login in</Link>
+              </button>
+              <button>
+                <Link to="/donate">donate</Link>
+              </button>
+              <div className="Icon">
+                <img src={Footer_5} alt="icon" />
+                <p>Proudly rooted in Oakland</p>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
-      <div className={classes.Bottom}>
-        <p>
-          ©2020 Oakland Digital Arts and Literacy Center Inc dba BRIDGEGOOD. All
-          rights reserved.
-        </p>
+
+      <div className="bottom">
+        ©2020 Oakland Digital Arts and Literacy Center Inc dba BRIDGEGOOD. All
+        rights reserved.
       </div>
     </footer>
   );
 };
-export default RenderFooter;
+export default Footer;

@@ -1,9 +1,6 @@
 import React from 'react';
 import './Supporters.less';
-import TwitterLogo from '../../../../assets/images/Twitter.png';
-import GoogleLogo from '../../../../assets/images/Google.png';
-import Adobe from '../../../../assets/images/Adobe.png';
-import GoldenStateLogo from '../../../../assets/images/Golden_State.png';
+import { Adobe, Twitter, Google, Golden_state } from '../../../../assets/index';
 const Supporters = props => {
   return (
     <>
@@ -12,10 +9,10 @@ const Supporters = props => {
 
         <div className="Logos">
           <div>
-            <img src={GoldenStateLogo} alt="logon" />
+            <img src={Golden_state} alt="logon" />
           </div>
           <div>
-            <img src={GoogleLogo} alt="logon" />
+            <img src={Google} alt="logon" />
           </div>
           <div
             style={{
@@ -25,7 +22,7 @@ const Supporters = props => {
             <img src={Adobe} alt="logon" />
           </div>
           <div>
-            <img src={TwitterLogo} alt="logon" />
+            <img src={Twitter} alt="logon" />
           </div>
         </div>
       </section>

@@ -1,7 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Main.less';
-import HeroImg from '../../../../assets/images/hero.png';
-import arrowIcon from '../../../../assets/images/arrow.png';
+import { Hero_img, Arrow } from '../../../../assets/index';
 const Main = props => {
   return (
     <main>
@@ -15,27 +15,34 @@ const Main = props => {
           </h1>
           <div>
             <button>
-              Reserve a spot now{' '}
-              <span>
-                <img src={arrowIcon} alt="arrow icon" />
-              </span>
+              <Link to="/login">
+                Reserve a spot now
+                <span>
+                  <img src={Arrow} alt="arrow icon" />
+                </span>
+              </Link>
+            </button>
+
+            <button>
+              <Link to="/donate">
+                Consider a donation
+                <span>
+                  <img src={Arrow} alt="arrow icon" />
+                </span>
+              </Link>
             </button>
             <button>
-              Consider a donation{' '}
-              <span>
-                <img src={arrowIcon} alt="arrow icon" />
-              </span>{' '}
-            </button>
-            <button>
-              Learn more about us{' '}
-              <span>
-                <img src={arrowIcon} alt="arrow icon" />
-              </span>
+              <a href="https://bridgegood.org/about/">
+                Learn more about us
+                <span>
+                  <img src={Arrow} alt="arrow icon" />
+                </span>
+              </a>
             </button>
           </div>
         </section>
         <section className="img-section">
-          <img src={HeroImg} alt="hero img" />
+          <img src={Hero_img} alt="hero img" />
         </section>
       </div>
     </main>
