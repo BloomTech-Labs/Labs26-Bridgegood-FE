@@ -25,6 +25,7 @@ import {
   DonatePage,
   MakeResPage,
   WelcomeBoard,
+  ConfirmationPage,
 } from './components/pages';
 import HomeContainer from './components/common/HomeContainer';
 
@@ -79,6 +80,10 @@ function App() {
           <Route
             path="/donate"
             component={() => <HomeContainer PageContent={DonatePage} />}
+          />
+          <SecureRoute
+            path="/confirmation"
+            component={() => <HomeContainer PageContent={ConfirmationPage} />}
           />
           <Route
             component={() => <HomeContainer PageContent={NotFoundPage} />}
