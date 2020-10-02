@@ -1,8 +1,6 @@
 import React from 'react';
 import './WhoWeServe.less';
-import CreativesImg from '../../../../assets/images/creatives.png';
-import FrameImg from '../../../../assets/images/Frame.png';
-import SchoolImgLoc from '../../../../assets/images/schoolLocation.png';
+import { Support_1, Support_2, Support_3 } from '../../../../assets/index';
 
 const WhoWeServer = props => {
   return (
@@ -10,15 +8,15 @@ const WhoWeServer = props => {
       <p>WHO WE SERVE</p>
       <div className="SubWhoWeServe">
         <div>
-          <img src={SchoolImgLoc} alt="Creatives Img" />
+          <img src={Support_1} alt="Creatives Img" />
           <h3>Schools in Northern California</h3>
         </div>
         <div>
-          <img src={FrameImg} alt="Creatives Img" />
+          <img src={Support_2} alt="Creatives Img" />
           <h3>Black, Indigenous, People of Color</h3>
         </div>
         <div>
-          <img src={CreativesImg} alt="Creatives Img" />
+          <img src={Support_3} alt="Creatives Img" />
           <h3>BRIDGEGOOD Creatives</h3>
         </div>
       </div>

@@ -4,20 +4,13 @@ import Mission from './Mission/Mission';
 import WhoWeServe from './WhoWeServe/WhoWeServe';
 import FAQ from './FAQ/FAQ';
 import Supporters from './Supporters/Supporters';
-
-const WhiteSpace = () => (
-  <div
-    style={{
-      padding: '60px 0',
-    }}
-  ></div>
-);
+import WhiteSpace from '../../common/WhiteSpace';
 const HomePage = () => {
   return (
     <>
       <div
         style={{
-          width: '1440px',
+          width: '95%',
           margin: '0 auto',
         }}
       >
@@ -29,7 +22,6 @@ const HomePage = () => {
         <FAQ />
         <WhiteSpace />
         <Supporters />
-        <WhiteSpace />
       </div>
     </>
   );
