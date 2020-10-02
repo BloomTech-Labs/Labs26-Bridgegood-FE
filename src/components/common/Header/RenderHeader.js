@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../../../assets/images/logo.png';
 import './Header.less';
 
-function RenderHeader({ isLoggedIn, userInfo, authService }) {
+function RenderHeader({ userInfo }) {
   return (
     <header className="header">
       <div className="Logo">
@@ -23,9 +23,16 @@ function RenderHeader({ isLoggedIn, userInfo, authService }) {
       </nav>
 
       <div className="Btns">
-        <button className="login-btn">
-          <Link to="/login">Login</Link>
-        </button>
+        {!userInfo && (
+          <button className="login-btn">
+            <Link to="/login">Log In</Link>
+          </button>
+        )}
+        {userInfo && (
+          <button className="login-btn">
+            <Link to="/logout">Log Out</Link>
+          </button>
+        )}
         <button className="donate-btn">
           <Link to="/donate">donate</Link>
         </button>
