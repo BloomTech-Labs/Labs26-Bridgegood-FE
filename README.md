@@ -1,7 +1,3 @@
-# Basic SPA
-
-For steps on how to work with this repository [please see here](https://docs.labs.lambdaschool.com/labs-spa-starter/)
-
 # BRIDGEGOOD
 
 BridgeGood is an organization that mentors aspiring designers in Oakland. They recently received a workspace for students to work in. We will be building a reservation and donation system for that workspace. Web students will focus on two user types: users and admin. You will be given hi-fi wireframes and be expected to ship to spec.
@@ -11,9 +7,10 @@ You can find the deployed project at [bridgegood.dev](http://main.d2pjupszhlnsi0
 ## Contributors
 
 | [Ana Carrillo](https://github.com/acarrillo3) | [Alexander Besse](https://github.com/AlexJoeb) | [Anthony Koharian](https://github.com/antonyk) | [Drake Alia](https://github.com/DrakeAlia) | [Gregory Hawman](https://github.com/Gregory-Hawman) | [Yasir Haymm](https://github.com/YasirHasn9) |
-| :------------------------: | :------------------------: | :------------------------: | :------------------------: | :------------------------: | 
-| [<img style="height:auto;" alt="" width="260" height="260" class="avatar avatar-user width-full border bg-white" src="https://avatars2.githubusercontent.com/u/50473626?s=460&amp;u=07109007eb1bc4adfa296a718c87157ff9e950df&amp;v=4"/>](https://github.com/acarrillo3) | [<img style="height:auto;" alt="Avatar" width="260" height="260" class="avatar avatar-user width-full border bg-white" src="https://avatars0.githubusercontent.com/u/44859433?s=460&amp;u=c331ffc2bf0878ed7cd0f83d5deb17dba9a42053&amp;v=4"/>](https://github.com/AlexJoeb) | [<img style="height:auto;" alt="Avatar" width="260" height="260" class="avatar avatar-user width-full border bg-white" src="https://avatars3.githubusercontent.com/u/2497571?s=460&amp;u=871c77d98deed2e84da52a8154649ede5301068f&amp;v=4"/>](https://github.com/antonyk) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/antonyk)|[<img style="height:auto;" alt="Avatar" width="260" height="260" class="avatar avatar-user width-full border bg-white" src="https://avatars3.githubusercontent.com/u/52472741?s=460&amp;u=19257a3af0b3b29cd1cf85982d8d97c38402d6f8&amp;v=4">](https://github.com/DrakeAlia)|                          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Mister-Corn)                           |                          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/NandoTheessen)                           |                           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/wvandolah)                            |
-|                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                |                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                 |                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                |                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                 |                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                |
+| :------------------------: | :------------------------: | :------------------------: | :------------------------: | :------------------------: | :------------------------: |
+| [<img src="https://avatars2.githubusercontent.com/u/50473626?s=460&amp;u=07109007eb1bc4adfa296a718c87157ff9e950df&amp;v=4" width = "200" />](https://github.com/acarrillo3) | [<img src="https://avatars0.githubusercontent.com/u/44859433?s=460&amp;u=c331ffc2bf0878ed7cd0f83d5deb17dba9a42053&amp;v=4" width = "200" />](https://github.com/AlexJoeb) | [<img src="https://avatars3.githubusercontent.com/u/2497571?s=460&amp;u=871c77d98deed2e84da52a8154649ede5301068f&amp;v=4" width = "200" />](https://github.com/antonyk) | [<img src="https://avatars3.githubusercontent.com/u/52472741?s=460&amp;u=19257a3af0b3b29cd1cf85982d8d97c38402d6f8&amp;v=4" width = "200" />](https://github.com/DrakeAlia) | [<img src="https://avatars0.githubusercontent.com/u/55816177?s=460&amp;u=3c1b33955c81040d6a54f2f6000948da24d06622&amp;v=4" width = "200" />](https://github.com/Gregory-Hawman) | [<img src="https://avatars0.githubusercontent.com/u/50093004?s=400&amp;u=eba9dd56e75848e1e5c13814380e6c243a30e1c5&amp;v=4" width = "200" /> ](https://github.com/YasirHasn9) |
+| [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/acarrillo3) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/AlexJoeb) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/antonyk) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/DrakeAlia) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Gregory-Hawman) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/YasirHasn9) |  
+[ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/acarrillo3/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/alexander-besse/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/akoharian/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/drake-alia/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/gregory-hawman/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/yasirhasn9/) |
 
 <br>
 <br>
@@ -84,6 +81,10 @@ You can do anything your heart can imagine. In life you need colors. This is whe
     * build - creates a build of the application
     * start - starts the production server after a build is created
     * test - runs tests in **tests** directory \* eject - copy the configuration files and dependencies into the project so you have full control over them
+
+# Basic SPA
+
+For steps on how to work with this repository [please see here](https://docs.labs.lambdaschool.com/labs-spa-starter/)
 
 # Contributing
 
