@@ -15,68 +15,70 @@ You can find the deployed project at [bridgegood.dev](http://main.d2pjupszhlnsi0
 <br>
 <br>
 
-🚫 Optional examples of using images with links for your tech stack, make sure to change these to fit your project
+## Project Overview
+
+[Labs 26 Trello Board](https://trello.com/b/nW5Qz4yT/bridgegood-ana)
+
+### [Key Features](https://www.notion.so/Bridgegood-Roadmap-42978540fee14397a27189f5d815949c)
+
+- Authentication
+- Reservation system
+- Donation
+- Admin dashboard 
+
+### Tech Stack
 
 ![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
 ![React](https://img.shields.io/badge/react-v16.7.0--alpha.2-blue.svg)
 ![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)
 
-🚫 more info on using badges [here](https://github.com/badges/shields)
+```🚫 more info on using badges [here](https://github.com/badges/shields)```
+
+#### Front end deployed to `Amazon AWS` built using:
+- React
+- Redux
+- Ant Design
+- Venmo
+
+#### [Back end](https://github.com/Lambda-School-Labs/Labs26-Bridgegood-BE) built using:
+
+- Node.js
+- Knex/Express
+- PostgreSQL
+- Swagger-UI
+
+#### Product Diagram and Engineering Architecture: [click here](https://whimsical.com/QHZNGNapWnCyYxEUHL2P87)
+
+#### Database Schema: [click here](https://app.dbdesigner.net/designer/schema/0-untitled-225e23af-0314-4e21-8781-5852abb5b9dd)
+
+# APIs
+
+## Okta Authentication API
+- Okta is the only approved identity and access management company per the Lambda School Engineering Standards 
+- Okta is a trusted service that has been in buisness since 2009
+- Okta allows developers to build identity controls into applications, website web services and devices
+
+## Venmo Payment API
+
+- Venmo is a mobile payment service owned by PayPal. Venmo account holders can transfer funds to others via a mobile phone app; both the sender and receiver have to live in the U.S.
+
+# Environment Variables
+
+In order for the app to function correctly, the user must set up their own environment variables. There should be a .env file containing the following:
+
+    *  REACT_APP_CLIENT_ID=example
+    *  REACT_APP_OKTA_ISSUER_URI="https://example-882474.okta.com"
+    *  REACT_APP_API_URI=http://localhost:8005
+
+# Installation Instructions
 
 - Fork and clone the repo to install it as your own remote.
-  - **note** please [be sure to set your remote](https://help.github.jp/enterprise/2.11/user/articles/changing-a-remote-s-url/) for this repo to point to your Labs Team Front End Repository.
 - run: `npm install` to download all dependencies.
 - run: `npm start` to start your local development server.
 
 > When using Okta for authentication, the app will need to run locally on port 3000.
 
-### Key Features
-
-- feature one
-- feature two
-- feature three
-- feature four
-- feature five
-
-#### Front end deployed to `🚫insert service here`
-
-#### [Back end](🚫link to back end repo here) built using:
-
-#### 🚫 back end framework goes here
-
-- point one
-- point two
-- point three
-
-🚫 List the rest of the back end end features and libraries in the same format as the framework above
-
-# APIs
-
-## Authentication API here
-
-🚫Replace text below with a description of the API
-
-Water's like me. It's laaazy ... Boy, it always looks for the easiest way to do things A little happy sunlight shining through there. Let all these little things happen. Don't fight them. Learn to use them. Even the worst thing we can do here is good.
-
-## Payment API here
-
-🚫Replace text below with a description of the API
-
-This is the way you take out your flustrations. Get away from those little Christmas tree things we used to make in school. Isn't it fantastic that you can change your mind and create all these happy things? Everything's not great in life, but we can still find beauty in it.
-
-## Misc API here
-
-🚫Replace text below with a description of the API
-
-You can do anything your heart can imagine. In life you need colors. This is where you take out all your hostilities and frustrations. It's better than kicking the puppy dog around and all that so. I'm sort of a softy, I couldn't shoot Bambi except with a camera. Trees get lonely too, so we'll give him a little friend. We'll lay all these little funky little things in there.
-
-# Installation Instructions
-
-🚫explain how to install the required dependencies to get this project up and running with yarn and NPM
-
 ## Other Scripts
-
-🚫replace these examples with your own
 
     * build - creates a build of the application
     * start - starts the production server after a build is created
