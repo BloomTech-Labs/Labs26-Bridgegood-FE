@@ -51,18 +51,29 @@ You can find the deployed project at [bridgegood.dev](http://main.d2pjupszhlnsi0
 
 #### Database Schema: [click here](https://app.dbdesigner.net/designer/schema/0-untitled-225e23af-0314-4e21-8781-5852abb5b9dd)
 
-# APIs
+### APIs
 
-## Okta Authentication API
+#### Okta Authentication API
 - Okta is the only approved identity and access management company per the Lambda School Engineering Standards 
 - Okta is a trusted service that has been in buisness since 2009
 - Okta allows developers to build identity controls into applications, website web services and devices
 
-## Venmo Payment API
+#### Venmo Payment API
 
 - Venmo is a mobile payment service owned by PayPal. Venmo account holders can transfer funds to others via a mobile phone app; both the sender and receiver have to live in the U.S.
 
-# Environment Variables
+
+
+## Installation Instructions
+
+- Fork and clone the repo to install it as your own remote.
+- Set you environment variables
+- run: `npm install` to download all dependencies.
+- run: `npm start` to start your local development server.
+
+> When using Okta for authentication, the app will need to run locally on port 3000.
+
+### Environment Variables
 
 In order for the app to function correctly, the user must set up their own environment variables. There should be a .env file containing the following:
 
@@ -70,15 +81,7 @@ In order for the app to function correctly, the user must set up their own envir
     *  REACT_APP_OKTA_ISSUER_URI="https://example-882474.okta.com"
     *  REACT_APP_API_URI=http://localhost:8005
 
-# Installation Instructions
-
-- Fork and clone the repo to install it as your own remote.
-- run: `npm install` to download all dependencies.
-- run: `npm start` to start your local development server.
-
-> When using Okta for authentication, the app will need to run locally on port 3000.
-
-## Other Scripts
+### Other Scripts
 
     * build - creates a build of the application
     * start - starts the production server after a build is created
@@ -122,4 +125,4 @@ Remember that this project is licensed under the MIT license, and by submitting 
 
 ## Documentation
 
-See [Backend Documentation](🚫*link to your backend API SWAGGER DOCS here*) for details on the backend of our project.
+See [Backend Documentation](https://bridgegood-api.herokuapp.com/api-docs/) for details on the backend of our project.
