@@ -8,7 +8,7 @@ import {
   Footer_4,
   Footer_5,
 } from '../../../assets/index';
-const Footer = props => {
+const Footer = ({ userInfo }) => {
   return (
     <footer className="footer">
       <div className="top">
@@ -48,7 +48,7 @@ const Footer = props => {
             <div className="nav">
               <ul>
                 <li>
-                  <a href="https://bridgegood.org/about/">About Us</a>
+                  <a href="https://bridgegood.org/about">About Us</a>
                 </li>
                 <li>
                   <a href="/#">FAQ</a>
@@ -57,7 +57,7 @@ const Footer = props => {
                   <Link to="/donate">Pay it Forward</Link>
                 </li>
                 <li>
-                  <a href="https://bridgegood.org/">
+                  <a href="https://bridgegood.org">
                     BRIDGEGOOD.<span>org</span>
                   </a>
                 </li>
@@ -65,9 +65,16 @@ const Footer = props => {
             </div>
 
             <div className="test">
-              <button>
-                <Link to="/login">login in</Link>
-              </button>
+              {!userInfo && (
+                <button>
+                  <Link to="/login">Log In</Link>
+                </button>
+              )}
+              {userInfo && (
+                <button>
+                  <Link to="/logout">Log Out</Link>
+                </button>
+              )}
               <button>
                 <Link to="/donate">donate</Link>
               </button>
