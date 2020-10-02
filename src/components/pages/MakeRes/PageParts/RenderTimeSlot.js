@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { updateTimeSlot } from '../../../../state/actions/TimeSlotActions';
+import { updateStep } from '../../../../state/actions/StepsActions';
 import '../MakeRes.css';
 
 function RenderTimeSlot(props) {
@@ -16,9 +17,7 @@ function RenderTimeSlot(props) {
   };
 
   const nextStep = () => {
-    if (props.timeSlotOnProps == !'None') {
-      props.updateStep(2);
-    }
+    props.updateStep(2);
   };
 
   if (duration === '1-2 Hours') {
@@ -79,7 +78,9 @@ function RenderTimeSlot(props) {
               </div>
             </div>
           </div>
-          <div className="finalBtn">Finalize Reservation</div>
+          <div className="finalBtn" onClick={nextStep}>
+            Finalize Reservation
+          </div>
         </div>
         <h2> You've Selected = {props.timeSlotOnProps}</h2>
       </>
@@ -132,7 +133,9 @@ function RenderTimeSlot(props) {
               <div className="greyOut">5:00pm</div>
             </div>
           </div>
-          <div className="finalBtn">Finalize Reservation</div>
+          <div className="finalBtn" onClick={nextStep}>
+            Finalize Reservation
+          </div>
         </div>
         <h2> You've Selected = {props.timeSlotOnProps}</h2>
       </>
@@ -170,7 +173,9 @@ function RenderTimeSlot(props) {
               <div className="greyOut">5:00pm</div>
             </div>
           </div>
-          <div className="finalBtn">Finalize Reservation</div>
+          <div className="finalBtn" onClick={nextStep}>
+            Finalize Reservation
+          </div>
         </div>
         <h2> You've Selected = {props.timeSlotOnProps}</h2>
       </>
@@ -193,8 +198,8 @@ function RenderTimeSlot(props) {
               <div className="greyOut">5:00pm</div>
             </div>
           </div>
-          <div className="finalBtn">
-            <Link to="/"> Finalize Reservation</Link>
+          <div className="finalBtn" onClick={nextStep}>
+            Finalize Reservation
           </div>
         </div>
         <h2> You've Selected = {props.timeSlotOnProps}</h2>
@@ -207,7 +212,10 @@ const mapStateToProps = state => {
   return {
     timeSlotOnProps: state.time_slot,
     duration: state.duration,
+    currentStep: state.currentStep,
   };
 };
 
-export default connect(mapStateToProps, { updateTimeSlot })(RenderTimeSlot);
+export default connect(mapStateToProps, { updateTimeSlot, updateStep })(
+  RenderTimeSlot
+);

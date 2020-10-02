@@ -52,10 +52,10 @@ function RenderDuration(props) {
               </Radio>
             </Radio.Group>
           </div>
-          <h2>THE DURATION IS = {props.durationOnProps}</h2>
           <div className="radioBtn" onClick={() => props.updateStep(1)}>
             Next
           </div>
+          {/* <h2>THE DURATION IS = {props.durationOnProps}</h2> */}
         </div>
       </div>
     </div>

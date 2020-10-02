@@ -69,7 +69,7 @@ function App() {
             component={() => <HomeContainer PageContent={HomePage} />}
           />
           <SecureRoute
-            path="/make-res"
+            path="/reservation"
             component={() => <HomeContainer PageContent={MakeResPage} />}
           />
           <Route

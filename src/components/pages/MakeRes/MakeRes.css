@@ -1,7 +1,7 @@
 /* ===== MakeResContainer.js ===== */
 
 .big-box {
-    margin: 1rem 5rem 2rem
+    margin: 3rem 5rem 2rem
 }
 
 .row {
@@ -29,8 +29,7 @@
 .steps-box {
     width: 100%;
     background: rgba(196, 196, 196, 0.25);
-    padding: .5rem;
-    margin: -.6rem 0 0 0
+    padding: 1rem 0 .5rem;
 }
 
 .steps {
@@ -46,7 +45,7 @@
     flex-direction: column;
     align-items: center;
     width: 17rem;
-    padding: 5rem 0 5rem
+    padding: 5rem 0 6rem
 }
 
 .roomBtn {
@@ -167,7 +166,7 @@
 
 .duration-page {
     background: url("../../../assets/images/bridgegoodesignstudio2.jpg") center 0 no-repeat;
-    background-size: contain;
+    background-size: 1440px 35rem; 
     height: 35rem;
     display: flex;
 }
@@ -175,17 +174,17 @@
 .radio-box {
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 32rem;
-    margin: 4.5rem auto 7rem;
+    width: 35rem;
+    margin: 4rem auto 7rem;
 }
 
 .radio-box h1{
-    font-size: 26px;
-    margin: 1.5rem 3rem 1rem;
+    font-size: 28px;
+    margin: .4rem 3rem 1rem;
 }
 
 .radio-group {
-    margin: 2rem 12rem 0; 
+    margin: 1rem 12rem 0; 
 }
 
 
@@ -196,7 +195,7 @@
     padding: 1.2rem 2rem;
     color: #FFFFFF;
     width: 10rem;
-    margin: 2.5rem auto 1rem;
+    margin: 1rem auto 1rem;
     text-align: center;
     font-size: 18px;
 }
