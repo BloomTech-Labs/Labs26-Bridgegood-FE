@@ -60,7 +60,6 @@ function App() {
             path="/login"
             component={() => <HomeContainer PageContent={LoginPage} />}
           />
-
           {/* <Route path="/login" component={LoginPage} /> */}
           <Route path="/implicit/callback" component={LoginCallback} />
           <Route
