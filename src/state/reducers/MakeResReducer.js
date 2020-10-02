@@ -5,6 +5,7 @@ import { UPDATE_TIME_SLOT } from '../actions/TimeSlotActions';
 import { UPDATE_STEP } from '../actions/StepsActions';
 
 export const initialState = {
+  user: 'TestUser',
   duration: '0', // 1-2 hours, 3-4 hours, 6 hours
   date: '2011-11-11', //'Any present or future date'
   room: 'None', // 'CoWorker or Media'
