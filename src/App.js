@@ -69,7 +69,7 @@ export default function App() {
         )}
       />
       <SecureRoute
-        path="/make-res"
+        path="/reserve"
         component={() => (
           <HomeContainer userInfo={userInfo} PageContent={MakeResPage} />
         )}
