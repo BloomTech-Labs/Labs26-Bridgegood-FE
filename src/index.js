@@ -1,16 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-  BrowserRouter as Router,
-  Route,
-  useHistory,
-  Switch,
-} from 'react-router-dom';
-import { Security } from '@okta/okta-react';
-
+import { BrowserRouter as Router, useHistory } from 'react-router-dom';
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+
+import { Security } from '@okta/okta-react';
+
 import 'antd/dist/antd.less';
 
 import './index.less';

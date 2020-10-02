@@ -1,12 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Route, useHistory, Switch } from 'react-router-dom';
 
-import {
-  Security,
-  SecureRoute,
-  LoginCallback,
-  useOktaAuth,
-} from '@okta/okta-react';
+import { SecureRoute, LoginCallback, useOktaAuth } from '@okta/okta-react';
 
 import {
   HomePage,
@@ -53,23 +48,31 @@ export default function App() {
       <Route
         path="/"
         exact
-        component={() => <HomeContainer PageContent={HomePage} />}
+        component={() => (
+          <HomeContainer userInfo={userInfo} PageContent={HomePage} />
+        )}
       />
       <Route path="/login">
-        <HomeContainer PageContent={LoginPage} />
+        <HomeContainer userInfo={userInfo} PageContent={LoginPage} />
       </Route>
       <Route path="/implicit/callback" component={LoginCallback} />
       <Route
         path="/donate"
-        component={() => <HomeContainer PageContent={DonatePage} />}
+        component={() => (
+          <HomeContainer userInfo={userInfo} PageContent={DonatePage} />
+        )}
       />
       <SecureRoute
         path="/welcome"
-        component={() => <HomeContainer PageContent={WelcomeBoard} />}
+        component={() => (
+          <HomeContainer userInfo={userInfo} PageContent={WelcomeBoard} />
+        )}
       />
       <SecureRoute
         path="/make-res"
-        component={() => <HomeContainer PageContent={MakeResPage} />}
+        component={() => (
+          <HomeContainer userInfo={userInfo} PageContent={MakeResPage} />
+        )}
       />
       <SecureRoute
         path="/admin"
@@ -78,7 +81,11 @@ export default function App() {
         )}
       />
 
-      <Route component={() => <HomeContainer PageContent={NotFoundPage} />} />
+      <Route
+        component={() => (
+          <HomeContainer userInfo={userInfo} PageContent={NotFoundPage} />
+        )}
+      />
     </Switch>
   );
 }
