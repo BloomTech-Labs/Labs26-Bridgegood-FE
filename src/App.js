@@ -48,40 +48,35 @@ export default function App() {
   }, [memoAuthService]);
 
   return (
+    // NOTE: SecureRoute to work correctly, we need to use the 'component' prop instead of relying on props.children
     <Switch>
-      <Route
-        path="/login"
-        component={() => <HomeContainer PageContent={LoginPage} />}
-      />
-
-      {/* <Route path="/login" component={LoginPage} /> */}
-      <Route path="/implicit/callback" component={LoginCallback} />
       <Route
         path="/"
         exact
         component={() => <HomeContainer PageContent={HomePage} />}
       />
-      <SecureRoute
-        path="/make-res"
-        component={() => <HomeContainer PageContent={MakeResPage} />}
-      />
-      <Route
-        path="/welcome"
-        component={() => <HomeContainer PageContent={WelcomeBoard} />}
-      />
+      <Route path="/login">
+        <HomeContainer PageContent={LoginPage} />
+      </Route>
+      <Route path="/implicit/callback" component={LoginCallback} />
       <Route
         path="/donate"
         component={() => <HomeContainer PageContent={DonatePage} />}
       />
-      <SecureRoute path="/admin">
-        <AdminLayout userInfo={userInfo} PageContent={AdminPage}>
-          {/* <AdminPage user={userInfo}
-              isLoggedIn={authState.isAuthenticated}
-              userInfo={userInfo}
-              authService={authService}
-              /> */}
-        </AdminLayout>
-      </SecureRoute>
+      <SecureRoute
+        path="/welcome"
+        component={() => <HomeContainer PageContent={WelcomeBoard} />}
+      />
+      <SecureRoute
+        path="/make-res"
+        component={() => <HomeContainer PageContent={MakeResPage} />}
+      />
+      <SecureRoute
+        path="/admin"
+        component={() => (
+          <AdminLayout userInfo={userInfo} PageContent={AdminPage} />
+        )}
+      />
 
       <Route component={() => <HomeContainer PageContent={NotFoundPage} />} />
     </Switch>
