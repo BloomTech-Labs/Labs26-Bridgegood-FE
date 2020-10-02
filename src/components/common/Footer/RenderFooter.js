@@ -48,7 +48,7 @@ const Footer = ({ userInfo }) => {
             <div className="nav">
               <ul>
                 <li>
-                  <a href="https://bridgegood.org/about/">About Us</a>
+                  <a href="https://bridgegood.org/about">About Us</a>
                 </li>
                 <li>
                   <a href="/#">FAQ</a>
@@ -57,7 +57,7 @@ const Footer = ({ userInfo }) => {
                   <Link to="/donate">Pay it Forward</Link>
                 </li>
                 <li>
-                  <a href="https://bridgegood.org/">
+                  <a href="https://bridgegood.org">
                     BRIDGEGOOD.<span>org</span>
                   </a>
                 </li>

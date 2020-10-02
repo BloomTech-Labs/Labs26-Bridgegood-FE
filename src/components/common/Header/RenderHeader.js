@@ -13,11 +13,11 @@ function RenderHeader({ userInfo }) {
       </div>
 
       <nav>
-        <a href="https://bridgegood.org/about/">About us</a>
+        <a href="https://bridgegood.org/about">About us</a>
 
         <Link to="/donate">pay it forward</Link>
 
-        <a href="https://bridgegood.org/">
+        <a href="https://bridgegood.org">
           BRIDGEGOOD.<span>org</span>
         </a>
       </nav>
