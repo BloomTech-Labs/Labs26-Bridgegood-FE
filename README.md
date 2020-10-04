@@ -2,7 +2,7 @@
 
 BridgeGood is an organization that mentors aspiring designers in Oakland. They recently received a workspace for students to work in. We will be building a reservation and donation system for that workspace. Web students will focus on two user types: users and admin. You will be given hi-fi wireframes and be expected to ship to spec.
 
-You can find the deployed project at [bridgegood.dev](http://main.d2pjupszhlnsi0.amplifyapp.com/login).
+You can find the deployed project at [BRIDGEGOOD.dev](https://bridgegood.dev).
 
 ## Contributors
 
@@ -34,7 +34,7 @@ You can find the deployed project at [bridgegood.dev](http://main.d2pjupszhlnsi0
 
 ```🚫 more info on using badges [here](https://github.com/badges/shields)```
 
-#### Front end deployed to `Amazon AWS` built using:
+#### Front end deployed to `AWS Amplify` built using:
 - React
 - Redux
 - Ant Design
@@ -62,8 +62,6 @@ You can find the deployed project at [bridgegood.dev](http://main.d2pjupszhlnsi0
 
 - Venmo is a mobile payment service owned by PayPal. Venmo account holders can transfer funds to others via a mobile phone app; both the sender and receiver have to live in the U.S.
 
-
-
 ## Installation Instructions
 
 - Fork and clone the repo to install it as your own remote.
@@ -79,7 +77,7 @@ In order for the app to function correctly, the user must set up their own envir
 
     *  REACT_APP_CLIENT_ID=example
     *  REACT_APP_OKTA_ISSUER_URI="https://example-882474.okta.com"
-    *  REACT_APP_API_URI=http://localhost:8005
+    *  REACT_APP_API_URI=http://localhost:3000
 
 ### Other Scripts
 
