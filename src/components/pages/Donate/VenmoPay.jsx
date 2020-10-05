@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import dropin from 'braintree-web-drop-in';
-import braintree from 'braintree';
+// import braintree from 'braintree';
 import { Form, Button } from 'antd';
 
 const useMulti = false;

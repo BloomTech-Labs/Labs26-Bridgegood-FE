@@ -74,6 +74,7 @@ export default function SignUp() {
     >
       <Form.Item
         name="firstName"
+        className="test"
         label="First Name"
         rules={[
           {
@@ -87,6 +88,7 @@ export default function SignUp() {
 
       <Form.Item
         name="lastName"
+        className="test"
         label="Last Name"
         rules={[
           {
@@ -100,6 +102,7 @@ export default function SignUp() {
 
       <Form.Item
         name="schoolEnrolled"
+        className="test"
         label="School Enrolled"
         rules={[
           {
@@ -113,6 +116,7 @@ export default function SignUp() {
 
       <Form.Item
         name="username"
+        className="test"
         label="BRIDGEGOOD Username"
         rules={[
           {
@@ -126,6 +130,7 @@ export default function SignUp() {
 
       <Form.Item
         name="email"
+        className="test2"
         label="Email"
         rules={[
           {
@@ -143,6 +148,7 @@ export default function SignUp() {
 
       <Form.Item
         name="phone"
+        className="test"
         label="Phone Number"
         rules={[
           {
@@ -161,6 +167,7 @@ export default function SignUp() {
 
       <Form.Item
         name="password"
+        className="test"
         label="Password"
         rules={[
           {
@@ -175,6 +182,7 @@ export default function SignUp() {
 
       <Form.Item
         name="agreement"
+        // className="test8"
         valuePropName="checked"
         rules={[
           {
