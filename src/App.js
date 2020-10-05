@@ -45,77 +45,79 @@ export default function App() {
 
   return (
     // NOTE: SecureRoute to work correctly, we need to use the 'component' prop instead of relying on props.children
-    <Switch>
-      <Route
-        path="/"
-        exact
-        component={() => (
-          <HomeContainer
-            authService={authService}
-            userInfo={userInfo}
-            PageContent={HomePage}
-          />
-        )}
-      />
-      <Route path="/login">
-        <HomeContainer
-          authService={authService}
-          userInfo={userInfo}
-          PageContent={LoginPage}
+    <div className="App">
+      <Switch>
+        <Route
+          path="/"
+          exact
+          component={() => (
+            <HomeContainer
+              authService={authService}
+              userInfo={userInfo}
+              PageContent={HomePage}
+            />
+          )}
         />
-      </Route>
-      <Route path="/logout" component={Logout} />
-      <Route path="/implicit/callback" component={LoginCallback} />
-      <Route
-        path="/donate"
-        component={() => (
+        <Route path="/login">
           <HomeContainer
             authService={authService}
             userInfo={userInfo}
-            PageContent={DonatePage}
+            PageContent={LoginPage}
           />
-        )}
-      />
-      <SecureRoute
-        path="/welcome"
-        component={() => (
-          <HomeContainer
-            authService={authService}
-            userInfo={userInfo}
-            PageContent={WelcomeBoard}
-          />
-        )}
-      />
-      <SecureRoute
-        path="/reserve"
-        component={() => (
-          <HomeContainer
-            authService={authService}
-            userInfo={userInfo}
-            PageContent={MakeResPage}
-          />
-        )}
-      />
-      <SecureRoute
-        path="/admin"
-        component={() => (
-          <AdminLayout
-            authService={authService}
-            userInfo={userInfo}
-            PageContent={AdminPage}
-          />
-        )}
-      />
+        </Route>
+        <Route path="/logout" component={Logout} />
+        <Route path="/implicit/callback" component={LoginCallback} />
+        <Route
+          path="/donate"
+          component={() => (
+            <HomeContainer
+              authService={authService}
+              userInfo={userInfo}
+              PageContent={DonatePage}
+            />
+          )}
+        />
+        <SecureRoute
+          path="/welcome"
+          component={() => (
+            <HomeContainer
+              authService={authService}
+              userInfo={userInfo}
+              PageContent={WelcomeBoard}
+            />
+          )}
+        />
+        <SecureRoute
+          path="/reserve"
+          component={() => (
+            <HomeContainer
+              authService={authService}
+              userInfo={userInfo}
+              PageContent={MakeResPage}
+            />
+          )}
+        />
+        <SecureRoute
+          path="/admin"
+          component={() => (
+            <AdminLayout
+              authService={authService}
+              userInfo={userInfo}
+              PageContent={AdminPage}
+            />
+          )}
+        />
 
-      <Route
-        component={() => (
-          <HomeContainer
-            authService={authService}
-            userInfo={userInfo}
-            PageContent={NotFoundPage}
-          />
-        )}
-      />
-    </Switch>
+        <Route
+          component={() => (
+            <HomeContainer
+              authService={authService}
+              userInfo={userInfo}
+              PageContent={NotFoundPage}
+            />
+          )}
+        />
+      </Switch>
+    </div>
   );
 }

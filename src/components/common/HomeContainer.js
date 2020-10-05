@@ -7,9 +7,9 @@ import React, { useState, useEffect, useMemo } from 'react';
 import RenderHeader from './Header/RenderHeader';
 import RenderFooter from './Footer/RenderFooter';
 
-import { Layout } from 'antd';
+// import { Layout } from 'antd';
 
-const { Header, Footer, Sider, Content } = Layout;
+// const { Header, Footer, Sider, Content } = Layout;
 
 export default function HomeContainer({ authService, userInfo, PageContent }) {
   return (
