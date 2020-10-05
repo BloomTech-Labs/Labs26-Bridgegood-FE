@@ -11,12 +11,12 @@ import { Layout } from 'antd';
 
 const { Header, Footer, Sider, Content } = Layout;
 
-export default function HomeContainer({ userInfo, PageContent }) {
+export default function HomeContainer({ authService, userInfo, PageContent }) {
   return (
     <>
-      <RenderHeader userInfo={userInfo} />
+      <RenderHeader userInfo={userInfo} authService={authService} />
       <PageContent userInfo={userInfo} />
-      <RenderFooter userInfo={userInfo} />
+      <RenderFooter userInfo={userInfo} authService={authService} />
     </>
   );
 }
