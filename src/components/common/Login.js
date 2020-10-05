@@ -20,10 +20,14 @@ export default function Login(props) {
       // turning this feature on allows your widget to use Okta for user registration
       logo: img,
       // add your custom logo to your signing/register widget here.
+      colors: {
+        brand: '#002171',
+      },
       i18n: {
+        // Overriding English properties
         en: {
-          'primaryauth.title': 'LOG IN',
-          // change title for your app
+          'primaryauth.title': 'LOG IN TO RESERVE',
+          'primaryauth.username.placeholder': 'Email address',
         },
       },
       authParams: {
