@@ -255,8 +255,8 @@
     justify-content: space-between;
 }
 
-.res-details p:last-child {
-    margin-right: 8rem;
+.res-details p {
+    width: 100%;
 }
 
 .user-res-info {
@@ -264,18 +264,6 @@
     font-size: 16px;
     margin: 4rem 0 4rem;
     justify-content: space-between;
-}
-
-.res-room {
-    margin-left: 6.5rem;
-}
-
-.res-date {
-    margin-left: 3.5rem;
-}
-
-.user-res-info p:last-child {
-    margin-right: 8rem;
 }
 
 .donation-box {
