@@ -12,6 +12,7 @@ import {
   WelcomeBoard,
   AdminPage,
 } from './components/pages';
+import Logout from './components/common/Logout';
 
 import HomeContainer from './components/common/HomeContainer';
 import AdminLayout from './components/pages/AdminLayout';
@@ -50,41 +51,70 @@ export default function App() {
           path="/"
           exact
           component={() => (
-            <HomeContainer userInfo={userInfo} PageContent={HomePage} />
+            <HomeContainer
+              authService={authService}
+              userInfo={userInfo}
+              PageContent={HomePage}
+            />
           )}
         />
         <Route path="/login">
-          <HomeContainer userInfo={userInfo} PageContent={LoginPage} />
+          <HomeContainer
+            authService={authService}
+            userInfo={userInfo}
+            PageContent={LoginPage}
+          />
         </Route>
+        <Route path="/logout" component={Logout} />
         <Route path="/implicit/callback" component={LoginCallback} />
         <Route
           path="/donate"
           component={() => (
-            <HomeContainer userInfo={userInfo} PageContent={DonatePage} />
+            <HomeContainer
+              authService={authService}
+              userInfo={userInfo}
+              PageContent={DonatePage}
+            />
           )}
         />
         <SecureRoute
           path="/welcome"
           component={() => (
-            <HomeContainer userInfo={userInfo} PageContent={WelcomeBoard} />
+            <HomeContainer
+              authService={authService}
+              userInfo={userInfo}
+              PageContent={WelcomeBoard}
+            />
           )}
         />
         <SecureRoute
           path="/reserve"
           component={() => (
-            <HomeContainer userInfo={userInfo} PageContent={MakeResPage} />
+            <HomeContainer
+              authService={authService}
+              userInfo={userInfo}
+              PageContent={MakeResPage}
+            />
           )}
         />
         <SecureRoute
           path="/admin"
           component={() => (
-            <AdminLayout userInfo={userInfo} PageContent={AdminPage} />
+            <AdminLayout
+              authService={authService}
+              userInfo={userInfo}
+              PageContent={AdminPage}
+            />
           )}
         />
 
         <Route
           component={() => (
-            <HomeContainer userInfo={userInfo} PageContent={NotFoundPage} />
+            <HomeContainer
+              authService={authService}
+              userInfo={userInfo}
+              PageContent={NotFoundPage}
+            />
           )}
         />
       </Switch>
