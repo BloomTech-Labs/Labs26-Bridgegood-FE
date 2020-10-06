@@ -15,7 +15,7 @@ export const initialState = {
   date: '2011-11-11', //'Any present or future date'
   room: 'None', // 'CoWorker or Media'
   time_slot: 'None', // Examples of times 10,11,12,13,14,15,16,17 (10am - 5pm)
-  currentStep: 2, // 0-2 (Pick time), (date/ room/ time slot), (finalize/ donate)
+  currentStep: 0, // 0-2 (Pick time), (date/ room/ time slot), (finalize/ donate)
   donation: 'None', // 1, 5, 10, 20, Other Amount
   isFetchingData: false,
   isPostingData: false,
@@ -24,7 +24,6 @@ export const initialState = {
 };
 
 export const makeResReducer = (state = initialState, action) => {
-  console.log('ACTION FROM REDUCER ====>', 'Initial State', state);
   switch (action.type) {
     case UPDATE_DURATION:
       return {

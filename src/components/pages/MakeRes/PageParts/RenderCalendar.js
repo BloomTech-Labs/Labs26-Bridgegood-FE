@@ -23,7 +23,7 @@ function RenderCalendar(props) {
       >
         <Calendar fullscreen={false} onSelect={onSelectChange} />
       </div>
-      <h2> You've Selected = {props.dateOnProps}</h2>
+      {/* <h2> You've Selected = {props.dateOnProps}</h2> */}
     </>
   );
 }

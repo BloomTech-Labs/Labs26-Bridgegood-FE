@@ -38,7 +38,7 @@
 }
 
 /* ===== RenderRoomPick.js ===== */
-.roomBox {
+.room-box {
     border: 1px#4E4E4E solid;
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@
     padding: 5rem 0 6rem
 }
 
-.roomBtn {
+.room-btn {
     border: 1px #4E4E4E solid;
     border-radius: 20px;
     text-align: center;
@@ -56,12 +56,12 @@
     width: 10rem;
 }
 
-.roomBtn:hover {
+.room-btn:hover {
     color: #40a9ff;
     border: 1px #40a9ff solid;
 }
 
-.roomBtnActive {
+.room-btn-active {
     color: #FFFFFF;
     border: 1px #4e4e4e solid;
     background-color: #002171;
@@ -72,6 +72,25 @@
     width: 10rem;
 }
 
+.room-box-disabled {
+    border: 1px#E5E5E5 solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 17rem;
+    padding: 5rem 0 6rem
+}
+
+.room-btn-disabled {
+    border: 1px #E5E5E5 solid;
+    border-radius: 20px;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    width: 10rem;
+    color: #E5E5E5;
+}
+
 /* ===== RenderTimeSlots.js ===== */
 .timeSlotBox {
     border: 1px #4E4E4E solid;
@@ -80,6 +99,7 @@
     align-items: center;
     padding: 2.5rem 1rem 2.35rem;
 }
+
 .row-ts {
     display: flex;
 }
@@ -125,6 +145,14 @@
     padding: .75rem 1.5rem;
 }
 
+.timeSlotBox-greyOut {
+    border: 1px #E5E5E5 solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1rem 2.35rem;
+}
+
 .finalBtn {
     border: 2px #C5922C solid;
     border-radius: 4px;
@@ -134,8 +162,21 @@
     padding: .3rem 1.5rem;
 }
 
-.finalBtn a{
+.final-btn a{
     color: #FFFFFF;
+}
+
+.final-btn-disabled {
+    border: 2px #E5E5E5 solid;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    color: #E5E5E5;
+    margin-top: 1rem;
+    padding: .3rem 1.5rem;
+}
+
+.finalBtn a{
+    color: #E5E5E5;
 }
 
 /* ===== ResSteps ===== */
@@ -184,7 +225,7 @@
     margin: 1rem 12rem 0; 
 }
 
-.radioBtn {
+.radioBtn-disactive{
     border: 2px solid #E5E5E5;
     background: #C4C4C4;
     padding: 1.2rem 2rem;
@@ -193,17 +234,24 @@
     margin: 1rem auto 1rem;
     text-align: center;
     font-size: 18px;
+    border-radius: 4px;
 }
 
-.radioBtn:hover {
+.radioBtn-active{
+    border: 2px solid #E5E5E5;
+    background: #C5922C;
+    padding: 1.2rem 2rem;
+    color: #FFFFFF;
+    width: 10rem;
+    margin: 1rem auto 1rem;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.radioBtn-active:hover {
     color: #40a9ff;
     border: 1px #40a9ff solid;
-}
-
-.radioBtn:active {
-    color: #FFFFFF;
-    border: 1px #4e4e4e solid;
-    background-color: #002171;
 }
 
 

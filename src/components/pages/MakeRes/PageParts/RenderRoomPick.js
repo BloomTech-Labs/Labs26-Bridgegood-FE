@@ -6,30 +6,49 @@ import '../MakeRes.css';
 
 function RenderRoomPick(props) {
   const clicked = props.roomOnProps;
-  return (
-    <>
-      <div className="roomBox">
-        <div
-          onClick={() => props.updateRoom('CoWorking Room')}
-          className={clicked === 'CoWorking Room' ? 'roomBtnActive' : 'roomBtn'}
-        >
-          CoWorking Room
-        </div>
+  console.log(props.date);
+  if (props.date === undefined) {
+    return (
+      <>
+        <div className="room-box-disabled">
+          <div className="room-btn-disabled">CoWorking Room</div>
 
-        <div
-          onClick={() => props.updateRoom('Media Room')}
-          className={clicked === 'Media Room' ? 'roomBtnActive' : 'roomBtn'}
-        >
-          Media Room
+          <div className="room-btn-disabled">Media Room</div>
         </div>
-      </div>
-      <h2> You've Selected = {props.roomOnProps}</h2>
-    </>
-  );
+        {/* <h2> You've Selected = {props.roomOnProps}</h2> */}
+      </>
+    );
+  } else {
+    return (
+      <>
+        <div className="room-box">
+          <div
+            onClick={() => props.updateRoom('CoWorking Room')}
+            className={
+              clicked === 'CoWorking Room' ? 'room-btn-active' : 'room-btn'
+            }
+          >
+            CoWorking Room
+          </div>
+
+          <div
+            onClick={() => props.updateRoom('Media Room')}
+            className={
+              clicked === 'Media Room' ? 'room-btn-active' : 'room-btn'
+            }
+          >
+            Media Room
+          </div>
+        </div>
+        {/* <h2> You've Selected = {props.roomOnProps}</h2> */}
+      </>
+    );
+  }
 }
 
 const mapStateToProps = state => {
   return {
+    date: state.date,
     roomOnProps: state.room,
   };
 };
