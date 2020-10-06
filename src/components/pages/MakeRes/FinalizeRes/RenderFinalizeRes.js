@@ -5,6 +5,7 @@ import { Row, Col } from 'antd';
 
 import { updateStep } from '../../../../state/actions/StepsActions';
 import { addReservation } from '../../../../state/actions/AddResAction';
+import { updateDonation } from '../../../../state/actions/DonationAction';
 import '../MakeRes.css';
 
 const RenderFinalizeRes = props => {
@@ -106,24 +107,26 @@ const RenderFinalizeRes = props => {
     props.addReservation(reservationData);
   };
 
+  const clicked = props.donation;
+
   return (
     <>
       <div className="finalize-box">
         <div className="reservation-details">
-          <div className="donation-details">
-            <div>
+          <Row className="donation-details">
+            <Col>
               <h1>
                 Your donation helps keep <br />
                 creativity diverse in Oakland
               </h1>
-            </div>
-            <div>
+            </Col>
+            <Col>
               <h2>
                 BRIDGEGOOD is a 503(c) nonprofit <br />
                 and is run 100% through donations
               </h2>
-            </div>
-          </div>
+            </Col>
+          </Row>
           <Row className="res-details">
             <Col span={6}>
               <p>Creative's Name</p>
@@ -162,13 +165,42 @@ const RenderFinalizeRes = props => {
           </div>
           <div className="donation-btns">
             <div className="row-1">
-              <div>$1</div>
-              <div>$5</div>
-              <div>$10</div>
+              <div
+                onClick={() => props.updateDonation('1')}
+                className={clicked === '1' ? 'active-donate-btn' : 'row-1-div'}
+              >
+                $1
+              </div>
+              <div
+                onClick={() => props.updateDonation('5')}
+                className={clicked === '5' ? 'active-donate-btn' : 'row-1-div'}
+              >
+                $5
+              </div>
+              <div
+                onClick={() => props.updateDonation('10')}
+                className={clicked === '10' ? 'active-donate-btn' : 'row-1-div'}
+              >
+                $10
+              </div>
             </div>
             <div className="row-2">
-              <div>$20</div>
-              <div>Other Amount</div>
+              <div
+                onClick={() => props.updateDonation('20')}
+                className={
+                  clicked === '20' ? 'active-donation-btn-2' : 'row-2-div'
+                }
+              >
+                $20
+              </div>
+              <div
+                onClick={() => props.updateDonation('OA')}
+                className={
+                  clicked === 'OA' ? 'active-donation-btn-2-OA' : 'row-2-div-OA'
+                }
+              >
+                Other Amount
+              </div>
             </div>
             <div id="donate-btn">
               <h2>DONATE</h2>
@@ -199,8 +231,11 @@ const mapStateToProps = state => {
     room: state.room,
     time_slot: state.time_slot,
     currentStep: state.currentStep,
+    donation: state.donation,
   };
 };
-export default connect(mapStateToProps, { updateStep, addReservation })(
-  RenderFinalizeRes
-);
+export default connect(mapStateToProps, {
+  updateStep,
+  addReservation,
+  updateDonation,
+})(RenderFinalizeRes);

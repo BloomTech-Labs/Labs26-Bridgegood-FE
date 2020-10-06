@@ -9,13 +9,6 @@ function RenderTimeSlot(props) {
   const duration = props.duration;
   const clicked = props.timeSlotOnProps;
 
-  const passiveState = {
-    duration: '0',
-    date: '2011-11-11',
-    room: 'None',
-    time_slot: 'None',
-  };
-
   const nextStep = () => {
     props.updateStep(2);
   };

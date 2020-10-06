@@ -12,7 +12,6 @@ function RenderDuration(props) {
   const ud = props.updateDuration(value);
 
   const clicked = props.durationOnProps;
-  console.log(clicked);
 
   const nextStep = () => {
     if (clicked == !'0') {

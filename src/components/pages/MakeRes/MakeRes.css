@@ -1,5 +1,4 @@
 /* ===== MakeResContainer.js ===== */
-
 .big-box {
     margin: 3rem 5rem 2rem
 }
@@ -37,8 +36,8 @@
     margin: 0 auto;
     
 }
-/* ===== RenderRoomPick.js ===== */
 
+/* ===== RenderRoomPick.js ===== */
 .roomBox {
     border: 1px#4E4E4E solid;
     display: flex;
@@ -74,7 +73,6 @@
 }
 
 /* ===== RenderTimeSlots.js ===== */
-
 .timeSlotBox {
     border: 1px #4E4E4E solid;
     display: flex;
@@ -141,7 +139,6 @@
 }
 
 /* ===== ResSteps ===== */
-
 .step-def{
     font-size: 14px;
     display: flex;
@@ -162,8 +159,8 @@
     background-color: #C4C4C4;
 }
 
-/* ===== RenderDuration ===== */
 
+/* ===== RenderDuration ===== */
 .duration-page {
     background: url("../../../assets/images/bridgegoodesignstudio2.jpg") center 0 no-repeat;
     background-size: 1440px 35rem; 
@@ -209,6 +206,7 @@
     background-color: #002171;
 }
 
+
 /* ===== RenderFinalizeRes ===== */
 .finalize-box {
     display: flex;
@@ -224,7 +222,7 @@
 .edit-res {
     font-size: 16px;
     color: #1A64B7;
-    margin: 7rem 0 0;
+    margin: 8rem 0 0;
 }
 
 .donation-details {
@@ -244,6 +242,7 @@
     font-weight: 400;
     font-size:22px;
     line-height: 25.78px;
+    margin-top: .5rem;
 }
 
 .res-details {
@@ -297,10 +296,20 @@
     margin: 3rem auto 1rem;
 }
 
-.row-1 div {
+.row-1-div {
     border: 1px solid #C4C4C4;
     border-radius: 3px;
     background-color: #E5E5E5;
+    padding: .75rem 3.25rem;
+    font-size: 14px;
+}
+
+.active-donate-btn {
+    font-size: 14px;
+    color: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    border-radius: 3px;
+    background-color: #002171;
     padding: .75rem 3.25rem;
 }
 
@@ -311,14 +320,35 @@
     margin: 0 auto 1rem;
 }
 
-.row-2 div {
+.row-2-div {
     border: 1px solid #C4C4C4;
     border-radius: 3px;
     background-color: #E5E5E5;
     padding: .75rem 3rem;
 }
 
-.row-2 div:last-child {
+.active-donation-btn-2 {
+    font-size: 14px;
+    color: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    border-radius: 3px;
+    background-color: #002171;
+    padding: .75rem 3rem;
+}
+
+.row-2-div-OA {
+    border: 1px solid #C4C4C4;
+    border-radius: 3px;
+    background-color: #E5E5E5;
+    padding: .75rem 5.2rem;
+}
+
+.active-donation-btn-2-OA {
+    font-size: 14px;
+    color: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    border-radius: 3px;
+    background-color: #002171;
     padding: .75rem 5.2rem;
 }
 
