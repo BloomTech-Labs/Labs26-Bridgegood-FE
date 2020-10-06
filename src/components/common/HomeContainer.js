@@ -4,54 +4,19 @@
 // Also, passes down global state (like auth state)
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { useOktaAuth } from '@okta/okta-react';
 import RenderHeader from './Header/RenderHeader';
 import RenderFooter from './Footer/RenderFooter';
 
-import { Layout } from 'antd';
+// import { Layout } from 'antd';
 
-const { Header, Footer, Sider, Content } = Layout;
+// const { Header, Footer, Sider, Content } = Layout;
 
-export default function HomeContainer({ PageContent }) {
-  const { authState, authService } = useOktaAuth();
-  const [userInfo, setUserInfo] = useState(null);
-  // eslint-disable-next-line
-  const [memoAuthService] = useMemo(() => [authService], []);
-
-  useEffect(() => {
-    let isSubscribed = true;
-
-    memoAuthService
-      .getUser()
-      .then(info => {
-        // if user is authenticated we can use the authService to snag some user info.
-        // isSubscribed is a boolean toggle that we're using to clean up our useEffect.
-        if (isSubscribed) {
-          setUserInfo(info);
-        }
-      })
-      .catch(err => {
-        isSubscribed = false;
-        return setUserInfo(null);
-      });
-    return () => (isSubscribed = false);
-  }, [memoAuthService]);
-
+export default function HomeContainer({ authService, userInfo, PageContent }) {
   return (
     <>
-      <RenderHeader
-        isLoggedIn={authState.isAuthenticated}
-        userInfo={userInfo}
-        authService={authService}
-      />
-
-      <PageContent
-        isLoggedIn={authState.isAuthenticated}
-        userInfo={userInfo}
-        authService={authService}
-      />
-
-      <RenderFooter />
+      <RenderHeader userInfo={userInfo} authService={authService} />
+      <PageContent userInfo={userInfo} />
+      <RenderFooter userInfo={userInfo} authService={authService} />
     </>
   );
 }

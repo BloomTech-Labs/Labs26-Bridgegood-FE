@@ -15,7 +15,7 @@ const Main = props => {
           </h1>
           <div>
             <button>
-              <Link to="/login">
+              <Link to="/reserve">
                 Reserve a spot now
                 <span>
                   <img src={Arrow} alt="arrow icon" />
@@ -32,7 +32,7 @@ const Main = props => {
               </Link>
             </button>
             <button>
-              <a href="https://bridgegood.org/about/">
+              <a href="https://bridgegood.org/about">
                 Learn more about us
                 <span>
                   <img src={Arrow} alt="arrow icon" />
