@@ -32,8 +32,14 @@ const Mission = props => {
           the students in the Bay Area.
         </p>
         <div>
-          <button>Pay It Forward</button>
-          <span>HOW WE ARE HELPING IMPROVE DESIGN INCLUSION</span>
+          <button>
+            <a href="#">Pay It Forward</a>
+          </button>
+          <span>
+            <a href="https://bridgegood.org/impact/">
+              HOW WE ARE HELPING IMPROVE DESIGN INCLUSION
+            </a>
+          </span>
           <img src={PloygonIcon} alt="PloygonIcon " />
         </div>
       </section>
