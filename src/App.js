@@ -81,7 +81,6 @@ export default function App() {
             <AdminLayout userInfo={userInfo} PageContent={AdminPage} />
           )}
         />
-
         <Route
           component={() => (
             <HomeContainer userInfo={userInfo} PageContent={NotFoundPage} />
