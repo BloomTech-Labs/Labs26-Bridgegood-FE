@@ -22,6 +22,7 @@ const HomePage = () => {
         <FAQ />
         <WhiteSpace />
         <Supporters />
+        <WhiteSpace />
       </div>
     </>
   );

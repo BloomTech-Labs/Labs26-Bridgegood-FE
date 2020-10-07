@@ -9,10 +9,31 @@ import RenderFooter from './Footer/RenderFooter';
 
 export default function HomeContainer({ userInfo, PageContent }) {
   return (
-    <>
+    <div
+      // test
+      style={{
+        margin: '0 auto',
+        position: 'relative',
+        overflow: 'hidden',
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+      }}
+      // test
+    >
       <RenderHeader userInfo={userInfo} />
-      <PageContent userInfo={userInfo} />
+      <div
+        style={{
+          width: '100%',
+          height: '100%',
+        }}
+      >
+        <PageContent userInfo={userInfo} />
+      </div>
+
       <RenderFooter userInfo={userInfo} />
-    </>
+    </div>
   );
 }
