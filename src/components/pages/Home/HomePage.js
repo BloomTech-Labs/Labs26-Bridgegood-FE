@@ -10,7 +10,7 @@ const HomePage = () => {
     <>
       <div
         style={{
-          width: '95%',
+          width: '85%',
           margin: '0 auto',
         }}
       >
