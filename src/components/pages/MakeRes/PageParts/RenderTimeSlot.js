@@ -9,7 +9,6 @@ function RenderTimeSlot(props) {
   const duration = props.duration;
   const clicked = props.timeSlotOnProps;
   const roomSelected = props.room;
-  console.log('ROOM SELECTED', roomSelected);
 
   const nextStep = () => {
     props.updateStep(2);
@@ -39,7 +38,7 @@ function RenderTimeSlot(props) {
       </>
     );
   } else {
-    if (duration === '1-2 Hours') {
+    if (duration === '2h') {
       return (
         <>
           <div className="timeSlotBox">
@@ -118,7 +117,7 @@ function RenderTimeSlot(props) {
           {/* <h2> You've Selected = {props.timeSlotOnProps}</h2> */}
         </>
       );
-    } else if (duration === '3-4 Hours') {
+    } else if (duration === '4h') {
       return (
         <>
           <div className="timeSlotBox">
@@ -185,7 +184,7 @@ function RenderTimeSlot(props) {
           {/* <h2> You've Selected = {props.timeSlotOnProps}</h2> */}
         </>
       );
-    } else if (duration === '6 Hours') {
+    } else if (duration === '6h') {
       return (
         <>
           <div className="timeSlotBox">

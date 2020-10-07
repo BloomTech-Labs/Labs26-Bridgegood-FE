@@ -13,10 +13,10 @@ export const addReservation = reservationData => dispatch => {
       dispatch({ type: UPDATE_RESERVATIONS, payload: res.data });
     })
     .catch(err => {
-      console.log('error fetching data from api, err: ', err);
+      console.log('error posting data to api, err: ', err);
       dispatch({
         type: SET_ERROR,
-        payload: 'error fetching data from api, err: ',
+        payload: 'error posting data to api, err: ',
       });
     });
 };

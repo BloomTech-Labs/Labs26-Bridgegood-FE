@@ -9,7 +9,6 @@ const ResSteps = props => {
   const currentStep = props.currentStep;
   const selectDuration = props.duration;
   const selectTimeSlot = props.time_slot;
-  console.log(selectTimeSlot);
 
   const stepOne = () => {
     props.updateStep(0);

@@ -54,11 +54,12 @@
     padding: 1.5rem 0;
     margin-bottom: 2rem;
     width: 10rem;
+    cursor: pointer;
 }
 
 .room-btn:hover {
-    color: #40a9ff;
-    border: 1px #40a9ff solid;
+    color:#1A64B7;
+    border: 1px #1A64B7 solid;
 }
 
 .room-btn-active {
@@ -70,6 +71,7 @@
     padding: 1.5rem 0;
     margin-bottom: 2rem;
     width: 10rem;
+    cursor: pointer;
 }
 
 .room-box-disabled {
@@ -89,6 +91,7 @@
     margin-bottom: 2rem;
     width: 10rem;
     color: #E5E5E5;
+    cursor: default;
 }
 
 /* ===== RenderTimeSlots.js ===== */
@@ -114,11 +117,12 @@
     padding: .75rem 1.5rem;
     border: 1px #4E4E4E solid;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .tsBtn:hover {
-    color: #40a9ff;
-    border: 1px #40a9ff solid;
+    color:#1A64B7;
+    border: 1px#1A64B7 solid;
 }
 
 .tsBtn:active {
@@ -135,6 +139,7 @@
     color: #FFFFFF;
     border: 1px #4e4e4e solid;
     background-color: #002171;
+    cursor: pointer;
 }
 
 .greyOut {
@@ -143,6 +148,7 @@
     color: #E5E5E5;
     margin: .5rem .75rem;
     padding: .75rem 1.5rem;
+    cursor: default;
 }
 
 .timeSlotBox-greyOut {
@@ -160,6 +166,7 @@
     color: #FFFFFF;
     margin-top: 1rem;
     padding: .3rem 1.5rem;
+    cursor: pointer;
 }
 
 .final-btn a{
@@ -173,27 +180,31 @@
     color: #E5E5E5;
     margin-top: 1rem;
     padding: .3rem 1.5rem;
+    cursor: default;
 }
 
 .finalBtn a{
     color: #E5E5E5;
 }
 
-/* ===== ResSteps ===== */
+/* ===== RenderResSteps ===== */
 .step-def{
     font-size: 14px;
     display: flex;
     justify-content: space-between;
     margin: .5rem 0 0 -1rem;
     width: 38rem;
+    cursor: pointer;
 }
 
 .step-2 {
     margin-left: 3rem;
+    cursor: pointer;
 }
 
 .step-3 {
     margin-right: 2rem;
+    cursor: pointer;
 }
 
 .ant-steps-item-title::after {
@@ -235,6 +246,7 @@
     text-align: center;
     font-size: 18px;
     border-radius: 4px;
+    cursor: default;
 }
 
 .radioBtn-active{
@@ -247,11 +259,12 @@
     text-align: center;
     font-size: 18px;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .radioBtn-active:hover {
-    color: #40a9ff;
-    border: 1px #40a9ff solid;
+    color: #1A64B7;
+    border: 1px #1A64B7 solid;
 }
 
 
@@ -271,6 +284,7 @@
     font-size: 16px;
     color: #1A64B7;
     margin: 8rem 0 0;
+    cursor: pointer;
 }
 
 .donation-details {
@@ -350,6 +364,7 @@
     background-color: #E5E5E5;
     padding: .75rem 3.25rem;
     font-size: 14px;
+    cursor: pointer;
 }
 
 .active-donate-btn {
@@ -359,6 +374,7 @@
     border-radius: 3px;
     background-color: #002171;
     padding: .75rem 3.25rem;
+    cursor: pointer;
 }
 
 .row-2 {
@@ -373,6 +389,7 @@
     border-radius: 3px;
     background-color: #E5E5E5;
     padding: .75rem 3rem;
+    cursor: pointer;
 }
 
 .active-donation-btn-2 {
@@ -382,6 +399,7 @@
     border-radius: 3px;
     background-color: #002171;
     padding: .75rem 3rem;
+    cursor: pointer;
 }
 
 .row-2-div-OA {
@@ -389,6 +407,7 @@
     border-radius: 3px;
     background-color: #E5E5E5;
     padding: .75rem 5.2rem;
+    cursor: pointer;
 }
 
 .active-donation-btn-2-OA {
@@ -398,6 +417,7 @@
     border-radius: 3px;
     background-color: #002171;
     padding: .75rem 5.2rem;
+    cursor: pointer;
 }
 
 #donate-btn {
@@ -406,12 +426,14 @@
     padding: .75rem 0;
     background-color: #002171;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 #donate-btn h2 {
     margin: 0 10.5rem;
     font-size: 16px;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 .donation-alt {

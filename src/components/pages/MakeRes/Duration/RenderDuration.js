@@ -30,21 +30,21 @@ function RenderDuration(props) {
               <Radio.Group onChange={onChange}>
                 <Radio
                   style={radioStyle}
-                  value={'1-2 Hours'}
+                  value={'2h'}
                   onClick={() => props.updateDuration(value)}
                 >
                   1 - 2 Hours
                 </Radio>
                 <Radio
                   style={radioStyle}
-                  value={'3-4 Hours'}
+                  value={'4h'}
                   onClick={() => props.updateDuration(value)}
                 >
                   3 - 4 Hours
                 </Radio>
                 <Radio
                   style={radioStyle}
-                  value={'6 Hours'}
+                  value={'6h'}
                   onClick={() => props.updateDuration(value)}
                 >
                   6 Hours
@@ -70,21 +70,21 @@ function RenderDuration(props) {
               <Radio.Group onChange={onChange}>
                 <Radio
                   style={radioStyle}
-                  value={'1-2 Hours'}
+                  value={'2h'}
                   onClick={() => props.updateDuration(value)}
                 >
                   1 - 2 Hours
                 </Radio>
                 <Radio
                   style={radioStyle}
-                  value={'3-4 Hours'}
+                  value={'4h'}
                   onClick={() => props.updateDuration(value)}
                 >
                   3 - 4 Hours
                 </Radio>
                 <Radio
                   style={radioStyle}
-                  value={'6 Hours'}
+                  value={'6h'}
                   onClick={() => props.updateDuration(value)}
                 >
                   6 Hours

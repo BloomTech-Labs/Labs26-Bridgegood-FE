@@ -6,7 +6,6 @@ import '../MakeRes.css';
 
 function RenderRoomPick(props) {
   const clicked = props.roomOnProps;
-  console.log(props.date);
   if (props.date === undefined) {
     return (
       <>

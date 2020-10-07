@@ -51,7 +51,7 @@ const RenderFinalizeRes = props => {
     var duration = props.duration;
     var time_window = 'None';
 
-    if (duration === '1-2 Hours') {
+    if (duration === '2h') {
       if (time_slot === '10') {
         time_window = '10:00AM - 12:00PM';
       } else if (time_slot === '11') {
@@ -69,7 +69,7 @@ const RenderFinalizeRes = props => {
       } else if (time_slot === '17') {
         time_window = '5:00PM - 6:00PM';
       }
-    } else if (duration === '3-4 Hours') {
+    } else if (duration === '4h') {
       if (time_slot === '10') {
         time_window = '10:00AM - 2:00PM';
       } else if (time_slot === '11') {
@@ -83,7 +83,7 @@ const RenderFinalizeRes = props => {
       } else if (time_slot === '15') {
         time_window = '3:00PM - 6:00PM';
       }
-    } else if (duration === '6 Hours') {
+    } else if (duration === '6h') {
       if (time_slot === '10') {
         time_window = '10:00AM - 4:00PM';
       } else if (time_slot === '11') {
