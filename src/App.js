@@ -44,48 +44,50 @@ export default function App() {
 
   return (
     // NOTE: SecureRoute to work correctly, we need to use the 'component' prop instead of relying on props.children
-    <Switch>
-      <Route
-        path="/"
-        exact
-        component={() => (
-          <HomeContainer userInfo={userInfo} PageContent={HomePage} />
-        )}
-      />
-      <Route path="/login">
-        <HomeContainer userInfo={userInfo} PageContent={LoginPage} />
-      </Route>
-      <Route path="/implicit/callback" component={LoginCallback} />
-      <Route
-        path="/donate"
-        component={() => (
-          <HomeContainer userInfo={userInfo} PageContent={DonatePage} />
-        )}
-      />
-      <SecureRoute
-        path="/welcome"
-        component={() => (
-          <HomeContainer userInfo={userInfo} PageContent={WelcomeBoard} />
-        )}
-      />
-      <SecureRoute
-        path="/reserve"
-        component={() => (
-          <HomeContainer userInfo={userInfo} PageContent={MakeResPage} />
-        )}
-      />
-      <SecureRoute
-        path="/admin"
-        component={() => (
-          <AdminLayout userInfo={userInfo} PageContent={AdminPage} />
-        )}
-      />
+    <div className="App">
+      <Switch>
+        <Route
+          path="/"
+          exact
+          component={() => (
+            <HomeContainer userInfo={userInfo} PageContent={HomePage} />
+          )}
+        />
+        <Route path="/login">
+          <HomeContainer userInfo={userInfo} PageContent={LoginPage} />
+        </Route>
+        <Route path="/implicit/callback" component={LoginCallback} />
+        <Route
+          path="/donate"
+          component={() => (
+            <HomeContainer userInfo={userInfo} PageContent={DonatePage} />
+          )}
+        />
+        <SecureRoute
+          path="/welcome"
+          component={() => (
+            <HomeContainer userInfo={userInfo} PageContent={WelcomeBoard} />
+          )}
+        />
+        <SecureRoute
+          path="/reserve"
+          component={() => (
+            <HomeContainer userInfo={userInfo} PageContent={MakeResPage} />
+          )}
+        />
+        <SecureRoute
+          path="/admin"
+          component={() => (
+            <AdminLayout userInfo={userInfo} PageContent={AdminPage} />
+          )}
+        />
 
-      <Route
-        component={() => (
-          <HomeContainer userInfo={userInfo} PageContent={NotFoundPage} />
-        )}
-      />
-    </Switch>
+        <Route
+          component={() => (
+            <HomeContainer userInfo={userInfo} PageContent={NotFoundPage} />
+          )}
+        />
+      </Switch>
+    </div>
   );
 }
