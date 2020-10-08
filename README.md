@@ -6,11 +6,11 @@ You can find the deployed project at [BRIDGEGOOD.dev](https://bridgegood.dev).
 
 ## Contributors
 
-| [Ana Carrillo](https://github.com/acarrillo3) | [Alexander Besse](https://github.com/AlexJoeb) | [Anthony Koharian](https://github.com/antonyk) | [Drake Alia](https://github.com/DrakeAlia) | [Gregory Hawman](https://github.com/Gregory-Hawman) | [Yasir Haymm](https://github.com/YasirHasn9) |
-| :------------------------: | :------------------------: | :------------------------: | :------------------------: | :------------------------: | :------------------------: |
+|                                                                [Ana Carrillo](https://github.com/acarrillo3)                                                                |                                                              [Alexander Besse](https://github.com/AlexJoeb)                                                               |                                                             [Anthony Koharian](https://github.com/antonyk)                                                              |                                                                 [Drake Alia](https://github.com/DrakeAlia)                                                                 |                                                               [Gregory Hawman](https://github.com/Gregory-Hawman)                                                               |                                                                 [Yasir Haymm](https://github.com/YasirHasn9)                                                                 |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [<img src="https://avatars2.githubusercontent.com/u/50473626?s=460&amp;u=07109007eb1bc4adfa296a718c87157ff9e950df&amp;v=4" width = "200" />](https://github.com/acarrillo3) | [<img src="https://avatars0.githubusercontent.com/u/44859433?s=460&amp;u=c331ffc2bf0878ed7cd0f83d5deb17dba9a42053&amp;v=4" width = "200" />](https://github.com/AlexJoeb) | [<img src="https://avatars3.githubusercontent.com/u/2497571?s=460&amp;u=871c77d98deed2e84da52a8154649ede5301068f&amp;v=4" width = "200" />](https://github.com/antonyk) | [<img src="https://avatars3.githubusercontent.com/u/52472741?s=460&amp;u=19257a3af0b3b29cd1cf85982d8d97c38402d6f8&amp;v=4" width = "200" />](https://github.com/DrakeAlia) | [<img src="https://avatars0.githubusercontent.com/u/55816177?s=460&amp;u=3c1b33955c81040d6a54f2f6000948da24d06622&amp;v=4" width = "200" />](https://github.com/Gregory-Hawman) | [<img src="https://avatars0.githubusercontent.com/u/50093004?s=400&amp;u=eba9dd56e75848e1e5c13814380e6c243a30e1c5&amp;v=4" width = "200" /> ](https://github.com/YasirHasn9) |
-| [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/acarrillo3) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/AlexJoeb) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/antonyk) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/DrakeAlia) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Gregory-Hawman) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/YasirHasn9) |  
-[ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/acarrillo3/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/alexander-besse/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/akoharian/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/drake-alia/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/gregory-hawman/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/yasirhasn9/) |
+|                                           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/acarrillo3)                                           |                                           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/AlexJoeb)                                           |                                          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/antonyk)                                           |                                           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/DrakeAlia)                                           |                                           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Gregory-Hawman)                                           |                                           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/YasirHasn9)                                            |
+|                         [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/acarrillo3/)                         |                     [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/alexander-besse/)                      |                       [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/akoharian/)                        |                        [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/drake-alia/)                         |                         [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/gregory-hawman/)                         |                         [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/yasirhasn9/)                          |
 
 <br>
 <br>
@@ -24,7 +24,7 @@ You can find the deployed project at [BRIDGEGOOD.dev](https://bridgegood.dev).
 - Authentication
 - Reservation system
 - Donation
-- Admin dashboard 
+- Admin dashboard
 
 ### Tech Stack
 
@@ -32,9 +32,10 @@ You can find the deployed project at [BRIDGEGOOD.dev](https://bridgegood.dev).
 ![React](https://img.shields.io/badge/react-v16.7.0--alpha.2-blue.svg)
 ![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)
 
-```🚫 more info on using badges [here](https://github.com/badges/shields)```
+`🚫 more info on using badges [here](https://github.com/badges/shields)`
 
 #### Front end deployed to `AWS Amplify` built using:
+
 - React
 - Redux
 - Ant Design
@@ -54,7 +55,8 @@ You can find the deployed project at [BRIDGEGOOD.dev](https://bridgegood.dev).
 ### APIs
 
 #### Okta Authentication API
-- Okta is the only approved identity and access management company per the Lambda School Engineering Standards 
+
+- Okta is the only approved identity and access management company per the Lambda School Engineering Standards
 - Okta is a trusted service that has been in buisness since 2009
 - Okta allows developers to build identity controls into applications, website web services and devices
 
