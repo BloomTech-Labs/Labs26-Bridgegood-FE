@@ -8,6 +8,7 @@ import {
   Row,
   Col,
   Checkbox,
+  Radio,
   Button,
   AutoComplete,
 } from 'antd';
@@ -24,24 +25,24 @@ const formItemLayout = {
     },
   },
   wrapperCol: {
-    xs: {
-      span: 24,
-    },
-    sm: {
-      span: 16,
-    },
+    //   xs: {
+    //     span: 24,
+    //   },
+    //   sm: {
+    //     span: 16,
+    //   },
   },
 };
 const tailFormItemLayout = {
   wrapperCol: {
-    xl: {
-      span: 24,
-      offset: 0,
-    },
-    sm: {
-      span: 16,
-      offset: 8,
-    },
+    // xl: {
+    //   span: 24,
+    //   offset: 0,
+    // },
+    // sm: {
+    //   span: 16,
+    //   offset: 8,
+    // },
   },
 };
 
@@ -68,64 +69,79 @@ export default function SignUp() {
     <Form
       {...formItemLayout}
       form={form}
+      className="signUpForm"
       name="register"
       onFinish={onFinish}
       scrollToFirstError
     >
-      <Form.Item
-        name="firstName"
-        label="First Name"
-        rules={[
-          {
-            required: true,
-            message: 'Please enter your First Name',
-          },
-        ]}
-      >
-        <Input />
-      </Form.Item>
+      <div className="title">CREATE AN ACCOUNT</div>
 
-      <Form.Item
-        name="lastName"
-        label="Last Name"
-        rules={[
-          {
-            required: true,
-            message: 'Please enter your Last Name',
-          },
-        ]}
-      >
-        <Input />
-      </Form.Item>
+      <div className="formTop">
+        <Form.Item
+          name="firstName"
+          className="firstName"
+          // className="test"
+          label="First Name"
+          rules={[
+            {
+              required: true,
+              message: 'Please enter your First Name',
+            },
+          ]}
+        >
+          <Input />
+        </Form.Item>
 
-      <Form.Item
-        name="schoolEnrolled"
-        label="School Enrolled"
-        rules={[
-          {
-            required: true,
-            message: 'Please enter your school that your enrolled into',
-          },
-        ]}
-      >
-        <Input />
-      </Form.Item>
+        <Form.Item
+          name="lastName"
+          className="lastName"
+          // className="test"
+          label="Last Name"
+          rules={[
+            {
+              required: true,
+              message: 'Please enter your Last Name',
+            },
+          ]}
+        >
+          <Input />
+        </Form.Item>
 
-      <Form.Item
-        name="username"
-        label="BRIDGEGOOD Username"
-        rules={[
-          {
-            required: true,
-            message: 'Please enter your username',
-          },
-        ]}
-      >
-        <Input />
-      </Form.Item>
+        <Form.Item
+          name="schoolEnrolled"
+          className="school"
+          // className="test"
+          label="School Enrolled"
+          rules={[
+            {
+              required: true,
+              message: 'Please enter your school that your enrolled into',
+            },
+          ]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          name="username"
+          className="userName"
+          // className="test"
+          label="BRIDGEGOOD Username"
+          rules={[
+            {
+              required: true,
+              message: 'Please enter your username',
+            },
+          ]}
+        >
+          <Input />
+        </Form.Item>
+      </div>
 
       <Form.Item
         name="email"
+        className="email"
+        // className="test2"
         label="Email"
         rules={[
           {
@@ -140,63 +156,72 @@ export default function SignUp() {
       >
         <Input />
       </Form.Item>
+      <div className="formBottom">
+        <Form.Item
+          name="phone"
+          className="phoneNumber"
+          // className="test"
+          label="Phone Number"
+          rules={[
+            {
+              required: true,
+              message: 'Please enter your phone number',
+            },
+          ]}
+        >
+          <Input
+          // addonBefore={prefixSelector}
+          // style={{
+          //   width: '100%',
+          // }}
+          />
+        </Form.Item>
 
-      <Form.Item
-        name="phone"
-        label="Phone Number"
-        rules={[
-          {
-            required: true,
-            message: 'Please enter your phone number',
-          },
-        ]}
-      >
-        <Input
-        // addonBefore={prefixSelector}
-        // style={{
-        //   width: '100%',
-        // }}
-        />
-      </Form.Item>
-
-      <Form.Item
-        name="password"
-        label="Password"
-        rules={[
-          {
-            required: true,
-            message: 'Please enter your password!',
-          },
-        ]}
-        hasFeedback
-      >
-        <Input.Password />
-      </Form.Item>
-
-      <Form.Item
-        name="agreement"
-        valuePropName="checked"
-        rules={[
-          {
-            validator: (_, value) =>
-              value
-                ? Promise.resolve()
-                : Promise.reject('Please accept agreement'),
-          },
-        ]}
-        {...tailFormItemLayout}
-      >
-        <Checkbox>
-          By checking this, I confirm that I am 18 years of age and older{' '}
-          <br></br>
-          and I agree to follow the terms for using this space.
-        </Checkbox>
-      </Form.Item>
-      <Form.Item {...tailFormItemLayout}>
-        <Button type="primary" htmlType="submit">
-          Create Account
-        </Button>
-      </Form.Item>
+        <Form.Item
+          name="password"
+          className="password"
+          // className="test"
+          label="Password"
+          rules={[
+            {
+              required: true,
+              message: 'Please enter your password!',
+            },
+          ]}
+          hasFeedback
+        >
+          <Input.Password />
+        </Form.Item>
+      </div>
+      <div className="formFooter">
+        <Form.Item
+          name="agreement"
+          // className="test8"
+          valuePropName="checked"
+          rules={[
+            {
+              validator: (_, value) =>
+                value
+                  ? Promise.resolve()
+                  : Promise.reject('Please accept agreement'),
+            },
+          ]}
+          {...tailFormItemLayout}
+        >
+          {/* <Radio> */}
+          <Checkbox className="check">
+            By checking this, I confirm that I am 18 years of age and older
+            <br></br>
+            and I agree to follow the terms for using this space.
+            {/* </Radio> */}
+          </Checkbox>
+        </Form.Item>
+        <Form.Item {...tailFormItemLayout}>
+          <Button className="btn" size="large" type="primary" htmlType="submit">
+            Create Account
+          </Button>
+        </Form.Item>
+      </div>
     </Form>
   );
 }

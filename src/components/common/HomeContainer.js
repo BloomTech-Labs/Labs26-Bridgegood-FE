@@ -7,16 +7,31 @@ import React, { useState, useEffect, useMemo } from 'react';
 import RenderHeader from './Header/RenderHeader';
 import RenderFooter from './Footer/RenderFooter';
 
-// import { Layout } from 'antd';
-
-// const { Header, Footer, Sider, Content } = Layout;
-
 export default function HomeContainer({ authService, userInfo, PageContent }) {
   return (
-    <>
-      <RenderHeader userInfo={userInfo} authService={authService} />
-      <PageContent userInfo={userInfo} />
-      <RenderFooter userInfo={userInfo} authService={authService} />
-    </>
+    <div
+      style={{
+        margin: '0 auto',
+        position: 'relative',
+        overflow: 'hidden',
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+      }}
+    >
+      <RenderHeader userInfo={userInfo} />
+      <div
+        style={{
+          width: '100%',
+          height: '100%',
+        }}
+      >
+        <PageContent userInfo={userInfo} />
+      </div>
+
+      <RenderFooter userInfo={userInfo} />
+    </div>
   );
 }

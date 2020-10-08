@@ -1,50 +1,49 @@
 /* ===== MakeResContainer.js ===== */
 .big-box {
-    margin: 3rem 5rem 2rem
+  margin: 3rem 5rem 2rem;
 }
 
 .row {
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid #7E7A7A;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #7e7a7a;
 }
 
 .col-1 h2,
 .col-2 h2,
 .col-3 h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: .5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
 }
 
 .components {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .steps-box {
-    width: 100%;
-    background: rgba(196, 196, 196, 0.25);
-    padding: 1rem 0 .5rem;
+  width: 100%;
+  background: rgba(196, 196, 196, 0.25);
+  padding: 1rem 0 0.5rem;
 }
 
 .steps {
-    width: 30rem;
-    margin: 0 auto;
-    
+  width: 30rem;
+  margin: 0 auto;
 }
 
 /* ===== RenderRoomPick.js ===== */
 .room-box {
-    border: 1px#4E4E4E solid;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 17rem;
-    padding: 5rem 0 6rem
+  border: 1px#4E4E4E solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 17rem;
+  padding: 5rem 0 6rem;
 }
 
 .room-btn {
@@ -75,12 +74,12 @@
 }
 
 .room-box-disabled {
-    border: 1px#E5E5E5 solid;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 17rem;
-    padding: 5rem 0 6rem
+  border: 1px#E5E5E5 solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 17rem;
+  padding: 5rem 0 6rem;
 }
 
 .room-btn-disabled {
@@ -96,20 +95,20 @@
 
 /* ===== RenderTimeSlots.js ===== */
 .timeSlotBox {
-    border: 1px #4E4E4E solid;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2.5rem 1rem 2.35rem;
+  border: 1px #4e4e4e solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1rem 2.35rem;
 }
 
 .row-ts {
-    display: flex;
+  display: flex;
 }
 
 .col-ts {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .tsBtn {
@@ -121,14 +120,14 @@
 }
 
 .tsBtn:hover {
-    color: #40a9ff;
-    border: 1px #40a9ff solid;
+  color: #40a9ff;
+  border: 1px #40a9ff solid;
 }
 
 .tsBtn:active {
-    color: #FFFFFF;
-    border: 1px #4e4e4e solid;
-    background-color: #002171;
+  color: #ffffff;
+  border: 1px #4e4e4e solid;
+  background-color: #002171;
 }
 
 .tsBtnActive {
@@ -152,11 +151,11 @@
 }
 
 .timeSlotBox-greyOut {
-    border: 1px #E5E5E5 solid;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2.5rem 1rem 2.35rem;
+  border: 1px #e5e5e5 solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1rem 2.35rem;
 }
 
 .finalBtn {
@@ -169,8 +168,8 @@
     cursor: pointer;
 }
 
-.final-btn a{
-    color: #FFFFFF;
+.final-btn a {
+  color: #ffffff;
 }
 
 .final-btn-disabled {
@@ -183,8 +182,8 @@
     cursor: default;
 }
 
-.finalBtn a{
-    color: #E5E5E5;
+.finalBtn a {
+  color: #e5e5e5;
 }
 
 /* ===== RenderResSteps ===== */
@@ -208,32 +207,32 @@
 }
 
 .ant-steps-item-title::after {
-    background-color: #C4C4C4;
+  background-color: #c4c4c4;
 }
-
 
 /* ===== RenderDuration ===== */
 .duration-page {
-    background: url("../../../assets/images/bridgegoodesignstudio2.jpg") center 0 no-repeat;
-    background-size: 1440px 35rem; 
-    height: 35rem;
-    display: flex;
+  background: url('../../../assets/images/bridgegoodesignstudio2.jpg') center 0
+    no-repeat;
+  background-size: 1440px 35rem;
+  height: 35rem;
+  display: flex;
 }
 
 .radio-box {
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 35rem;
-    margin: 4rem auto 7rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 35rem;
+  margin: 4rem auto 7rem;
 }
 
-.radio-box h1{
-    font-size: 28px;
-    margin: .4rem 3rem 1rem;
+.radio-box h1 {
+  font-size: 28px;
+  margin: 0.4rem 3rem 1rem;
 }
 
 .radio-group {
-    margin: 1rem 12rem 0; 
+  margin: 1rem 12rem 0;
 }
 
 .radioBtn-disactive{
@@ -267,17 +266,16 @@
     border: 1px #1A64B7 solid;
 }
 
-
 /* ===== RenderFinalizeRes ===== */
 .finalize-box {
-    display: flex;
-    justify-content: space-between;
-    margin: 4rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 4rem 2rem;
 }
 
 .reservation-details {
-    width: 60%;
-    border-bottom: 1px solid #7E7A7A;
+  width: 60%;
+  border-bottom: 1px solid #7e7a7a;
 }
 
 .edit-res {
@@ -288,74 +286,74 @@
 }
 
 .donation-details {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .donation-details h1 {
-    color: #C5922C;
-    font-weight: 500;
-    font-size:32px;
-    line-height: 37.5px;
+  color: #c5922c;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 37.5px;
 }
 
 .donation-details h2 {
-    color: #252E6B;
-    font-weight: 400;
-    font-size:22px;
-    line-height: 25.78px;
-    margin-top: .5rem;
+  color: #252e6b;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 25.78px;
+  margin-top: 0.5rem;
 }
 
 .res-details {
-    display: flex;
-    color: #7E7A7A;
-    font-size: 16px;
-    border-top: 1px solid  #7E7A7A;
-    margin-top: 4rem;
-    justify-content: space-between;
+  display: flex;
+  color: #7e7a7a;
+  font-size: 16px;
+  border-top: 1px solid #7e7a7a;
+  margin-top: 4rem;
+  justify-content: space-between;
 }
 
 .res-details p {
-    width: 100%;
+  width: 100%;
 }
 
 .user-res-info {
-    display: flex;
-    font-size: 16px;
-    margin: 4rem 0 4rem;
-    justify-content: space-between;
+  display: flex;
+  font-size: 16px;
+  margin: 4rem 0 4rem;
+  justify-content: space-between;
 }
 
 .donation-box {
-    border: 1px solid #C4C4C4;
-    border-radius: 3px;
-    width: 33%;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  width: 33%;
 }
 
 .header-box {
-    border: 1px solid #C4C4C4;
-    border-radius: 3px 3px 0px 0px;
-    background-color: #E5E5E5;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px 3px 0px 0px;
+  background-color: #e5e5e5;
 }
 
-.header-box h2{
-    font-size: 22px;
-    font-weight: 700;
-    padding: 1rem 5.5rem .125rem;
+.header-box h2 {
+  font-size: 22px;
+  font-weight: 700;
+  padding: 1rem 5.5rem 0.125rem;
 }
 
 .donation-btns {
-    border-bottom: 1px solid #E5E5E5;
-    padding-bottom: 2rem;
-    margin: 0 1rem;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 2rem;
+  margin: 0 1rem;
 }
 
 .row-1 {
-    width: 95%;
-    display: flex;
-    justify-content: space-evenly;
-    margin: 3rem auto 1rem;
+  width: 95%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 3rem auto 1rem;
 }
 
 .row-1-div {
@@ -378,10 +376,10 @@
 }
 
 .row-2 {
-    width: 92%;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto 1rem;
+  width: 92%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 1rem;
 }
 
 .row-2-div {
@@ -437,8 +435,8 @@
 }
 
 .donation-alt {
-    width: 70%;
-    margin: .75rem auto 1.5rem;
-    font-weight: 700;
-    font-size: 14px;
+  width: 70%;
+  margin: 0.75rem auto 1.5rem;
+  font-weight: 700;
+  font-size: 14px;
 }

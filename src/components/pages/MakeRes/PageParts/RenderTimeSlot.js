@@ -1,20 +1,28 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { updateTimeSlot } from '../../../../state/actions/TimeSlotActions';
-import { updateStep } from '../../../../state/actions/StepsActions';
+import { UPDATE_TIME_SLOT } from '../../../../state/actions/TimeSlotActions';
+import { UPDATE_STEP } from '../../../../state/actions/StepsActions';
 import '../MakeRes.css';
 
-function RenderTimeSlot(props) {
-  const duration = props.duration;
-  const clicked = props.timeSlotOnProps;
-  const roomSelected = props.room;
+export default function RenderTimeSlot() {
+  const dispatch = useDispatch();
+  const { date, time_slot, duration, room, currentStep } = useSelector(
+    state => state.reservation
+  );
+
+  // updateTimeSlot, updateStep
+
+  // const duration = props.duration;
+  const clicked = time_slot;
+  // const roomSelected = props.room;
+  console.log('ROOM SELECTED', room);
 
   const nextStep = () => {
-    props.updateStep(2);
+    dispatch({ type: UPDATE_STEP, payload: 2 });
   };
 
-  if (roomSelected === 'None' || props.date === undefined) {
+  if (room === 'None' || date === undefined) {
     return (
       <>
         <div className="timeSlotBox-greyOut">
@@ -45,25 +53,33 @@ function RenderTimeSlot(props) {
             <div className="row-ts">
               <div className="col-ts">
                 <div
-                  onClick={() => props.updateTimeSlot('10')}
+                  onClick={() =>
+                    dispatch({ type: UPDATE_TIME_SLOT, payload: '10' })
+                  }
                   className={clicked === '10' ? 'tsBtnActive' : 'tsBtn'}
                 >
                   10:00am
                 </div>
                 <div
-                  onClick={() => props.updateTimeSlot('11')}
+                  onClick={() =>
+                    dispatch({ type: UPDATE_TIME_SLOT, payload: '11' })
+                  }
                   className={clicked === '11' ? 'tsBtnActive' : 'tsBtn'}
                 >
                   11:00am
                 </div>
                 <div
-                  onClick={() => props.updateTimeSlot('12')}
+                  onClick={() =>
+                    dispatch({ type: UPDATE_TIME_SLOT, payload: '12' })
+                  }
                   className={clicked === '12' ? 'tsBtnActive' : 'tsBtn'}
                 >
                   12:00pm
                 </div>
                 <div
-                  onClick={() => props.updateTimeSlot('13')}
+                  onClick={() =>
+                    dispatch({ type: UPDATE_TIME_SLOT, payload: '13' })
+                  }
                   className={clicked === '13' ? 'tsBtnActive' : 'tsBtn'}
                 >
                   01:00pm
@@ -71,25 +87,33 @@ function RenderTimeSlot(props) {
               </div>
               <div className="col-ts">
                 <div
-                  onClick={() => props.updateTimeSlot('14')}
+                  onClick={() =>
+                    dispatch({ type: UPDATE_TIME_SLOT, payload: '14' })
+                  }
                   className={clicked === '14' ? 'tsBtnActive' : 'tsBtn'}
                 >
                   2:00pm
                 </div>
                 <div
-                  onClick={() => props.updateTimeSlot('15')}
+                  onClick={() =>
+                    dispatch({ type: UPDATE_TIME_SLOT, payload: '15' })
+                  }
                   className={clicked === '15' ? 'tsBtnActive' : 'tsBtn'}
                 >
                   3:00pm
                 </div>
                 <div
-                  onClick={() => props.updateTimeSlot('16')}
+                  onClick={() =>
+                    dispatch({ type: UPDATE_TIME_SLOT, payload: '16' })
+                  }
                   className={clicked === '16' ? 'tsBtnActive' : 'tsBtn'}
                 >
                   4:00pm
                 </div>
                 <div
-                  onClick={() => props.updateTimeSlot('17')}
+                  onClick={() =>
+                    dispatch({ type: UPDATE_TIME_SLOT, payload: '17' })
+                  }
                   className={clicked === '17' ? 'tsBtnActive' : 'tsBtn'}
                 >
                   5:00pm
@@ -124,25 +148,33 @@ function RenderTimeSlot(props) {
             <div className="row-ts">
               <div className="col-ts">
                 <div
-                  onClick={() => props.updateTimeSlot('10')}
+                  onClick={() =>
+                    dispatch({ type: UPDATE_TIME_SLOT, payload: '10' })
+                  }
                   className={clicked === '10' ? 'tsBtnActive' : 'tsBtn'}
                 >
                   10:00am
                 </div>
                 <div
-                  onClick={() => props.updateTimeSlot('11')}
+                  onClick={() =>
+                    dispatch({ type: UPDATE_TIME_SLOT, payload: '11' })
+                  }
                   className={clicked === '11' ? 'tsBtnActive' : 'tsBtn'}
                 >
                   11:00am
                 </div>
                 <div
-                  onClick={() => props.updateTimeSlot('12')}
+                  onClick={() =>
+                    dispatch({ type: UPDATE_TIME_SLOT, payload: '12' })
+                  }
                   className={clicked === '12' ? 'tsBtnActive' : 'tsBtn'}
                 >
                   12:00pm
                 </div>
                 <div
-                  onClick={() => props.updateTimeSlot('13')}
+                  onClick={() =>
+                    dispatch({ type: UPDATE_TIME_SLOT, payload: '13' })
+                  }
                   className={clicked === '13' ? 'tsBtnActive' : 'tsBtn'}
                 >
                   01:00pm
@@ -150,13 +182,17 @@ function RenderTimeSlot(props) {
               </div>
               <div className="col-ts">
                 <div
-                  onClick={() => props.updateTimeSlot('14')}
+                  onClick={() =>
+                    dispatch({ type: UPDATE_TIME_SLOT, payload: '14' })
+                  }
                   className={clicked === '14' ? 'tsBtnActive' : 'tsBtn'}
                 >
                   2:00pm
                 </div>
                 <div
-                  onClick={() => props.updateTimeSlot('15')}
+                  onClick={() =>
+                    dispatch({ type: UPDATE_TIME_SLOT, payload: '15' })
+                  }
                   className={clicked === '15' ? 'tsBtnActive' : 'tsBtn'}
                 >
                   3:00pm
@@ -191,19 +227,25 @@ function RenderTimeSlot(props) {
             <div className="row-ts">
               <div className="col-ts">
                 <div
-                  onClick={() => props.updateTimeSlot('10')}
+                  onClick={() =>
+                    dispatch({ type: UPDATE_TIME_SLOT, payload: '10' })
+                  }
                   className={clicked === '10' ? 'tsBtnActive' : 'tsBtn'}
                 >
                   10:00am
                 </div>
                 <div
-                  onClick={() => props.updateTimeSlot('11')}
+                  onClick={() =>
+                    dispatch({ type: UPDATE_TIME_SLOT, payload: '11' })
+                  }
                   className={clicked === '11' ? 'tsBtnActive' : 'tsBtn'}
                 >
                   11:00am
                 </div>
                 <div
-                  onClick={() => props.updateTimeSlot('12')}
+                  onClick={() =>
+                    dispatch({ type: UPDATE_TIME_SLOT, payload: '12' })
+                  }
                   className={clicked === '12' ? 'tsBtnActive' : 'tsBtn'}
                 >
                   12:00pm
@@ -258,16 +300,16 @@ function RenderTimeSlot(props) {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    date: state.date,
-    timeSlotOnProps: state.time_slot,
-    duration: state.duration,
-    room: state.room,
-    currentStep: state.currentStep,
-  };
-};
+// const mapStateToProps = state => {
+//   return {
+//     date: state.date,
+//     timeSlotOnProps: state.time_slot,
+//     duration: state.duration,
+//     room: state.room,
+//     currentStep: state.currentStep,
+//   };
+// };
 
-export default connect(mapStateToProps, { updateTimeSlot, updateStep })(
-  RenderTimeSlot
-);
+// export default connect(mapStateToProps, { updateTimeSlot, updateStep })(
+//   RenderTimeSlot
+// );

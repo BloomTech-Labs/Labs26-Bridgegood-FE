@@ -1,32 +1,41 @@
 import React from 'react';
 import { Steps } from 'antd';
-import { connect } from 'react-redux';
-import { updateStep } from '../../../../state/actions/StepsActions';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  UPDATE_STEP,
+  // updateStep,
+} from '../../../../state/actions/StepsActions';
 
 const { Step } = Steps;
 
-const ResSteps = props => {
-  const currentStep = props.currentStep;
-  const selectDuration = props.duration;
-  const selectTimeSlot = props.time_slot;
+// const ResSteps = ({currentStep, duration, time_slot}) => {
+export default function ResSteps() {
+  const dispatch = useDispatch();
+  const { currentStep, duration, time_slot } = useSelector(
+    state => state.reservation
+  );
+  // const currentStep = props.currentStep;
+  // const selectDuration = props.duration;
+  // const selectTimeSlot = props.time_slot;
+  console.log(time_slot);
 
   const stepOne = () => {
-    props.updateStep(0);
+    dispatch({ type: UPDATE_STEP, payload: 0 });
   };
 
   const stepTwo = () => {
-    if (selectDuration === undefined) {
+    if (duration === undefined) {
       return null;
     } else {
-      props.updateStep(1);
+      dispatch({ type: UPDATE_STEP, payload: 1 });
     }
   };
 
   const stepThree = () => {
-    if (selectTimeSlot === 'None') {
+    if (time_slot === 'None') {
       return null;
     } else {
-      props.updateStep(2);
+      dispatch({ type: UPDATE_STEP, payload: 2 });
     }
   };
 
@@ -51,14 +60,14 @@ const ResSteps = props => {
       <p></p>
     </>
   );
-};
+}
 
-const mapStateToProps = state => {
-  return {
-    currentStep: state.currentStep,
-    duration: state.duration,
-    time_slot: state.time_slot,
-  };
-};
+// const mapStateToProps = state => {
+//   return {
+//     currentStep: state.currentStep,
+//     duration: state.duration,
+//     time_slot: state.time_slot,
+//   };
+// };
 
-export default connect(mapStateToProps, { updateStep })(ResSteps);
+// export default connect(mapStateToProps, { updateStep })(ResSteps);
