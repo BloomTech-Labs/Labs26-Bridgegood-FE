@@ -74,6 +74,8 @@ export default function SignUp() {
       onFinish={onFinish}
       scrollToFirstError
     >
+      <div className="title">CREATE AN ACCOUNT</div>
+
       <div className="formTop">
         <Form.Item
           name="firstName"
