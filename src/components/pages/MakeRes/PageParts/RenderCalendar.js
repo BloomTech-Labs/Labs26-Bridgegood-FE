@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import { Calendar } from 'antd';
-import { connect } from 'react-redux';
-import { updateDate } from '../../../../state/actions/CalActions';
+import { useDispatch } from 'react-redux';
+import { UPDATE_DATE } from '../../../../state/actions/CalActions';
 
-function RenderCalendar(props) {
-  const [newDate, setNewDate] = useState();
+export default function RenderCalendar(props) {
+  const dispatch = useDispatch();
+  // const [newDate, setNewDate] = useState();
 
   function onSelectChange(value) {
-    setNewDate(value.format('YYYY-MM-DD'));
+    dispatch({ type: UPDATE_DATE, payload: value.format('YYYY-MM-DD') });
+    // setNewDate(value.format('YYYY-MM-DD'));
   }
-  const value = newDate;
-  const ud = props.updateDate(value);
+  // const value = newDate;
+  // const ud = dispatch({type: UPDATE_DATE, payload: newDate}) // props.updateDate(value);
 
   return (
     <>
@@ -28,10 +30,10 @@ function RenderCalendar(props) {
   );
 }
 
-const mapStateToProps = state => {
-  return {
-    dateOnProps: state.date,
-  };
-};
+// const mapStateToProps = state => {
+//   return {
+//     dateOnProps: state.date,
+//   };
+// };
 
-export default connect(mapStateToProps, { updateDate })(RenderCalendar);
+// export default connect(mapStateToProps, { updateDate })(RenderCalendar);
