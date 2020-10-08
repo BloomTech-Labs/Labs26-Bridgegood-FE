@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import RenderCalendar from './PageParts/RenderCalendar';
 import RenderRoomPick from './PageParts/RenderRoomPick';
 import RenderTimeSlot from './PageParts/RenderTimeSlot';
-import ResSteps from './PageParts/ResSteps';
+import ResSteps from './PageParts/RenderResSteps';
 import { updateStep } from '../../../state/actions/StepsActions';
 import { DurationPage } from './Duration';
 import { FinalizeResPage } from './FinalizeRes';

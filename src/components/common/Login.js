@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import OktaSignIn from '@okta/okta-signin-widget';
 import '@okta/okta-signin-widget/dist/css/okta-sign-in.min.css';
 import { config } from '../../utils/oktaConfig';
-import img from '../../assets/images/logo.png';
+import img from '../../assets/images/LOG_IN_TO_RESERVE.png';
 
 export default function Login(props) {
   useEffect(() => {
@@ -26,7 +26,7 @@ export default function Login(props) {
       i18n: {
         // Overriding English properties
         en: {
-          'primaryauth.title': 'LOG IN TO RESERVE',
+          'primaryauth.title': ' ',
           'primaryauth.username.placeholder': 'Email address',
         },
       },

@@ -18,12 +18,12 @@ function RenderCalendar(props) {
         style={{
           width: 500,
           border: '1px solid #4E4E4E',
-          paddingBottom: '2.15rem',
+          paddingBottom: '4rem',
         }}
       >
         <Calendar fullscreen={false} onSelect={onSelectChange} />
       </div>
-      <h2> You've Selected = {props.dateOnProps}</h2>
+      {/* <h2> You've Selected = {props.dateOnProps}</h2> */}
     </>
   );
 }
