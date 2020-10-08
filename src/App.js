@@ -16,6 +16,7 @@ import Logout from './components/common/Logout';
 
 import HomeContainer from './components/common/HomeContainer';
 import AdminLayout from './components/pages/AdminLayout';
+import ConfirmationPage from './components/pages/Confirmation/ConfirmationPage';
 // import Dispatch from './components/pages/Dispatch';
 
 export default function App() {
@@ -107,6 +108,7 @@ export default function App() {
             />
           )}
         />
+        <SecureRoute path="/confirmation/:resid" component={ConfirmationPage} />
         <Route
           component={() => (
             <HomeContainer
