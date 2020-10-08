@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
@@ -23,28 +21,27 @@ export default function ConfirmationPage() {
   const [donated, setDonated] = useState(false);
 
   // ID of reservation
-  const {resid} = useParams();
+  const { resid } = useParams();
 
   useEffect(() => {
     Axios.get(`https://bridgegood-api.herokuapp.com/reservations/${resid}`, {
       headers: {
-        authorization: `Bearer ${authState.idToken}`
-      }
+        authorization: `Bearer ${authState.idToken}`,
+      },
     })
-    .then(({ data }) => {
-      if(data.donation_id) setDonated(true);
-    })
-    .catch(err => console.log(err));
-  }, [])
+      .then(({ data }) => {
+        if (data.donation_id) setDonated(true);
+      })
+      .catch(err => console.log(err));
+  }, []);
 
   return (
     <div className="confirmation__container">
       <p className="confirmation__content">
         {donated && <span>Thanks for your donation! </span>}
-        We’ll see you on{' '}
-        <strong>July 8th, 2020</strong> at
-        <strong> 2:00PM!</strong> An e-mail reminder has been sent to you. Please
-        remember the guidelines before arriving:
+        We’ll see you on <strong>July 8th, 2020</strong> at
+        <strong> 2:00PM!</strong> An e-mail reminder has been sent to you.
+        Please remember the guidelines before arriving:
       </p>
       <ul className="confirmation__list">
         <Location
