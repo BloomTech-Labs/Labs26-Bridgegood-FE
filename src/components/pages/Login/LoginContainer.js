@@ -53,7 +53,7 @@ const LoginContainer = () => {
   }, []);
 
   return (
-    <div className="loginBox">
+    <div className="signUpBox">
       <section>
         <Login enabled={true} />
       </section>

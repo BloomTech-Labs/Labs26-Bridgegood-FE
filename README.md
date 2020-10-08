@@ -1,92 +1,93 @@
-# Basic SPA
+# BRIDGEGOOD
 
-For steps on how to work with this repository [please see here](https://docs.labs.lambdaschool.com/labs-spa-starter/)
+BridgeGood is an organization that mentors aspiring designers in Oakland. They recently received a workspace for students to work in. We will be building a reservation and donation system for that workspace. Web students will focus on two user types: users and admin. You will be given hi-fi wireframes and be expected to ship to spec.
 
-🚫 Note: All lines that start with 🚫 are instructions and should be deleted before this is posted to your first Pull-Request is merged. This is intended to be a guideline. Feel free to add your own flare to it.
-
-# Title of project goes here
-
-You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
+You can find the deployed project at [BRIDGEGOOD.dev](https://bridgegood.dev).
 
 ## Contributors
 
-🚫Add contributor info below, make sure add images and edit the social links for each member. Add to or delete these place-holders as needed
-
-|                                                      [Student 1](https://github.com/)                                                       |                                                       [Student 2](https://github.com/)                                                        |                                                      [Student 3](https://github.com/)                                                       |                                                       [Student 4](https://github.com/)                                                        |                                                      [Student 5](https://github.com/)                                                       |
-| :-----------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------: |
-| [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/) |
-|                                [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/)                                |                            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/honda0306)                             |                          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Mister-Corn)                           |                          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/NandoTheessen)                           |                           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/wvandolah)                            |
-|                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                |                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                 |                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                |                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                 |                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                |
+| [Ana Carrillo](https://github.com/acarrillo3) | [Alexander Besse](https://github.com/AlexJoeb) | [Anthony Koharian](https://github.com/antonyk) | [Drake Alia](https://github.com/DrakeAlia) | [Gregory Hawman](https://github.com/Gregory-Hawman) | [Yasir Haymm](https://github.com/YasirHasn9) |
+| :------------------------: | :------------------------: | :------------------------: | :------------------------: | :------------------------: | :------------------------: |
+| [<img src="https://avatars2.githubusercontent.com/u/50473626?s=460&amp;u=07109007eb1bc4adfa296a718c87157ff9e950df&amp;v=4" width = "200" />](https://github.com/acarrillo3) | [<img src="https://avatars0.githubusercontent.com/u/44859433?s=460&amp;u=c331ffc2bf0878ed7cd0f83d5deb17dba9a42053&amp;v=4" width = "200" />](https://github.com/AlexJoeb) | [<img src="https://avatars3.githubusercontent.com/u/2497571?s=460&amp;u=871c77d98deed2e84da52a8154649ede5301068f&amp;v=4" width = "200" />](https://github.com/antonyk) | [<img src="https://avatars3.githubusercontent.com/u/52472741?s=460&amp;u=19257a3af0b3b29cd1cf85982d8d97c38402d6f8&amp;v=4" width = "200" />](https://github.com/DrakeAlia) | [<img src="https://avatars0.githubusercontent.com/u/55816177?s=460&amp;u=3c1b33955c81040d6a54f2f6000948da24d06622&amp;v=4" width = "200" />](https://github.com/Gregory-Hawman) | [<img src="https://avatars0.githubusercontent.com/u/50093004?s=400&amp;u=eba9dd56e75848e1e5c13814380e6c243a30e1c5&amp;v=4" width = "200" /> ](https://github.com/YasirHasn9) |
+| [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/acarrillo3) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/AlexJoeb) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/antonyk) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/DrakeAlia) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Gregory-Hawman) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/YasirHasn9) |  
+[ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/acarrillo3/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/alexander-besse/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/akoharian/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/drake-alia/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/gregory-hawman/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/yasirhasn9/) |
 
 <br>
 <br>
 
-🚫 Optional examples of using images with links for your tech stack, make sure to change these to fit your project
+## Project Overview
+
+[Labs 26 Trello Board](https://trello.com/b/nW5Qz4yT/bridgegood-ana)
+
+### [Key Features](https://www.notion.so/Bridgegood-Roadmap-42978540fee14397a27189f5d815949c)
+
+- Authentication
+- Reservation system
+- Donation
+- Admin dashboard 
+
+### Tech Stack
 
 ![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
 ![React](https://img.shields.io/badge/react-v16.7.0--alpha.2-blue.svg)
 ![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)
 
-🚫 more info on using badges [here](https://github.com/badges/shields)
+```🚫 more info on using badges [here](https://github.com/badges/shields)```
+
+#### Front end deployed to `AWS Amplify` built using:
+- React
+- Redux
+- Ant Design
+- Venmo
+
+#### [Back end](https://github.com/Lambda-School-Labs/Labs26-Bridgegood-BE) built using:
+
+- Node.js
+- Knex/Express
+- PostgreSQL
+- Swagger-UI
+
+#### Product Diagram and Engineering Architecture: [click here](https://whimsical.com/QHZNGNapWnCyYxEUHL2P87)
+
+#### Database Schema: [click here](https://app.dbdesigner.net/designer/schema/0-untitled-225e23af-0314-4e21-8781-5852abb5b9dd)
+
+### APIs
+
+#### Okta Authentication API
+- Okta is the only approved identity and access management company per the Lambda School Engineering Standards 
+- Okta is a trusted service that has been in buisness since 2009
+- Okta allows developers to build identity controls into applications, website web services and devices
+
+#### Venmo Payment API
+
+- Venmo is a mobile payment service owned by PayPal. Venmo account holders can transfer funds to others via a mobile phone app; both the sender and receiver have to live in the U.S.
+
+## Installation Instructions
 
 - Fork and clone the repo to install it as your own remote.
-  - **note** please [be sure to set your remote](https://help.github.jp/enterprise/2.11/user/articles/changing-a-remote-s-url/) for this repo to point to your Labs Team Front End Repository.
+- Set you environment variables
 - run: `npm install` to download all dependencies.
 - run: `npm start` to start your local development server.
 
 > When using Okta for authentication, the app will need to run locally on port 3000.
 
-### Key Features
+### Environment Variables
 
-- feature one
-- feature two
-- feature three
-- feature four
-- feature five
+In order for the app to function correctly, the user must set up their own environment variables. There should be a .env file containing the following:
 
-#### Front end deployed to `🚫insert service here`
+    *  REACT_APP_CLIENT_ID=example
+    *  REACT_APP_OKTA_ISSUER_URI="https://example-882474.okta.com"
+    *  REACT_APP_API_URI=http://localhost:3000
 
-#### [Back end](🚫link to back end repo here) built using:
-
-#### 🚫 back end framework goes here
-
-- point one
-- point two
-- point three
-
-🚫 List the rest of the back end end features and libraries in the same format as the framework above
-
-# APIs
-
-## Authentication API here
-
-🚫Replace text below with a description of the API
-
-Water's like me. It's laaazy ... Boy, it always looks for the easiest way to do things A little happy sunlight shining through there. Let all these little things happen. Don't fight them. Learn to use them. Even the worst thing we can do here is good.
-
-## Payment API here
-
-🚫Replace text below with a description of the API
-
-This is the way you take out your flustrations. Get away from those little Christmas tree things we used to make in school. Isn't it fantastic that you can change your mind and create all these happy things? Everything's not great in life, but we can still find beauty in it.
-
-## Misc API here
-
-🚫Replace text below with a description of the API
-
-You can do anything your heart can imagine. In life you need colors. This is where you take out all your hostilities and frustrations. It's better than kicking the puppy dog around and all that so. I'm sort of a softy, I couldn't shoot Bambi except with a camera. Trees get lonely too, so we'll give him a little friend. We'll lay all these little funky little things in there.
-
-# Installation Instructions
-
-🚫explain how to install the required dependencies to get this project up and running with yarn and NPM
-
-## Other Scripts
-
-🚫replace these examples with your own
+### Other Scripts
 
     * build - creates a build of the application
     * start - starts the production server after a build is created
     * test - runs tests in **tests** directory \* eject - copy the configuration files and dependencies into the project so you have full control over them
+
+# Basic SPA
+
+For steps on how to work with this repository [please see here](https://docs.labs.lambdaschool.com/labs-spa-starter/)
 
 # Contributing
 
@@ -122,4 +123,4 @@ Remember that this project is licensed under the MIT license, and by submitting 
 
 ## Documentation
 
-See [Backend Documentation](🚫*link to your backend API SWAGGER DOCS here*) for details on the backend of our project.
+See [Backend Documentation](https://bridgegood-api.herokuapp.com/api-docs/) for details on the backend of our project.
