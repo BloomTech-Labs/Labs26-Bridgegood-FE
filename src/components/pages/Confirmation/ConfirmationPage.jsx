@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+
+
+import React, { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 
 import './styles.less';
 
@@ -9,13 +11,37 @@ import { ReactComponent as Mask } from '../../../assets/images/mask.svg';
 import { ReactComponent as PersonBadge } from '../../../assets/images/personbadge.svg';
 import { ReactComponent as SixFeet } from '../../../assets/images/sixfeet.svg';
 import { ReactComponent as Sound } from '../../../assets/images/sound.svg';
+import { useOktaAuth } from '@okta/okta-react';
+
+import Axios from 'axios';
 
 export default function ConfirmationPage() {
-  const [donated] = useState(false);
+  // Okta hook to retrieve authenication state.
+  const { authState } = useOktaAuth();
+
+  // Conditional Donated Boolean
+  const [donated, setDonated] = useState(false);
+
+  // ID of reservation
+  const {resid} = useParams();
+
+  useEffect(() => {
+    Axios.get(`https://bridgegood-api.herokuapp.com/reservations/${resid}`, {
+      headers: {
+        authorization: `Bearer ${authState.idToken}`
+      }
+    })
+    .then(({ data }) => {
+      if(data.donation_id) setDonated(true);
+    })
+    .catch(err => console.log(err));
+  }, [])
+
   return (
     <div className="confirmation__container">
       <p className="confirmation__content">
-        {donated && <span>Thanks for your donation! </span>}We’ll see you on{' '}
+        {donated && <span>Thanks for your donation! </span>}
+        We’ll see you on{' '}
         <strong>July 8th, 2020</strong> at
         <strong> 2:00PM!</strong> An e-mail reminder has been sent to you. Please
         remember the guidelines before arriving:

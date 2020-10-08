@@ -82,7 +82,7 @@ function App() {
             component={() => <HomeContainer PageContent={DonatePage} />}
           />
           <SecureRoute
-            path="/confirmation"
+            path="/confirmation/:resid"
             component={() => <HomeContainer PageContent={ConfirmationPage} />}
           />
           <Route
