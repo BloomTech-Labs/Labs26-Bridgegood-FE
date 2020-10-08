@@ -1,7 +1,6 @@
 /* ===== MakeResContainer.js ===== */
-
 .big-box {
-    margin: 1rem 5rem 2rem
+    margin: 3rem 5rem 2rem
 }
 
 .row {
@@ -29,8 +28,7 @@
 .steps-box {
     width: 100%;
     background: rgba(196, 196, 196, 0.25);
-    padding: .5rem;
-    margin: -.6rem 0 0 0
+    padding: 1rem 0 .5rem;
 }
 
 .steps {
@@ -38,18 +36,18 @@
     margin: 0 auto;
     
 }
-/* ===== RenderRoomPick.js ===== */
 
-.roomBox {
+/* ===== RenderRoomPick.js ===== */
+.room-box {
     border: 1px#4E4E4E solid;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 17rem;
-    padding: 5rem 0 5rem
+    padding: 5rem 0 6rem
 }
 
-.roomBtn {
+.room-btn {
     border: 1px #4E4E4E solid;
     border-radius: 20px;
     text-align: center;
@@ -58,12 +56,12 @@
     width: 10rem;
 }
 
-.roomBtn:hover {
+.room-btn:hover {
     color: #40a9ff;
     border: 1px #40a9ff solid;
 }
 
-.roomBtnActive {
+.room-btn-active {
     color: #FFFFFF;
     border: 1px #4e4e4e solid;
     background-color: #002171;
@@ -74,8 +72,26 @@
     width: 10rem;
 }
 
-/* ===== RenderTimeSlots.js ===== */
+.room-box-disabled {
+    border: 1px#E5E5E5 solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 17rem;
+    padding: 5rem 0 6rem
+}
 
+.room-btn-disabled {
+    border: 1px #E5E5E5 solid;
+    border-radius: 20px;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    width: 10rem;
+    color: #E5E5E5;
+}
+
+/* ===== RenderTimeSlots.js ===== */
 .timeSlotBox {
     border: 1px #4E4E4E solid;
     display: flex;
@@ -83,6 +99,7 @@
     align-items: center;
     padding: 2.5rem 1rem 2.35rem;
 }
+
 .row-ts {
     display: flex;
 }
@@ -128,6 +145,14 @@
     padding: .75rem 1.5rem;
 }
 
+.timeSlotBox-greyOut {
+    border: 1px #E5E5E5 solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1rem 2.35rem;
+}
+
 .finalBtn {
     border: 2px #C5922C solid;
     border-radius: 4px;
@@ -137,12 +162,24 @@
     padding: .3rem 1.5rem;
 }
 
-.finalBtn a{
+.final-btn a{
     color: #FFFFFF;
 }
 
-/* ===== ResSteps ===== */
+.final-btn-disabled {
+    border: 2px #E5E5E5 solid;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    color: #E5E5E5;
+    margin-top: 1rem;
+    padding: .3rem 1.5rem;
+}
 
+.finalBtn a{
+    color: #E5E5E5;
+}
+
+/* ===== ResSteps ===== */
 .step-def{
     font-size: 14px;
     display: flex;
@@ -163,11 +200,11 @@
     background-color: #C4C4C4;
 }
 
-/* ===== RenderDuration ===== */
 
+/* ===== RenderDuration ===== */
 .duration-page {
     background: url("../../../assets/images/bridgegoodesignstudio2.jpg") center 0 no-repeat;
-    background-size: contain;
+    background-size: 1440px 35rem; 
     height: 35rem;
     display: flex;
 }
@@ -175,39 +212,211 @@
 .radio-box {
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 32rem;
-    margin: 4.5rem auto 7rem;
+    width: 35rem;
+    margin: 4rem auto 7rem;
 }
 
 .radio-box h1{
-    font-size: 26px;
-    margin: 1.5rem 3rem 1rem;
+    font-size: 28px;
+    margin: .4rem 3rem 1rem;
 }
 
 .radio-group {
-    margin: 2rem 12rem 0; 
+    margin: 1rem 12rem 0; 
 }
 
-
-
-.radioBtn {
+.radioBtn-disactive{
     border: 2px solid #E5E5E5;
     background: #C4C4C4;
     padding: 1.2rem 2rem;
     color: #FFFFFF;
     width: 10rem;
-    margin: 2.5rem auto 1rem;
+    margin: 1rem auto 1rem;
     text-align: center;
     font-size: 18px;
+    border-radius: 4px;
 }
 
-.radioBtn:hover {
+.radioBtn-active{
+    border: 2px solid #E5E5E5;
+    background: #C5922C;
+    padding: 1.2rem 2rem;
+    color: #FFFFFF;
+    width: 10rem;
+    margin: 1rem auto 1rem;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.radioBtn-active:hover {
     color: #40a9ff;
     border: 1px #40a9ff solid;
 }
 
-.radioBtn:active {
+
+/* ===== RenderFinalizeRes ===== */
+.finalize-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem 2rem;
+}
+
+.reservation-details {
+    width: 60%;
+    border-bottom: 1px solid #7E7A7A;
+}
+
+.edit-res {
+    font-size: 16px;
+    color: #1A64B7;
+    margin: 8rem 0 0;
+}
+
+.donation-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.donation-details h1 {
+    color: #C5922C;
+    font-weight: 500;
+    font-size:32px;
+    line-height: 37.5px;
+}
+
+.donation-details h2 {
+    color: #252E6B;
+    font-weight: 400;
+    font-size:22px;
+    line-height: 25.78px;
+    margin-top: .5rem;
+}
+
+.res-details {
+    display: flex;
+    color: #7E7A7A;
+    font-size: 16px;
+    border-top: 1px solid  #7E7A7A;
+    margin-top: 4rem;
+    justify-content: space-between;
+}
+
+.res-details p {
+    width: 100%;
+}
+
+.user-res-info {
+    display: flex;
+    font-size: 16px;
+    margin: 4rem 0 4rem;
+    justify-content: space-between;
+}
+
+.donation-box {
+    border: 1px solid #C4C4C4;
+    border-radius: 3px;
+    width: 33%;
+}
+
+.header-box {
+    border: 1px solid #C4C4C4;
+    border-radius: 3px 3px 0px 0px;
+    background-color: #E5E5E5;
+}
+
+.header-box h2{
+    font-size: 22px;
+    font-weight: 700;
+    padding: 1rem 5.5rem .125rem;
+}
+
+.donation-btns {
+    border-bottom: 1px solid #E5E5E5;
+    padding-bottom: 2rem;
+    margin: 0 1rem;
+}
+
+.row-1 {
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3rem auto 1rem;
+}
+
+.row-1-div {
+    border: 1px solid #C4C4C4;
+    border-radius: 3px;
+    background-color: #E5E5E5;
+    padding: .75rem 3.25rem;
+    font-size: 14px;
+}
+
+.active-donate-btn {
+    font-size: 14px;
     color: #FFFFFF;
-    border: 1px #4e4e4e solid;
+    border: 1px solid #C4C4C4;
+    border-radius: 3px;
     background-color: #002171;
+    padding: .75rem 3.25rem;
+}
+
+.row-2 {
+    width: 92%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 1rem;
+}
+
+.row-2-div {
+    border: 1px solid #C4C4C4;
+    border-radius: 3px;
+    background-color: #E5E5E5;
+    padding: .75rem 3rem;
+}
+
+.active-donation-btn-2 {
+    font-size: 14px;
+    color: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    border-radius: 3px;
+    background-color: #002171;
+    padding: .75rem 3rem;
+}
+
+.row-2-div-OA {
+    border: 1px solid #C4C4C4;
+    border-radius: 3px;
+    background-color: #E5E5E5;
+    padding: .75rem 5.2rem;
+}
+
+.active-donation-btn-2-OA {
+    font-size: 14px;
+    color: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    border-radius: 3px;
+    background-color: #002171;
+    padding: .75rem 5.2rem;
+}
+
+#donate-btn {
+    width: 92%;
+    margin: 2rem auto 0;
+    padding: .75rem 0;
+    background-color: #002171;
+    border-radius: 3px;
+}
+
+#donate-btn h2 {
+    margin: 0 10.5rem;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.donation-alt {
+    width: 70%;
+    margin: .75rem auto 1.5rem;
+    font-weight: 700;
+    font-size: 14px;
 }

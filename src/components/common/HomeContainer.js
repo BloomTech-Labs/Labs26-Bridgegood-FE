@@ -3,14 +3,13 @@
 // Wraps content and adds extra stuff, like header and footer, and determines the general layout;
 // Also, passes down global state (like auth state)
 
-import React from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import RenderHeader from './Header/RenderHeader';
 import RenderFooter from './Footer/RenderFooter';
 
-export default function HomeContainer({ userInfo, PageContent }) {
+export default function HomeContainer({ authService, userInfo, PageContent }) {
   return (
     <div
-      // test
       style={{
         margin: '0 auto',
         position: 'relative',
@@ -21,7 +20,6 @@ export default function HomeContainer({ userInfo, PageContent }) {
         flexDirection: 'column',
         justifyContent: 'space-between',
       }}
-      // test
     >
       <RenderHeader userInfo={userInfo} />
       <div
