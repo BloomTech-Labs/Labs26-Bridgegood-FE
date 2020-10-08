@@ -14,6 +14,7 @@
     font-size: 16px;
     line-height: 19px;
     text-transform: uppercase;
+    transition: all ease-in 0.2s;
     span {
       text-transform: lowercase;
     }
@@ -29,6 +30,16 @@
     width: 30%;
     display: flex;
     justify-content: space-around;
+    a {
+      padding: 10px 20px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      &:hover {
+        background: #002171;
+        border: 1px solid #000;
+        color: #fff;
+      }
+    }
   }
   .Btns {
     button {
@@ -44,7 +55,7 @@
       text-transform: uppercase;
       background-color: #fff;
       border: 1px solid #000000;
-      transition: ease-in-out 0.4s;
+      transition: all ease-in 0.2s;
     }
 
     .login-btn {
