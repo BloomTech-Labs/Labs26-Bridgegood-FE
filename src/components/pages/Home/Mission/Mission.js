@@ -1,6 +1,6 @@
 import React from 'react';
-import PloygonIcon from '../../../../assets/images/Polygon.png';
-import line from '../../../../assets/images/line.png';
+import { Link } from 'react-router-dom';
+import PolygonIcon from '../../../../assets/images/Polygon.png';
 import blueLocationIcon from '../../../../assets/images/blueLocationIcon.png';
 import './Mission.less';
 
@@ -33,14 +33,14 @@ const Mission = props => {
         </p>
         <div>
           <button>
-            <a href="#">Pay It Forward</a>
+            <Link to="/donate">Pay It Forward</Link>
           </button>
           <span>
             <a href="https://bridgegood.org/impact/">
               HOW WE ARE HELPING IMPROVE DESIGN INCLUSION
             </a>
           </span>
-          <img src={PloygonIcon} alt="PloygonIcon " />
+          <img src={PolygonIcon} alt="PolygonIcon " />
         </div>
       </section>
     </div>
