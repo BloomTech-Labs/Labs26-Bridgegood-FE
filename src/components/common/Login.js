@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import OktaSignIn from '@okta/okta-signin-widget';
 import '@okta/okta-signin-widget/dist/css/okta-sign-in.min.css';
 import { config } from '../../utils/oktaConfig';
-import img from '../../assets/images/logo.png';
+import img from '../../assets/images/LOG_IN_TO_RESERVE.png';
 
 export default function Login(props) {
   useEffect(() => {
@@ -20,10 +20,14 @@ export default function Login(props) {
       // turning this feature on allows your widget to use Okta for user registration
       logo: img,
       // add your custom logo to your signing/register widget here.
+      colors: {
+        brand: '#002171',
+      },
       i18n: {
+        // Overriding English properties
         en: {
-          'primaryauth.title': 'LOG IN',
-          // change title for your app
+          'primaryauth.title': ' ',
+          'primaryauth.username.placeholder': 'Email address',
         },
       },
       authParams: {
