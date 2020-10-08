@@ -136,12 +136,19 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-button:hover {
+button:hover,
+a:hover {
   cursor: pointer;
 }
 
 .App {
-  width: 1440px;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
