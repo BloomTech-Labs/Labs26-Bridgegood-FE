@@ -46,6 +46,10 @@ const tailFormItemLayout = {
   },
 };
 
+// Test Login User:
+// llama001@maildrop.cc
+// Test001Test
+
 export default function SignUp() {
   const [form] = Form.useForm();
 
@@ -119,7 +123,14 @@ export default function SignUp() {
             },
           ]}
         >
-          <Input />
+          <Select>
+            <Select.Option value="mills">Mills</Select.Option>
+            <Select.Option value="laney">Laney</Select.Option>
+            <Select.Option value="merritt">Merritt</Select.Option>
+            <Select.Option value="lincoln">Lincoln</Select.Option>
+            <Select.Option value="stanford">Stanford</Select.Option>
+            <Select.Option value="santaClara">Santa Clara</Select.Option>
+          </Select>
         </Form.Item>
 
         <Form.Item
@@ -211,7 +222,7 @@ export default function SignUp() {
           {/* <Radio> */}
           <Checkbox className="check">
             By checking this, I confirm that I am 18 years of age and older
-            <br></br>
+            <br />
             and I agree to follow the terms for using this space.
             {/* </Radio> */}
           </Checkbox>
