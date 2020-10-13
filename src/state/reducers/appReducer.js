@@ -2,7 +2,7 @@
 // MANAGES THE STATE OF GENERAL, SHARED APP SETTINGS
 import newAxios from '../../utils/axiosUtils';
 
-const initialAppAppState = {
+const initialAppState = {
   loggedIn: false, //
   axios: null, // ref to initialized axios instance
   isFetching: false, // if needed
@@ -11,7 +11,29 @@ const initialAppAppState = {
   errors: [],
 };
 
-export function appReducer(state = initialAppAppState, action) {
+// const initialUserState = {
+//   id,
+//   firstName,
+//   lastName,
+//   school,
+//   bgUsername,
+//   email,
+//   phone,
+//   profileUrl,
+//   visits,
+//   reservations,
+//   role,
+// };
+
+/*
+
+actions: update_X
+
+
+
+*/
+
+export function appReducer(state = initialAppState, action) {
   switch (action.type) {
     case 'APP_FETCHING':
       return {

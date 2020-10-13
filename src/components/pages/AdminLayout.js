@@ -15,7 +15,7 @@ const { Header, Footer, Sider, Content } = Layout;
 const { SubMenu } = Menu;
 // const routePageMap
 
-export default function AdminLayout({ userInfo, PageContent }) {
+export default function AdminLayout({ userInfo, pageContent: PageContent }) {
   // const [sideCollapsed, setSideCollapsed] = useState(false);
   // const [selectedPage, setSelectedPage] = useState('dashboard');
   const history = useHistory();
