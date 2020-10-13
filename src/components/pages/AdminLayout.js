@@ -16,34 +16,19 @@ const { SubMenu } = Menu;
 // const routePageMap
 
 export default function AdminLayout({ userInfo, pageContent: PageContent }) {
-  // const [sideCollapsed, setSideCollapsed] = useState(false);
   // const [selectedPage, setSelectedPage] = useState('dashboard');
   const history = useHistory();
   const location = useLocation();
 
   console.log(location);
 
-  // const onSideCollapse = collapsed => {
-  //   console.log(collapsed);
-  //   setSideCollapsed(collapsed);
-  // };
-
   function onMenuSelect({ key, keyPath, selectedKeys }) {
-    //   `item: ${{ item }}\nkey: ${{ key }}\nkeyPath: ${{
-    //     keyPath,
-    //   }}\nselectedKeys: ${{ selectedKeys }}\ndomEvent: ${{ domEvent }}`
-    // );
     // console.log(authState);
     console.log(userInfo);
     // console.log(selectedPage)
     // setSelectedPage(key)
     history.push('/admin/' + key);
   }
-
-  // useEffect(() => {
-  //   history.push('/admin/'+selectedPage)
-
-  // },[selectedPage])
 
   function onMenuClick(e) {}
 
