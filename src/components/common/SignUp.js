@@ -46,10 +46,6 @@ const tailFormItemLayout = {
   },
 };
 
-// Test Login User:
-// llama001@maildrop.cc
-// Test001Test
-
 export default function SignUp() {
   const [form] = Form.useForm();
 
