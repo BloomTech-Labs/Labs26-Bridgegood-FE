@@ -1,17 +1,19 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import RenderCalendar from './PageParts/RenderCalendar';
 import RenderRoomPick from './PageParts/RenderRoomPick';
 import RenderTimeSlot from './PageParts/RenderTimeSlot';
 import ResSteps from './PageParts/RenderResSteps';
 import { updateStep } from '../../../state/actions/StepsActions';
-import { DurationPage } from './Duration';
+import RenderDuration from './PageParts/RenderDuration';
 import { FinalizeResPage } from './FinalizeRes';
 import './MakeRes.css';
 
-function ResContainer(props) {
-  const currentStep = props.currentStep;
+export default function ResContainer(props) {
+  // const currentStep = props.currentStep;
+  const reservationObj = useSelector(state => state.reservation);
+  const { currentStep } = useSelector(state => state.reservation);
 
   if (currentStep === 1) {
     return (
@@ -21,7 +23,10 @@ function ResContainer(props) {
             <ResSteps />
           </div>
         </div>
-
+        <button onClick={() => console.log(reservationObj)}>
+          Print Redux Global State
+        </button>
+        ;
         <div className="big-box">
           <div className="row">
             <div className="col-1 col">
@@ -69,16 +74,16 @@ function ResContainer(props) {
           </div>
         </div>
 
-        <DurationPage />
+        <RenderDuration />
       </>
     );
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    currentStep: state.currentStep,
-  };
-};
+// const mapStateToProps = state => {
+//   return {
+//     currentStep: state.currentStep,
+//   };
+// };
 
-export default connect(mapStateToProps, { updateStep })(ResContainer);
+// export default connect(mapStateToProps, { updateStep })(ResContainer);

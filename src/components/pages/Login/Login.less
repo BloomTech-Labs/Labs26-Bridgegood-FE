@@ -1,15 +1,26 @@
-.signUpBox{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 5%;
-    width: 100%;
-    section {width: 50%} 
-    &:extend(.baseInputStyle);
-
+.loginBox {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5%;
+  width: 100%;
+  section {
+    width: 50%;
+  }
+  &:extend(.baseInputStyle);
+}
+.signUpBox {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5%;
+  width: 100%;
+  section {
+    width: 50%;
+  }
+  &:extend(.baseInputStyle);
 }
 
-.signUpForm{
-    margin: 1%;
+.signUpForm {
+  margin: 1%;
 }
 
 .title{
@@ -30,47 +41,49 @@
     padding-left: 0%;
 }
 
-.formTop{
-    display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    justify-content: space-between;
+.formTop {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: space-between;
 }
 
-.formBottom{
-    display: flex;
-    box-sizing: border-box;
-    justify-content: space-between;
+.formBottom {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
 }
 
-.formFooter{
-    text-align: center;
+.formFooter {
+  text-align: center;
 }
 
-.check{
-    font-size: 5rem;
+.check {
+  font-size: 5rem;
 }
 
 // Must be on the left hand side
-.firstName{
-    width: 45%;
-    // background-color: red;
-    input{
-        // background-color: blue;
-                width: 100%;
-                box-sizing: border-box;
-                height: 46px;}
+.firstName {
+  width: 45%;
+  // background-color: red;
+  input {
+    // background-color: blue;
+    width: 100%;
+    box-sizing: border-box;
+    height: 46px;
+  }
 }
 
 // Must be on the right hand side
-.lastName{
-    width: 45%;
-    // background-color: red;
-    input{
-        // background-color: yellow;
-                width: 100%;
-                height: 46px;}
-                padding-right: 0%;
+.lastName {
+  width: 45%;
+  // background-color: red;
+  input {
+    // background-color: yellow;
+    width: 100%;
+    height: 46px;
+  }
+  padding-right: 0%;
 }
 
 // Must be on the left hand side
@@ -94,12 +107,13 @@
 }
 
 // Must be center
-.email{
-    // background-color:purple;
-    input{
-        // background-color: green;
-        width: 100%;
-        height: 46px;}
+.email {
+  // background-color:purple;
+  input {
+    // background-color: green;
+    width: 100%;
+    height: 46px;
+  }
 }
 
 // Must be on the left hand side
@@ -126,22 +140,28 @@
     display: flex;
     width: 209px;
     height: 46px;
-    color: red;
-    background: #FFFFFF;
-    border: 1px solid #C4C4C4;
-    box-sizing: border-box;
+  }
+
+
+.ant-input {
+  display: flex;
+  width: 209px;
+  height: 46px;
+  color: red;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
 }
 
-.btn{
-    width: 100%;
-    height: 46px;
-    background-color: #C5922C !important;
-    border-radius: 4px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 4rem;
-    line-height: 26px;
-    padding: 4px;
-
+.btn {
+  width: 100%;
+  height: 46px;
+  background-color: #c5922c !important;
+  border-radius: 4px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 26px;
+  padding: 4px;
 }

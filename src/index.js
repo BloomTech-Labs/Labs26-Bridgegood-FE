@@ -13,9 +13,10 @@ import './index.less';
 import { config } from './utils/oktaConfig';
 
 import AppWithSecurity from './App';
-import { makeResReducer as reducer } from './state/reducers/MakeResReducer';
 
-const store = createStore(reducer, applyMiddleware(thunk));
+import rootReducer from './state/reducers';
+
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 function AppWithRouter() {
   // The reason to declare App this way is so that we can use any helper functions we'd need for business logic, in our case auth.
