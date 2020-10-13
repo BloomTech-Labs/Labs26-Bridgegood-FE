@@ -1,60 +1,37 @@
 import React from 'react';
-import { Button } from 'antd';
-import { useDispatch, useSelector, connect } from 'react-redux';
-import { UPDATE_ROOM, updateRoom } from '../../../../state/actions/RoomActions';
+import { useDispatch, useSelector } from 'react-redux';
+import { UPDATE_ROOM } from '../../../../state/reducers/MakeResReducer';
 import '../MakeRes.css';
 
 export default function RenderRoomPick() {
   const dispatch = useDispatch();
   const { date, room } = useSelector(state => state.reservation);
-  // const clicked = props.roomOnProps;
-  console.log(date);
-  if (date === undefined) {
-    return (
-      <>
-        <div className="room-box-disabled">
-          <div className="room-btn-disabled">CoWorking Room</div>
 
-          <div className="room-btn-disabled">Media Room</div>
-        </div>
-        {/* <h2> You've Selected = {props.roomOnProps}</h2> */}
-      </>
-    );
-  } else {
-    return (
-      <>
-        <div className="room-box">
-          <div
-            onClick={() =>
-              dispatch({ type: UPDATE_ROOM, payload: 'CoWorking Room' })
-            }
-            className={
-              room === 'CoWorking Room' ? 'room-btn-active' : 'room-btn'
-            }
-          >
-            CoWorking Room
-          </div>
+  const roomTypes = [{ type: 'CoWorking Room' }, { type: 'Media Room' }];
 
-          <div
-            onClick={() =>
-              dispatch({ type: UPDATE_ROOM, payload: 'Media Room' })
-            }
-            className={room === 'Media Room' ? 'room-btn-active' : 'room-btn'}
-          >
-            Media Room
-          </div>
-        </div>
-        {/* <h2> You've Selected = {props.roomOnProps}</h2> */}
-      </>
-    );
-  }
+  return (
+    <>
+      <div className={date === '2011-11-11' ? 'room-box-disabled' : 'room-box'}>
+        {roomTypes.map((roomType, index) => {
+          return (
+            <div
+              key={index}
+              onClick={() =>
+                dispatch({ type: UPDATE_ROOM, payload: roomType.type })
+              }
+              className={
+                date === '2011-11-11'
+                  ? 'room-btn-disabled'
+                  : roomType.type === room
+                  ? 'room-btn-active'
+                  : 'room-btn'
+              }
+            >
+              {roomType.type}
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
 }
-
-// const mapStateToProps = state => {
-//   return {
-//     date: state.date,
-//     roomOnProps: state.room,
-//   };
-// };
-
-// export default connect(mapStateToProps, { updateRoom })(RenderRoomPick);

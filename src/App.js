@@ -89,7 +89,7 @@ export default function App() {
           )}
         />
         <SecureRoute
-          path="/reserve"
+          path="/reservation"
           component={() => (
             <HomeContainer
               authService={authService}
