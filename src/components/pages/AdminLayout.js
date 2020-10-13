@@ -4,6 +4,7 @@
 // Also, passes down global state (like auth state)
 
 import React, { useState, useEffect, useMemo, useContext } from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
 import AdminHeader from './Admin/AdminHeader';
 import AdminFooter from './Admin/AdminFooter';
 
@@ -15,13 +16,17 @@ const { SubMenu } = Menu;
 // const routePageMap
 
 export default function AdminLayout({ userInfo, PageContent }) {
-  const [sideCollapsed, setSideCollapsed] = useState(false);
-  const [selectedPage, setSelectedPage] = useState('dashboard');
+  // const [sideCollapsed, setSideCollapsed] = useState(false);
+  // const [selectedPage, setSelectedPage] = useState('dashboard');
+  const history = useHistory();
+  const location = useLocation();
 
-  const onSideCollapse = collapsed => {
-    console.log(collapsed);
-    setSideCollapsed(collapsed);
-  };
+  console.log(location);
+
+  // const onSideCollapse = collapsed => {
+  //   console.log(collapsed);
+  //   setSideCollapsed(collapsed);
+  // };
 
   function onMenuSelect({ key, keyPath, selectedKeys }) {
     //   `item: ${{ item }}\nkey: ${{ key }}\nkeyPath: ${{
@@ -30,7 +35,15 @@ export default function AdminLayout({ userInfo, PageContent }) {
     // );
     // console.log(authState);
     console.log(userInfo);
+    // console.log(selectedPage)
+    // setSelectedPage(key)
+    history.push('/admin/' + key);
   }
+
+  // useEffect(() => {
+  //   history.push('/admin/'+selectedPage)
+
+  // },[selectedPage])
 
   function onMenuClick(e) {}
 
@@ -46,7 +59,12 @@ export default function AdminLayout({ userInfo, PageContent }) {
           <Sider width={200} className="site-layout-background">
             <Menu
               mode="vertical"
-              defaultSelectedKeys={['dashboard']}
+              defaultSelectedKeys={[
+                location.pathname
+                  .trim('/')
+                  .split('/')
+                  .pop(),
+              ]}
               theme="dark"
               style={{ height: '100%', borderRight: 5 }}
               onSelect={onMenuSelect}

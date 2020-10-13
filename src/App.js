@@ -11,6 +11,7 @@ import {
   MakeResPage,
   WelcomeBoard,
   AdminPage,
+  UsersPage,
 } from './components/pages';
 import Logout from './components/common/Logout';
 
@@ -99,12 +100,23 @@ export default function App() {
           )}
         />
         <SecureRoute
-          path="/admin"
+          path={['/admin', '/admin/dashboard']}
+          exact
           component={() => (
             <AdminLayout
               authService={authService}
               userInfo={userInfo}
               PageContent={AdminPage}
+            />
+          )}
+        />
+        <SecureRoute
+          path="/admin/users"
+          component={() => (
+            <AdminLayout
+              authService={authService}
+              userInfo={userInfo}
+              PageContent={UsersPage}
             />
           )}
         />
