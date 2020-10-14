@@ -78,7 +78,7 @@ const columns = [
 export default function AdminPage() {
   return (
     <Layout.Content>
-      <h1>THIS IS THE MAIN CONTENT</h1>
+      <h1>THIS IS THE USERS CONTENT</h1>
       <Table columns={columns} dataSource={data} />
     </Layout.Content>
   );

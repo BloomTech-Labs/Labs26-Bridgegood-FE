@@ -3,6 +3,7 @@ import { Route, useHistory, Switch } from 'react-router-dom';
 
 import { SecureRoute, LoginCallback, useOktaAuth } from '@okta/okta-react';
 
+import SecureAdminRoute from './components/common/SecureAdminRoute';
 import {
   HomePage,
   LoginPage,
@@ -11,6 +12,7 @@ import {
   MakeResPage,
   WelcomeBoard,
   AdminPage,
+  UsersPage,
 } from './components/pages';
 import Logout from './components/common/Logout';
 
@@ -98,13 +100,24 @@ export default function App() {
             />
           )}
         />
-        <SecureRoute
-          path="/admin"
+        <SecureAdminRoute
+          path={['/admin', '/admin/dashboard']}
+          exact
           component={() => (
             <AdminLayout
               authService={authService}
               userInfo={userInfo}
-              PageContent={AdminPage}
+              pageContent={AdminPage}
+            />
+          )}
+        />
+        <SecureAdminRoute
+          path="/admin/users"
+          component={() => (
+            <AdminLayout
+              authService={authService}
+              userInfo={userInfo}
+              pageContent={UsersPage}
             />
           )}
         />
