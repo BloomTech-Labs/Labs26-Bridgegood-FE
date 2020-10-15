@@ -34,7 +34,11 @@ export default function AdminLayout({ userInfo, pageContent: PageContent }) {
 
   return (
     <>
-      <Layout>
+      <Layout
+        style={{
+          width: '100vw',
+        }}
+      >
         <AdminHeader
           // isLoggedIn={authState.isAuthenticated}
           userInfo={userInfo}

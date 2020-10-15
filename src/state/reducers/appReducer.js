@@ -6,7 +6,25 @@ const initialAppState = {
   loggedIn: false, //
   axios: null, // ref to initialized axios instance
   isFetching: false, // if needed
-  user: null,
+  user: {
+    id: '6bcd387f-3448-4d34-8de1-d4c748672ff5',
+    first_name: 'Drake',
+    last_name: 'Alia',
+    school: 'Lambda School',
+    bg_username: 'Drake-Alia',
+    profile_url: 'https://www.bridgegood.dev/drake_alia',
+    isLocked: 0,
+    praises: 0,
+    demerits: 0,
+    user_rating: 0,
+    visits: 0,
+    reservations: 0,
+    phone: '(733) 823-1535 x7735',
+    email: 'llama002@maildrop.cc',
+    role_id: 1,
+    created_at: '2020-10-14T23:53:33.892Z',
+    updated_at: '2020-10-14T23:53:33.892Z',
+  },
 
   errors: [],
 };
