@@ -1,65 +1,63 @@
 // import * as act from './actions'
 // MANAGES THE STATE OF GENERAL, SHARED APP SETTINGS
-import newAxios from '../../utils/axiosUtils';
+// import newAxios from '../../utils/axiosUtils';
+import { initialOktaAuthState, getOktaAuthToken } from '../../utils/oktaUtils';
+
+export const APP_AUTHSTATE_UPDATE = 'APP_AUTHSTATE_UPDATE';
+// export const APP_AXIOS_UPDATE = 'APP_AXIOS_UPDATE'
+// export const APP_FETCHING = 'APP_FETCHING'
+export const APP_ERROR = 'APP_ERROR';
 
 const initialAppState = {
-  loggedIn: false, //
-  axios: null, // ref to initialized axios instance
-  isFetching: false, // if needed
-  user: null,
+  // App -- okta jwt, settings, axios reference,
+  // axios: newAxios(),// null, // ref to initialized axios instance
+  isLoggedIn: false,
+  oktaAuthState: initialOktaAuthState,
+  oktaToken: null,
 
   errors: [],
 };
-
-// const initialUserState = {
-//   id,
-//   firstName,
-//   lastName,
-//   school,
-//   bgUsername,
-//   email,
-//   phone,
-//   profileUrl,
-//   visits,
-//   reservations,
-//   role,
-// };
 
 /*
 
 actions: update_X
 
-
-
 */
 
 export function appReducer(state = initialAppState, action) {
   switch (action.type) {
-    case 'APP_FETCHING':
+    // case APP_FETCHING:
+    //   return {
+    //     ...state,
+    //     isFetching: action.payload,
+    //   };
+
+    case APP_AUTHSTATE_UPDATE:
       return {
         ...state,
-        isFetching: action.payload,
+        isLoggedIn: action.payload.isAuthenticated ? true : false,
+        oktaAuthState: action.payload,
+        oktaToken: getOktaAuthToken(action.payload),
       };
 
-    case 'APP_LOGIN':
-      return {
-        ...state,
-        loggedIn: true,
-        axios: newAxios(action.payload),
-      };
+    // case APP_AXIOS_UPDATE:
+    //   return {
+    //     ...state,
+    //     axios: newAxios(action.payload),
+    //   };
 
-    case 'APP_LOGOUT':
-      localStorage.removeItem('authToken');
-      return {
-        ...state,
-        loggedIn: false,
-        axios: newAxios(),
-      };
+    // case 'APP_LOGOUT':
+    //   // localStorage.removeItem('authToken');
+    //   return {
+    //     ...state,
+    //     axios: newAxios(),
+    //   };
 
-    case 'APP_ERROR':
+    case APP_ERROR:
       return {
         ...state,
-        errors: state.errors.unshift(action.payload.error).slice(0, 10),
+        // isFetching: false,
+        errors: [action.payload, ...state.errors.slice(1)],
       };
 
     default:

@@ -4,7 +4,7 @@ import { SecureRoute } from '@okta/okta-react';
 import { useSelector } from 'react-redux';
 
 const SecureAdminRoute = ({ component: Component, ...rest }) => {
-  const isAdmin = useSelector(state => state.app.user?.role === 1);
+  const isAdmin = useSelector(state => state.user?.role === 1);
 
   return (
     <SecureRoute

@@ -7,7 +7,7 @@ import React from 'react';
 import RenderHeader from './Header/RenderHeader';
 import RenderFooter from './Footer/RenderFooter';
 
-export default function HomeContainer({ authService, userInfo, PageContent }) {
+export default function HomeContainer({ pageContent: PageContent }) {
   return (
     <div
       style={{
@@ -21,17 +21,17 @@ export default function HomeContainer({ authService, userInfo, PageContent }) {
         justifyContent: 'space-between',
       }}
     >
-      <RenderHeader userInfo={userInfo} />
+      <RenderHeader />
       <div
         style={{
           width: '100%',
           height: '100%',
         }}
       >
-        <PageContent userInfo={userInfo} />
+        <PageContent />
       </div>
 
-      <RenderFooter userInfo={userInfo} />
+      <RenderFooter />
     </div>
   );
 }
