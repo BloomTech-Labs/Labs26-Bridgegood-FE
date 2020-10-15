@@ -6,25 +6,42 @@ import logoSrc from '../../../assets/images/bridgegood_logo_admin.png';
 
 export default function AdminHeader() {
   const Height = {
-    height: '64px'
-  }
+    height: '64px',
+  };
   return (
     <Layout.Header>
       <Row>
-        <Col span={6}>
-          <ImageWrapper src={logoSrc} desc='BridgeGood Community Text Logo' style={{
-            img: {
+        <Col
+          style={{
+            display: 'flex',
+          }}
+          span={24}
+        >
+          <ImageWrapper
+            src={logoSrc}
+            desc="BridgeGood Community Text Logo"
+            style={{
+              marginRight: 'auto',
               height: '64px',
-            }
-          }} />
-
-        </Col>
-        <Col span={3} offset={15}>
-          <Space direction='horizontal'>
-            <Button type='link'>Logout</Button>
-            <Typography.Text style={{
-              color: 'white'
-            }}>Welcome, Shaun!</Typography.Text>
+              img: {
+                height: '64px',
+              },
+            }}
+          />
+          <Space
+            style={{
+              height: '64px',
+            }}
+            direction="horizontal"
+          >
+            <Button type="link">Logout</Button>
+            <Typography.Text
+              style={{
+                color: 'white',
+              }}
+            >
+              Welcome, Shaun!
+            </Typography.Text>
           </Space>
         </Col>
       </Row>

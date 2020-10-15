@@ -23,7 +23,7 @@
   justify-content: center;
   align-items: center;
   margin: 0.5rem 0;
-  color: #E5E5E5
+  color: #e5e5e5;
 }
 
 .components {
@@ -55,30 +55,30 @@
 }
 
 .room-btn {
-    border: 1px #4E4E4E solid;
-    border-radius: 20px;
-    text-align: center;
-    padding: 1.5rem 0;
-    margin-bottom: 2rem;
-    width: 10rem;
-    cursor: pointer;
+  border: 1px #4e4e4e solid;
+  border-radius: 20px;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+  width: 10rem;
+  cursor: pointer;
 }
 
 .room-btn:hover {
-    color:#1A64B7;
-    border: 1px #1A64B7 solid;
+  color: #1a64b7;
+  border: 1px #1a64b7 solid;
 }
 
 .room-btn-active {
-    color: #FFFFFF;
-    border: 1px #4e4e4e solid;
-    background-color: #002171;
-    border-radius: 20px;
-    text-align: center;
-    padding: 1.5rem 0;
-    margin-bottom: 2rem;
-    width: 10rem;
-    cursor: pointer;
+  color: #ffffff;
+  border: 1px #4e4e4e solid;
+  background-color: #002171;
+  border-radius: 20px;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+  width: 10rem;
+  cursor: pointer;
 }
 
 .room-box-disabled {
@@ -91,14 +91,14 @@
 }
 
 .room-btn-disabled {
-    border: 1px #E5E5E5 solid;
-    border-radius: 20px;
-    text-align: center;
-    padding: 1.5rem 0;
-    margin-bottom: 2rem;
-    width: 10rem;
-    color: #E5E5E5;
-    cursor: default;
+  border: 1px #e5e5e5 solid;
+  border-radius: 20px;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+  width: 10rem;
+  color: #e5e5e5;
+  cursor: default;
 }
 
 /* ===== RenderTimeSlots.js ===== */
@@ -120,11 +120,11 @@
 }
 
 .tsBtn {
-    margin: .5rem .75rem;
-    padding: .75rem 1.5rem;
-    border: 1px #4E4E4E solid;
-    border-radius: 20px;
-    cursor: pointer;
+  margin: 0.5rem 0.75rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px #4e4e4e solid;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .tsBtn:hover {
@@ -139,23 +139,23 @@
 }
 
 .tsBtnActive {
-    margin: .5rem .75rem;
-    padding: .75rem 1.5rem;
-    border: 1px #4E4E4E solid;
-    border-radius: 20px;
-    color: #FFFFFF;
-    border: 1px #4e4e4e solid;
-    background-color: #002171;
-    cursor: pointer;
+  margin: 0.5rem 0.75rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px #4e4e4e solid;
+  border-radius: 20px;
+  color: #ffffff;
+  border: 1px #4e4e4e solid;
+  background-color: #002171;
+  cursor: pointer;
 }
 
 .greyOut {
-    border: 1px solid #E5E5E5;
-    border-radius: 20px;
-    color: #E5E5E5;
-    margin: .5rem .75rem;
-    padding: .75rem 1.5rem;
-    cursor: default;
+  border: 1px solid #e5e5e5;
+  border-radius: 20px;
+  color: #e5e5e5;
+  margin: 0.5rem 0.75rem;
+  padding: 0.75rem 1.5rem;
+  cursor: default;
 }
 
 .timeSlotBox-greyOut {
@@ -167,13 +167,13 @@
 }
 
 .finalBtn {
-    border: 2px #C5922C solid;
-    border-radius: 4px;
-    background-color: #C5922C;
-    color: #FFFFFF;
-    margin-top: 1rem;
-    padding: .3rem 1.5rem;
-    cursor: pointer;
+  border: 2px #c5922c solid;
+  border-radius: 4px;
+  background-color: #c5922c;
+  color: #ffffff;
+  margin-top: 1rem;
+  padding: 0.3rem 1.5rem;
+  cursor: pointer;
 }
 
 .final-btn a {
@@ -181,13 +181,13 @@
 }
 
 .final-btn-disabled {
-    border: 2px #E5E5E5 solid;
-    border-radius: 4px;
-    background-color: #FFFFFF;
-    color: #E5E5E5;
-    margin-top: 1rem;
-    padding: .3rem 1.5rem;
-    cursor: default;
+  border: 2px #e5e5e5 solid;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #e5e5e5;
+  margin-top: 1rem;
+  padding: 0.3rem 1.5rem;
+  cursor: default;
 }
 
 .finalBtn a {
@@ -195,23 +195,23 @@
 }
 
 /* ===== RenderResSteps ===== */
-.step-def{
-    font-size: 14px;
-    display: flex;
-    justify-content: space-between;
-    margin: .5rem 0 0 -1rem;
-    width: 38rem;
-    cursor: pointer;
+.step-def {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0 0 -1rem;
+  width: 38rem;
+  cursor: pointer;
 }
 
 .step-2 {
-    margin-left: 3rem;
-    cursor: pointer;
+  margin-left: 3rem;
+  cursor: pointer;
 }
 
 .step-3 {
-    margin-right: 2rem;
-    cursor: pointer;
+  margin-right: 2rem;
+  cursor: pointer;
 }
 
 .ant-steps-item-title::after {
@@ -243,35 +243,35 @@
   margin: 1rem 12rem 0;
 }
 
-.radioBtn-inactive{
-    border: 2px solid #E5E5E5;
-    background: #C4C4C4;
-    padding: 1.2rem 2rem;
-    color: #FFFFFF;
-    width: 10rem;
-    margin: 1rem auto 1rem;
-    text-align: center;
-    font-size: 18px;
-    border-radius: 4px;
-    cursor: default;
+.radioBtn-inactive {
+  border: 2px solid #e5e5e5;
+  background: #c4c4c4;
+  padding: 1.2rem 2rem;
+  color: #ffffff;
+  width: 10rem;
+  margin: 1rem auto 1rem;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: default;
 }
 
-.radioBtn-active{
-    border: 2px solid #E5E5E5;
-    background: #C5922C;
-    padding: 1.2rem 2rem;
-    color: #FFFFFF;
-    width: 10rem;
-    margin: 1rem auto 1rem;
-    text-align: center;
-    font-size: 18px;
-    border-radius: 4px;
-    cursor: pointer;
+.radioBtn-active {
+  border: 2px solid #e5e5e5;
+  background: #c5922c;
+  padding: 1.2rem 2rem;
+  color: #ffffff;
+  width: 10rem;
+  margin: 1rem auto 1rem;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .radioBtn-active:hover {
-    color: #1A64B7;
-    border: 1px #1A64B7 solid;
+  color: #1a64b7;
+  border: 1px #1a64b7 solid;
 }
 
 /* ===== RenderFinalizeRes ===== */
@@ -287,10 +287,10 @@
 }
 
 .edit-res {
-    font-size: 16px;
-    color: #1A64B7;
-    margin: 8rem 0 0;
-    cursor: pointer;
+  font-size: 16px;
+  color: #1a64b7;
+  margin: 8rem 0 0;
+  cursor: pointer;
 }
 
 .donation-details {
@@ -362,70 +362,70 @@
   width: 95%;
   display: flex;
   justify-content: space-between;
-  margin: 3rem auto .6rem;
+  margin: 3rem auto 0.6rem;
 }
 
 .row-1-div {
-    border: 1px solid #C4C4C4;
-    border-radius: 3px;
-    background-color: #E5E5E5;
-    padding: .75rem 3.25rem;
-    font-size: 14px;
-    cursor: pointer;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  background-color: #e5e5e5;
+  padding: 0.75rem 3.25rem;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .active-donate-btn {
-    font-size: 14px;
-    color: #FFFFFF;
-    border: 1px solid #C4C4C4;
-    border-radius: 3px;
-    background-color: #002171;
-    padding: .75rem 3.25rem;
-    cursor: pointer;
+  font-size: 14px;
+  color: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  background-color: #002171;
+  padding: 0.75rem 3.25rem;
+  cursor: pointer;
 }
 
 .row-2 {
   width: 95%;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto .5rem;
+  margin: 0 auto 0.5rem;
 }
 
 .row-2-div {
-    border: 1px solid #C4C4C4;
-    border-radius: 3px;
-    background-color: #E5E5E5;
-    padding: .75rem 3rem;
-    cursor: pointer;
-    margin: 0 0rem;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  background-color: #e5e5e5;
+  padding: 0.75rem 3rem;
+  cursor: pointer;
+  margin: 0 0rem;
 }
 
 .active-donation-btn-2 {
-    font-size: 14px;
-    color: #FFFFFF;
-    border: 1px solid #C4C4C4;
-    border-radius: 3px;
-    background-color: #002171;
-    padding: .75rem 3rem;
-    cursor: pointer;
+  font-size: 14px;
+  color: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  background-color: #002171;
+  padding: 0.75rem 3rem;
+  cursor: pointer;
 }
 
 .row-2-div-OA {
-    border: 1px solid #C4C4C4;
-    border-radius: 3px;
-    background-color: #E5E5E5;
-    padding: .75rem 5.2rem;
-    cursor: pointer;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  background-color: #e5e5e5;
+  padding: 0.75rem 5.2rem;
+  cursor: pointer;
 }
 
 .active-donation-btn-2-OA {
-    font-size: 14px;
-    color: #FFFFFF;
-    border: 1px solid #C4C4C4;
-    border-radius: 3px;
-    background-color: #002171;
-    padding: .75rem 5.2rem;
-    cursor: pointer;
+  font-size: 14px;
+  color: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  background-color: #002171;
+  padding: 0.75rem 5.2rem;
+  cursor: pointer;
 }
 
 .row-3 {
@@ -435,18 +435,18 @@
 }
 
 #donate-btn {
-    margin: 1rem auto 0;
-    padding: .75rem 0;
-    background-color: #002171;
-    border-radius: 3px;
-    cursor: pointer;
+  margin: 1rem auto 0;
+  padding: 0.75rem 0;
+  background-color: #002171;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 #donate-btn h2 {
-    margin: 0 0 0 10rem;
-    font-size: 16px;
-    color: #FFFFFF;
-    cursor: pointer;
+  margin: 0 0 0 10rem;
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .donation-alt {
