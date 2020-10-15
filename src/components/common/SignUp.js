@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useOktaAuth } from '@okta/okta-react';
+import newAxios from '../../utils/axiosUtils';
+import { getOktaAuthToken } from '../../utils/oktaUtils';
+
 import {
   Form,
   Input,
@@ -46,11 +51,56 @@ const tailFormItemLayout = {
   },
 };
 
+const allowedAccounts = new Set([
+  'llama001@maildrop.cc',
+  'llama002@maildrop.cc',
+  'llama003@maildrop.cc',
+  'llama004@maildrop.cc',
+]);
+
 export default function SignUp() {
+  const { authService } = useOktaAuth();
+
+  const app = useSelector(state => state.app);
+  const user = useSelector(state => state.user);
+  const dispatch = useDispatch();
+
   const [form] = Form.useForm();
 
   const onFinish = values => {
     console.log('Received values of form: ', values);
+    // create OKTA user
+    // 1. check values['email'] against 4 allowed user emails
+    if (!allowedAccounts.has(values['email'])) {
+      // return some error
+    }
+    // 2. normally, call OKTA's new user api method
+    // -> in our special case, perform regular authentication
+    authService.login();
+
+    // 3. at this point we have an Okta auth token
+
+    // build userData based on
+    const userData = {
+      first_name: values['firstName'],
+      last_name: values['lastName'],
+      email: values['email'],
+    };
+
+    const axios = newAxios(authService.authState.idToken);
+    axios
+      .post('/users', userData)
+      .then(res => {
+        console.log(res.data);
+      })
+      .catch(err => {
+        console.log('error', err);
+      });
+
+    /*
+    /login - GET /user --> (returns user profile info)
+    /signup - POST /users --> { firstname, lastname, etc. }
+    */
   };
 
   const [autoCompleteResult, setAutoCompleteResult] = useState([]);
