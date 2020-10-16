@@ -34,14 +34,24 @@ export default function AdminLayout({ userInfo, pageContent: PageContent }) {
 
   return (
     <>
-      <Layout>
+      <Layout
+        style={{
+          width: '100vw',
+        }}
+      >
         <AdminHeader
           // isLoggedIn={authState.isAuthenticated}
           userInfo={userInfo}
           // authService={authService}
         />
         <Layout>
-          <Sider width={200} className="site-layout-background">
+          <Sider
+            style={{
+              width: '200px',
+              height: 'calc(100vh - 64px)',
+            }}
+            className="site-layout-background"
+          >
             <Menu
               mode="vertical"
               defaultSelectedKeys={[
@@ -64,7 +74,6 @@ export default function AdminLayout({ userInfo, pageContent: PageContent }) {
           </Sider>
           <PageContent userInfo={userInfo} />
         </Layout>
-        <AdminFooter />
       </Layout>
     </>
   );
