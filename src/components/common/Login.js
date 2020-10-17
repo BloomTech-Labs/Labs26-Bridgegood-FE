@@ -6,7 +6,7 @@ import img from '../../assets/images/LOG_IN_TO_RESERVE.png';
 import logoImg from '../../assets/images/logo.png';
 import { useHistory } from 'react-router-dom';
 
-export default function Login(props) {
+export default function Login({ enabled }) {
   // destructure your config so that you can pass it into the required fields in your widget.
   const { pkce, issuer, clientId, redirectUri, scopes } = config;
   const history = useHistory();
@@ -63,7 +63,7 @@ export default function Login(props) {
   }, []);
 
   return (
-    <div disabled={!props.enabled && 'true'}>
+    <div disabled={!enabled && 'true'}>
       <section className="main-container">
         <div className="welcome-text"></div>
         <div id="sign-in-widget" />
