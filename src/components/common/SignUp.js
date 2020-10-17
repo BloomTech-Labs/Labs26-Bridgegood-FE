@@ -116,7 +116,7 @@ export default function SignUp({ enabled }) {
   };
 
   return (
-    <div>
+    <div disabled={!enabled}>
       <Form
         {...formItemLayout}
         form={form}
@@ -124,7 +124,6 @@ export default function SignUp({ enabled }) {
         name="register"
         onFinish={onFinish}
         scrollToFirstError
-        disabled={!enabled && 'true'}
       >
         <div className="title">CREATE AN ACCOUNT</div>
 

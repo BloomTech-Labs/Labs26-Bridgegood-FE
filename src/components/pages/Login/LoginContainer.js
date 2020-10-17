@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import OktaSignIn from '@okta/okta-signin-widget';
 import '@okta/okta-signin-widget/dist/css/okta-sign-in.min.css';
 import { Row, Col, Divider } from 'antd';
@@ -8,16 +9,16 @@ import SignUp from '../../common/SignUp';
 import Login from '../../common/Login';
 import './Login.less';
 
-const LoginContainer = ({ authType }) => {
-  const type = authType ? authType : 'login';
+const LoginContainer = () => {
+  const location = useLocation();
 
   return (
     <div className="signUpBox">
       <section>
-        <Login enabled={type === 'login'} />
+        <Login enabled={location === '/login'} />
       </section>
       <section>
-        <SignUp enabled={type === 'signup'} />
+        <SignUp enabled={location === '/signup'} />
       </section>
       {/* <section className="main-container">
         <div className="welcome-text"></div>

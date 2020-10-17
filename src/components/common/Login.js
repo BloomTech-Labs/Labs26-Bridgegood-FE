@@ -63,7 +63,7 @@ export default function Login({ enabled }) {
   }, []);
 
   return (
-    <div disabled={!enabled && 'true'}>
+    <div disabled={!enabled}>
       <section className="main-container">
         <div className="welcome-text"></div>
         <div id="sign-in-widget" />
