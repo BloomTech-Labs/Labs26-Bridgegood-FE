@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 export default function Login({ enabled }) {
   // destructure your config so that you can pass it into the required fields in your widget.
   const { pkce, issuer, clientId, redirectUri, scopes } = config;
-  const history = useHistory();
+  // const history = useHistory();
 
   useEffect(() => {
     // if (redirPath == window.location.origin) {

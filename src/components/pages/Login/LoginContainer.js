@@ -15,10 +15,10 @@ const LoginContainer = () => {
   return (
     <div className="signUpBox">
       <section>
-        <Login enabled={location === '/login'} />
+        <Login enabled={location.pathname === '/login'} />
       </section>
       <section>
-        <SignUp enabled={location === '/signup'} />
+        <SignUp enabled={location.pathname === '/signup'} />
       </section>
       {/* <section className="main-container">
         <div className="welcome-text"></div>
