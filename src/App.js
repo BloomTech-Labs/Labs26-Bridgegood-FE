@@ -90,10 +90,12 @@ export default function App() {
           exact
           component={() => <HomeContainer pageContent={HomePage} />}
         />
-        <Route path="/login">
+        <Route path={['/login', '/signup']}>
           <HomeContainer pageContent={LoginPage} />
         </Route>
-        <Route path="/logout" component={Logout} />
+        <Route path="/logout">
+          <Logout />
+        </Route>
         <Route path="/implicit/callback" component={LoginCallback} />
         <Route
           path="/donate"
