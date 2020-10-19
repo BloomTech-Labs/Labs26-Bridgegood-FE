@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Logo from '../../../assets/images/logo.png';
 import './Header.less';
 
-function RenderHeader({ userInfo }) {
+function RenderHeader() {
+  const app = useSelector(state => state.app);
+
   return (
     <header className="header">
       <div className="Logo">
@@ -23,12 +26,12 @@ function RenderHeader({ userInfo }) {
       </nav>
 
       <div className="Btns">
-        {!userInfo && (
+        {!app.isLoggedIn && (
           <button className="login-btn">
             <Link to="/login">Log In</Link>
           </button>
         )}
-        {userInfo && (
+        {app.isLoggedIn && (
           <button className="login-btn">
             <Link to="/logout">Log Out</Link>
           </button>
