@@ -37,12 +37,6 @@ export default function DonationBox() {
     time_slot: time_slot,
   };
 
-  // const handleClick = e => {
-  //   e.preventDefault();
-  //   dispatch({ type: ADD_RESERVATION, payload: reservationData });
-  //   dispatch({ type: UPDATE_STEP, payload: 0 });
-  // };
-
   return (
     <div className="donation-box">
       <div className="header-box">
@@ -103,7 +97,6 @@ export default function DonationBox() {
         </p>
         {currentStep === 2 && (
           <Link onClick={handleClick}>
-            {/* <Link onClick={handleClick} to="/confirmation/:resid"> */}
             <p>I'll donate another time, finish my reservation</p>
           </Link>
         )}
