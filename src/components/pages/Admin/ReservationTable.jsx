@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Button,
-  Row,
-  Col,
-  Table,
-  Typography,
-  Input,
-} from 'antd';
+import { Button, Row, Col, Table, Typography, Input } from 'antd';
 import { dataSource, columns } from './Utils';
 import { ReactComponent as LeftArrow } from './Assets/LeftArrow.svg';
 import { ReactComponent as RightArrow } from './Assets/RightArrow.svg';
@@ -61,7 +54,7 @@ export default function ReservationTable() {
               style={{
                 color: 'black',
                 fontWeight: 500,
-                userSelect: 'none'
+                userSelect: 'none',
               }}
               onClick={() => setDate(new Date())}
             >
@@ -95,7 +88,7 @@ export default function ReservationTable() {
           </div>
         </Col>
       </Row>
-      <Table dataSource={dataSource} columns={columns} />
+      <Table pagination={false} style={{marginBottom: '25px'}} dataSource={dataSource} columns={columns} />
     </>
   );
 }
