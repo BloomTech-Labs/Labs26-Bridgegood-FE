@@ -1,6 +1,7 @@
 import React from 'react';
 import { Layout } from 'antd';
 import ReservationTable from './ReservationTable';
+import Cards from './Cards';
 export default function AdminPage() {
   return (
     <Layout.Content
@@ -11,6 +12,9 @@ export default function AdminPage() {
       }}
     >
       <ReservationTable />
+      <div>
+        <Cards />
+      </div>
     </Layout.Content>
   );
 }

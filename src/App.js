@@ -118,7 +118,10 @@ export default function App() {
           path="/admin/users"
           component={() => <AdminLayout pageContent={UsersPage} />}
         />
-        <SecureRoute path="/confirmation/:resid" component={ConfirmationPage} />
+        <SecureRoute
+          path="/confirmation/:resid"
+          component={() => <HomeContainer pageContent={ConfirmationPage} />}
+        />
         <Route component={() => <HomeContainer pageContent={NotFoundPage} />} />
       </Switch>
     </div>
