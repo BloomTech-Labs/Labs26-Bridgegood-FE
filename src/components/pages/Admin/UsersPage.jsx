@@ -25,21 +25,24 @@ export default function AdminPage() {
   }, [search]);
 
   useEffect(() => {
-    setSearch('')
-    setSearchUsers(allUsers)
-  }, [allUsers])
+    setSearch('');
+    setSearchUsers(allUsers);
+  }, [allUsers]);
 
   useEffect(() => {
     const axios = newAxios(getOktaAuthToken(authState));
-    axios.get('/users')
-      .then(({data}) => {
-        setAllUsers(data.map(person => ({
-          ...person,
-          name: person.first_name + ' ' + person.last_name
-        })))
+    axios
+      .get('/users')
+      .then(({ data }) => {
+        setAllUsers(
+          data.map(person => ({
+            ...person,
+            name: person.first_name + ' ' + person.last_name,
+          }))
+        );
       })
-      .catch(err => console.error(err.message))
-  }, [])
+      .catch(err => console.error(err.message));
+  }, []);
 
   return (
     <Layout.Content
@@ -49,29 +52,46 @@ export default function AdminPage() {
         padding: '15px',
       }}
     >
-      <Row style={{
-        margin: '0 0 15px',
-        display: 'flex',
-      }}>
-        <Col span="6" style={{
-          marginRight: 'auto'
-        }}>
+      <Row
+        style={{
+          margin: '0 0 15px',
+          display: 'flex',
+        }}
+      >
+        <Col
+          span="6"
+          style={{
+            marginRight: 'auto',
+          }}
+        >
           <Input
             style={{
-              height: '32px'
+              height: '32px',
             }}
             placeholder="Search user..."
             value={search}
             onChange={e => setSearch(e.target.value)}
           />
         </Col>
-        <Col span="6" style={{
-          display: 'flex',
-          alignItems: 'flex-end',
-          justifyContent: 'flex-end'
-        }}>
-          <CSVLink data={searchUsers} separator={','} enclosingCharacter={"\""} filename='Users.csv' headers={Object.keys(allUsers[0] || {}).map(key => ({label: key, key}))}>
-            <Button type='input'>Export</Button>
+        <Col
+          span="6"
+          style={{
+            display: 'flex',
+            alignItems: 'flex-end',
+            justifyContent: 'flex-end',
+          }}
+        >
+          <CSVLink
+            data={searchUsers}
+            separator={','}
+            enclosingCharacter={'"'}
+            filename="Users.csv"
+            headers={Object.keys(allUsers[0] || {}).map(key => ({
+              label: key,
+              key,
+            }))}
+          >
+            <Button type="input">Export</Button>
           </CSVLink>
         </Col>
       </Row>
@@ -115,7 +135,7 @@ const UsersTable = ({ users }) => {
       title: 'Donation Total',
       dataIndex: 'donationTotal',
       key: 'donationTotal',
-      render: amount => `$${amount || 0}`
+      render: amount => `$${amount || 0}`,
     },
     {
       title: 'Last Visit',
@@ -127,9 +147,10 @@ const UsersTable = ({ users }) => {
       title: 'Registration Date',
       dataIndex: 'created_at',
       key: 'created_at',
-      render: date => date.split('T')[0]
+      render: date => date.split('T')[0],
     },
     {
+      key: 'controls',
       render: () => (
         <>
           <Pencil className={'hover hover-blue'} />

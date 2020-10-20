@@ -34,7 +34,7 @@
     "prettier:mac": "prettier --write \"**/*.+(js|jsx|json|css|scss|md|less)\"",
     "prettier:win": "prettier --write \"**/*.{js,jsx,json,css,scss,md,less}\"",
     "coverage": "npm test -- --coverage --watchAll=false",
-    "lint": "eslint 'src/**/*.{js,jsx}' --fix",
+    "lint": "eslint src/**/*.{js,jsx} --fix",
     "storybook": "start-storybook",
     "deploy-storybook": "storybook-to-ghpages"
   },
