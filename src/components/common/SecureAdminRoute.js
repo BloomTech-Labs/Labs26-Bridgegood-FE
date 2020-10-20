@@ -4,16 +4,19 @@ import { SecureRoute } from '@okta/okta-react';
 import { useSelector } from 'react-redux';
 
 const SecureAdminRoute = ({ component: Component, ...rest }) => {
-  const isAdmin = useSelector(state => state.user?.role === 1);
+  const isAdmin = useSelector(state => state.app.user.roleId === 1);
+  const isFetching = useSelector(state => state.app.isFetching === true);
 
   return (
     <SecureRoute
       {...rest}
       render={props => {
-        console.log({ isAdmin: isAdmin });
-
-        if (isAdmin) return <Component {...props} />;
-        else return <Redirect to="/welcome" />;
+        if (isFetching) {
+          return <h1>Loading User Profile</h1>;
+        } else {
+          if (isAdmin) return <Component {...props} />;
+          else return <Redirect to="/welcome" />;
+        }
       }}
     />
   );

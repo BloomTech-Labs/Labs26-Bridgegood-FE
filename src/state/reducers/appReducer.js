@@ -8,50 +8,43 @@ export const APP_AUTHSTATE_UPDATE = 'APP_AUTHSTATE_UPDATE';
 // export const APP_FETCHING = 'APP_FETCHING'
 export const APP_ERROR = 'APP_ERROR';
 
+// User Actions
+export const USER_UPDATE = 'USER_UPDATE';
+export const USER_RESET = 'USER_RESET';
+export const USER_FETCHING = 'USER_FETCHING';
+export const USER_ERROR = 'USER_ERROR';
+
+const initialUser = {
+  id: '',
+  firstName: '',
+  lastName: '',
+  school: '',
+  bgUsername: '',
+  praises: 0,
+  demerits: 0,
+  userRating: 0,
+  email: '',
+  phone: '',
+  profileUrl: '',
+  visits: 0,
+  reservations: 0,
+  roleId: 2, // default to non-admin
+  // isFetching: false,
+};
+
 const initialAppState = {
-  // App -- okta jwt, settings, axios reference,
-  // axios: newAxios(),// null, // ref to initialized axios instance
   isLoggedIn: false,
   oktaAuthState: initialOktaAuthState,
   oktaToken: null,
   isFetching: false,
-  user: {
-    id: '6bcd387f-3448-4d34-8de1-d4c748672ff5',
-    first_name: 'Drake',
-    last_name: 'Alia',
-    school: 'Lambda School',
-    bg_username: 'Drake-Alia',
-    profile_url: 'https://www.bridgegood.dev/drake_alia',
-    isLocked: 0,
-    praises: 0,
-    demerits: 0,
-    user_rating: 0,
-    visits: 0,
-    reservations: 0,
-    phone: '(733) 823-1535 x7735',
-    email: 'llama002@maildrop.cc',
-    role_id: 1,
-    created_at: '2020-10-14T23:53:33.892Z',
-    updated_at: '2020-10-14T23:53:33.892Z',
-  },
+
+  user: { ...initialUser },
 
   errors: [],
 };
 
-/*
-
-actions: update_X
-
-*/
-
 export function appReducer(state = initialAppState, action) {
   switch (action.type) {
-    // case APP_FETCHING:
-    //   return {
-    //     ...state,
-    //     isFetching: action.payload,
-    //   };
-
     case APP_AUTHSTATE_UPDATE:
       return {
         ...state,
@@ -60,24 +53,29 @@ export function appReducer(state = initialAppState, action) {
         oktaToken: getOktaAuthToken(action.payload),
       };
 
-    // case APP_AXIOS_UPDATE:
-    //   return {
-    //     ...state,
-    //     axios: newAxios(action.payload),
-    //   };
-
-    // case 'APP_LOGOUT':
-    //   // localStorage.removeItem('authToken');
-    //   return {
-    //     ...state,
-    //     axios: newAxios(),
-    //   };
-
     case APP_ERROR:
       return {
         ...state,
         // isFetching: false,
         errors: [action.payload, ...state.errors.slice(1)],
+      };
+
+    case USER_FETCHING:
+      return {
+        ...state,
+        isFetching: action.payload,
+      };
+
+    case USER_UPDATE:
+      return {
+        ...state,
+        user: { ...action.payload, isFetching: false },
+      };
+
+    case USER_RESET:
+      return {
+        ...state,
+        user: { ...initialUser },
       };
 
     default:
