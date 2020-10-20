@@ -35,7 +35,7 @@ export default function DonatePage() {
               {!app.isLoggedIn && <h1>Not logged in</h1>}
               {app.isLoggedIn && !user && <h1>Loading Profile</h1>}
               {app.isLoggedIn && user.email && (
-                <h1>Logged In and Profile Available</h1>
+                <h1>Logged In as {user.email} </h1>
               )}
               <DonationAmount />
               <VenmoPay containerId={Math.ceil(Math.random() * 1000)} />
