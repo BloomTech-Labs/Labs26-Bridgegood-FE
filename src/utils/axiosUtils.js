@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const baseURL = process.env.REACT_APP_BACKEND_ROOT_URI
   ? process.env.REACT_APP_BACKEND_ROOT_URI
-  : 'https://bridgegood-api.herokuapp.com';
+  : 'https://api.bridgegood.dev';
 
 export default function newAxios(token) {
   return axios.create(token ? getAxiosConfigWithAuth(token) : getAxiosConfig());
