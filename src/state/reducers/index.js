@@ -3,8 +3,9 @@
 import { combineReducers } from 'redux';
 import { makeResReducer } from './MakeResReducer';
 import { appReducer } from './appReducer';
-import { userReducer } from './userReducer';
 import { donationReducer } from './donationReducer';
+import { adminReducer } from './adminReducer';
+
 /*
 Overall app's global state architecture:
 
@@ -25,7 +26,7 @@ Users
 
 export default combineReducers({
   app: appReducer,
-  user: userReducer,
   reservation: makeResReducer,
   donation: donationReducer,
+  admin: adminReducer,
 });
