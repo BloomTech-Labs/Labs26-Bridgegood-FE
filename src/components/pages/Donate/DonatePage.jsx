@@ -23,8 +23,8 @@ const { Header, Content, Footer, Sider } = Layout;
 // const style = { disabled: null };
 
 export default function DonatePage() {
-  const app = useSelector(state => state.app)
-  const { user } = useSelector(state => state.app)
+  const app = useSelector(state => state.app);
+  const { user } = useSelector(state => state.app);
 
   return (
     <>

@@ -88,7 +88,12 @@ export default function ReservationTable() {
           </div>
         </Col>
       </Row>
-      <Table pagination={false} style={{marginBottom: '25px'}} dataSource={dataSource} columns={columns} />
+      <Table
+        pagination={false}
+        style={{ marginBottom: '25px' }}
+        dataSource={dataSource}
+        columns={columns}
+      />
     </>
   );
 }
