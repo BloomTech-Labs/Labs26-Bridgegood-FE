@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './Footer.less';
 import {
@@ -8,7 +9,9 @@ import {
   Footer_4,
   Footer_5,
 } from '../../../assets/index';
-const Footer = ({ userInfo }) => {
+const Footer = () => {
+  const app = useSelector(state => state.app);
+
   return (
     <footer className="footer">
       <div className="top">
@@ -65,12 +68,12 @@ const Footer = ({ userInfo }) => {
             </div>
 
             <div className="test">
-              {!userInfo && (
+              {!app.isLoggedIn && (
                 <button>
                   <Link to="/login">Log In</Link>
                 </button>
               )}
-              {userInfo && (
+              {app.isLoggedIn && (
                 <button>
                   <Link to="/logout">Log Out</Link>
                 </button>

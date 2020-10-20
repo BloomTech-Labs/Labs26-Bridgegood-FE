@@ -5,15 +5,12 @@ import RenderCalendar from './PageParts/RenderCalendar';
 import RenderRoomPick from './PageParts/RenderRoomPick';
 import RenderTimeSlot from './PageParts/RenderTimeSlot';
 import ResSteps from './PageParts/RenderResSteps';
-import { updateStep } from '../../../state/actions/StepsActions';
 import RenderDuration from './PageParts/RenderDuration';
-import { FinalizeResPage } from './FinalizeRes';
+import RenderFinalizeRes from './PageParts/RenderFinalizeRes';
 import './MakeRes.css';
 
-export default function ResContainer(props) {
-  // const currentStep = props.currentStep;
-  const reservationObj = useSelector(state => state.reservation);
-  const { currentStep } = useSelector(state => state.reservation);
+export default function ResContainer() {
+  const { currentStep, room, date } = useSelector(state => state.reservation);
 
   if (currentStep === 1) {
     return (
@@ -23,9 +20,6 @@ export default function ResContainer(props) {
             <ResSteps />
           </div>
         </div>
-        <button onClick={() => console.log(reservationObj)}>
-          Print Redux Global State
-        </button>
         ;
         <div className="big-box">
           <div className="row">
@@ -37,14 +31,18 @@ export default function ResContainer(props) {
             </div>
 
             <div className="col-2 col">
-              <h2>Select a Room</h2>
+              <h2 className={date === '2011-11-11' ? 'h2-grey' : null}>
+                Select a Room
+              </h2>
               <div className="components">
                 <RenderRoomPick />
               </div>
             </div>
 
             <div className="col-3 col">
-              <h2>Select Opening</h2>
+              <h2 className={room === 'None' ? 'h2-grey' : null}>
+                Select Opening
+              </h2>
               <div className="components">
                 <RenderTimeSlot />
               </div>
@@ -61,8 +59,7 @@ export default function ResContainer(props) {
             <ResSteps />
           </div>
         </div>
-
-        <FinalizeResPage />
+        <RenderFinalizeRes />
       </>
     );
   } else {
@@ -79,11 +76,3 @@ export default function ResContainer(props) {
     );
   }
 }
-
-// const mapStateToProps = state => {
-//   return {
-//     currentStep: state.currentStep,
-//   };
-// };
-
-// export default connect(mapStateToProps, { updateStep })(ResContainer);

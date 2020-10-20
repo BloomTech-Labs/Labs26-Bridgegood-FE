@@ -8,6 +8,7 @@ import {
 } from '@ant-design/icons';
 
 import VenmoPay from './VenmoPay';
+import DonationAmount from './DonationAmount';
 
 import img from '../../../assets/images/bridgegood_group_1.png';
 import './DonatePage.css';
@@ -28,11 +29,12 @@ export default function DonatePage({ isLoggedIn, userInfo, authService }) {
         <Content>
           <Row gutter={[16, 16]} justify="space-around" align="middle">
             <Col span={10}>
-              {!isLoggedIn && <h1>Not logged in</h1>}
+              {/* {!isLoggedIn && <h1>Not logged in</h1>}
               {isLoggedIn && !userInfo && <h1>Loading Profile</h1>}
               {isLoggedIn && userInfo && (
                 <h1>Logged In and Profile Available</h1>
-              )}
+              )} */}
+              <DonationAmount />
               <VenmoPay containerId={Math.ceil(Math.random() * 1000)} />
             </Col>
             <Col span={10}>
