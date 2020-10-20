@@ -3,11 +3,10 @@ import { Layout, Button, Space, Typography, Row, Col, Divider } from 'antd';
 import ImageWrapper from './TestWrapper';
 
 import logoSrc from '../../../assets/images/bridgegood_logo_admin.png';
+import { useSelector } from 'react-redux';
 
 export default function AdminHeader() {
-  const Height = {
-    height: '64px',
-  };
+  const user = useSelector(state => state.user);
   return (
     <Layout.Header>
       <Row>
@@ -40,7 +39,7 @@ export default function AdminHeader() {
                 color: 'white',
               }}
             >
-              Welcome, Shaun!
+              Welcome, {user.firstName}!
             </Typography.Text>
           </Space>
         </Col>
