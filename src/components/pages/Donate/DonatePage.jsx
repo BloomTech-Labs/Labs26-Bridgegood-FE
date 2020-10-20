@@ -24,16 +24,16 @@ const { Header, Content, Footer, Sider } = Layout;
 
 export default function DonatePage() {
   const app = useSelector(state => state.app)
-  const user = useSelector(state => state.user)
-  
+  const { user } = useSelector(state => state.app)
+
   return (
     <>
       <Layout className="layout">
         <Content>
           <Row gutter={[16, 16]} justify="space-around" align="middle">
             <Col span={10}>
-            {!app.isLoggedIn && <h1>Not logged in</h1>}
-              {app.isLoggedIn && !user.email && <h1>Loading Profile</h1>}
+              {!app.isLoggedIn && <h1>Not logged in</h1>}
+              {app.isLoggedIn && !user && <h1>Loading Profile</h1>}
               {app.isLoggedIn && user.email && (
                 <h1>Logged In and Profile Available</h1>
               )}
