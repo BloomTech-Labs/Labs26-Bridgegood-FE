@@ -63,7 +63,9 @@ export default function Login({ enabled }) {
 
     // handle unmount event
     return () => {
-      widget.remove();
+      try {
+        widget.remove();
+      } catch {}
     };
   }, []);
 
