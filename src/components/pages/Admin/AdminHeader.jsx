@@ -1,41 +1,47 @@
 import React from 'react';
-import { Layout, Row, Col, Image } from 'antd';
+import { Layout, Button, Space, Typography, Row, Col, Divider } from 'antd';
 import ImageWrapper from './TestWrapper';
 
-// import '../../assets/images/bridgegood_logo_admin.png'
 import logoSrc from '../../../assets/images/bridgegood_logo_admin.png';
+import { useSelector } from 'react-redux';
 
 export default function AdminHeader() {
+  const user = useSelector(state => state.user);
   return (
-    <Layout.Header height="300px">
-      {/* <Image src={logoSrc} width={300} />
-          <div>
-            <h1>Flex Middle</h1>
-          </div>
-          <div>
-            <h1>Logout</h1>
-          </div>
-          <div>
-            <h1>Welcome, Shaun!</h1>
-          </div> */}
-
-      <Row align="middle">
-        <Col flex="300px">
-          <ImageWrapper src={logoSrc} />
-          {/* <Image src={logoSrc} width={300} /> */}
-        </Col>
-        <Col flex="auto">
-          <div>
-            <h1>Flex Middle</h1>
-          </div>
-        </Col>
-        <Col flex="300px">
-          <div>
-            <h1>Logout</h1>
-          </div>
-          <div>
-            <h1>Welcome, Shaun!</h1>
-          </div>
+    <Layout.Header>
+      <Row>
+        <Col
+          style={{
+            display: 'flex',
+          }}
+          span={24}
+        >
+          <ImageWrapper
+            src={logoSrc}
+            desc="BridgeGood Community Text Logo"
+            style={{
+              marginRight: 'auto',
+              height: '64px',
+              img: {
+                height: '64px',
+              },
+            }}
+          />
+          <Space
+            style={{
+              height: '64px',
+            }}
+            direction="horizontal"
+          >
+            <Button type="link">Logout</Button>
+            <Typography.Text
+              style={{
+                color: 'white',
+              }}
+            >
+              Welcome, {user.firstName}!
+            </Typography.Text>
+          </Space>
         </Col>
       </Row>
     </Layout.Header>

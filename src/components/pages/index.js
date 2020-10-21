@@ -14,6 +14,7 @@ import { LoginPage } from './Login';
 import { MakeResPage } from './MakeRes';
 import WelcomeBoard from './WelcomeBoard';
 import AdminPage from './Admin/AdminPage';
+import UsersPage from './Admin/UsersPage';
 export {
   HomePage,
   NotFoundPage,
@@ -22,4 +23,5 @@ export {
   MakeResPage,
   DonatePage,
   AdminPage,
+  UsersPage,
 };

@@ -4,6 +4,7 @@
 // Also, passes down global state (like auth state)
 
 import React, { useState, useEffect, useMemo, useContext } from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
 import AdminHeader from './Admin/AdminHeader';
 import AdminFooter from './Admin/AdminFooter';
 
@@ -14,39 +15,51 @@ const { Header, Footer, Sider, Content } = Layout;
 const { SubMenu } = Menu;
 // const routePageMap
 
-export default function AdminLayout({ userInfo, PageContent }) {
-  const [sideCollapsed, setSideCollapsed] = useState(false);
-  const [selectedPage, setSelectedPage] = useState('dashboard');
+export default function AdminLayout({ userInfo, pageContent: PageContent }) {
+  // const [selectedPage, setSelectedPage] = useState('dashboard');
+  const history = useHistory();
+  const location = useLocation();
 
-  const onSideCollapse = collapsed => {
-    console.log(collapsed);
-    setSideCollapsed(collapsed);
-  };
+  console.log(location);
 
   function onMenuSelect({ key, keyPath, selectedKeys }) {
-    //   `item: ${{ item }}\nkey: ${{ key }}\nkeyPath: ${{
-    //     keyPath,
-    //   }}\nselectedKeys: ${{ selectedKeys }}\ndomEvent: ${{ domEvent }}`
-    // );
     // console.log(authState);
     console.log(userInfo);
+    // console.log(selectedPage)
+    // setSelectedPage(key)
+    history.push('/admin/' + key);
   }
 
   function onMenuClick(e) {}
 
   return (
     <>
-      <Layout>
+      <Layout
+        style={{
+          width: '100vw',
+        }}
+      >
         <AdminHeader
           // isLoggedIn={authState.isAuthenticated}
           userInfo={userInfo}
           // authService={authService}
         />
         <Layout>
-          <Sider width={200} className="site-layout-background">
+          <Sider
+            style={{
+              width: '200px',
+              height: 'calc(100vh - 64px)',
+            }}
+            className="site-layout-background"
+          >
             <Menu
               mode="vertical"
-              defaultSelectedKeys={['dashboard']}
+              defaultSelectedKeys={[
+                location.pathname
+                  .trim('/')
+                  .split('/')
+                  .pop(),
+              ]}
               theme="dark"
               style={{ height: '100%', borderRight: 5 }}
               onSelect={onMenuSelect}
@@ -61,7 +74,6 @@ export default function AdminLayout({ userInfo, PageContent }) {
           </Sider>
           <PageContent userInfo={userInfo} />
         </Layout>
-        <AdminFooter />
       </Layout>
     </>
   );

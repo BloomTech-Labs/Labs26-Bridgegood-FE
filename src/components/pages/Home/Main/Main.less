@@ -1,10 +1,26 @@
+/*====================================
+=            BREAK POINTS            =
+====================================*/
+@wide-screen-down: ~'(max-width: 1440px)';
+@desktop-down: ~'(max-width: 991px)';
+@tablet-down: ~'(max-width: 767px)';
+@phone-down: ~'(max-width: 480px)';
+@small-phone-down: ~'(max-width: 320px)';
+
 main {
   width: 100%;
   padding: 100px 0;
+  @media @small-phone-down {
+    padding: 0;
+  }
   .main {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    @media @small-phone-down {
+      flex-direction: column-reverse;
+      width: 100%;
+    }
     .img-section {
       width: 60%;
       img {
@@ -16,15 +32,26 @@ main {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      @media @small-phone-down {
+        width: 100%;
+      }
       h1 {
         font-size: 40px;
         line-height: 130%;
         color: #4e4e4e;
         margin-bottom: 100px;
+        @media @small-phone-down {
+          font-size: 16px;
+          margin: auto;
+          text-align: center;
+        }
       }
       div {
         display: flex;
         flex-direction: column;
+        @media @small-phone-down {
+          align-items: center;
+        }
         button {
           width: 368px;
           height: 59px;
@@ -36,6 +63,10 @@ main {
           font-size: 22px;
           line-height: 26px;
           color: #002171;
+          @media @small-phone-down {
+            width: 100%;
+            font-size: 16px;
+          }
           a {
             width: 100%;
             color: #002171;

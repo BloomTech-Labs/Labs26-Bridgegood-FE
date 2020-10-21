@@ -1,43 +1,81 @@
 // import * as act from './actions'
 // MANAGES THE STATE OF GENERAL, SHARED APP SETTINGS
-import newAxios from '../../utils/axiosUtils';
+// import newAxios from '../../utils/axiosUtils';
+import { initialOktaAuthState, getOktaAuthToken } from '../../utils/oktaUtils';
 
-const initialAppAppState = {
-  loggedIn: false, //
-  axios: null, // ref to initialized axios instance
-  isFetching: false, // if needed
-  user: null,
+export const APP_AUTHSTATE_UPDATE = 'APP_AUTHSTATE_UPDATE';
+// export const APP_AXIOS_UPDATE = 'APP_AXIOS_UPDATE'
+// export const APP_FETCHING = 'APP_FETCHING'
+export const APP_ERROR = 'APP_ERROR';
+
+// User Actions
+export const USER_UPDATE = 'USER_UPDATE';
+export const USER_RESET = 'USER_RESET';
+export const USER_FETCHING = 'USER_FETCHING';
+export const USER_ERROR = 'USER_ERROR';
+
+const initialUser = {
+  id: '',
+  firstName: '',
+  lastName: '',
+  school: '',
+  bgUsername: '',
+  praises: 0,
+  demerits: 0,
+  userRating: 0,
+  email: '',
+  phone: '',
+  profileUrl: '',
+  visits: 0,
+  reservations: 0,
+  roleId: 2, // default to non-admin
+  // isFetching: false,
+};
+
+const initialAppState = {
+  isLoggedIn: false,
+  oktaAuthState: initialOktaAuthState,
+  oktaToken: null,
+  isFetching: false,
+
+  user: { ...initialUser },
 
   errors: [],
 };
 
-export function appReducer(state = initialAppAppState, action) {
+export function appReducer(state = initialAppState, action) {
   switch (action.type) {
-    case 'APP_FETCHING':
+    case APP_AUTHSTATE_UPDATE:
+      return {
+        ...state,
+        isLoggedIn: action.payload.isAuthenticated ? true : false,
+        oktaAuthState: action.payload,
+        oktaToken: getOktaAuthToken(action.payload),
+      };
+
+    case APP_ERROR:
+      return {
+        ...state,
+        // isFetching: false,
+        errors: [action.payload, ...state.errors.slice(1)],
+      };
+
+    case USER_FETCHING:
       return {
         ...state,
         isFetching: action.payload,
       };
 
-    case 'APP_LOGIN':
+    case USER_UPDATE:
       return {
         ...state,
-        loggedIn: true,
-        axios: newAxios(action.payload),
+        user: { ...action.payload, isFetching: false },
       };
 
-    case 'APP_LOGOUT':
-      localStorage.removeItem('authToken');
+    case USER_RESET:
       return {
         ...state,
-        loggedIn: false,
-        axios: newAxios(),
-      };
-
-    case 'APP_ERROR':
-      return {
-        ...state,
-        errors: state.errors.unshift(action.payload.error).slice(0, 10),
+        user: { ...initialUser },
       };
 
     default:

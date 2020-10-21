@@ -3,8 +3,30 @@
 import { combineReducers } from 'redux';
 import { makeResReducer } from './MakeResReducer';
 import { appReducer } from './appReducer';
+import { donationReducer } from './donationReducer';
+import { adminReducer } from './adminReducer';
+
+/*
+Overall app's global state architecture:
+
+Customer UI
+-----------
+App -- settings, axios reference, okta jwt
+User
+Donation
+
+
+Admin UI
+--------
+Reservations
+Users
+(Donations)
+
+*/
 
 export default combineReducers({
-  reservation: makeResReducer,
   app: appReducer,
+  reservation: makeResReducer,
+  donation: donationReducer,
+  admin: adminReducer,
 });
