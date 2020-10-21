@@ -39,7 +39,7 @@ describe('<SignUp /> test suite', () => {
     const el = renderResult.container.querySelector('#register');
     // const el = screen.getBy('#register')
     // console.log(el)
-    // expect(el).toBeTruthy()
+    expect(el).toBeTruthy();
     // expect(renderResult.container.querySelector('#register').elementType).toBe('form');
   });
 });
