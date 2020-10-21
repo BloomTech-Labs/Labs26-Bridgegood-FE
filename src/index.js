@@ -11,12 +11,15 @@ import 'antd/dist/antd.less';
 
 import './index.less';
 import { config } from './utils/oktaConfig';
-
+import { logger } from './utils/reduxUtils';
 import AppWithSecurity from './App';
 
 import rootReducer from './state/reducers';
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const store =
+  process.env.REACT_APP_CUSTOM_ENV === 'dev'
+    ? createStore(rootReducer, applyMiddleware(thunk, logger))
+    : createStore(rootReducer, applyMiddleware(thunk));
 
 function AppWithRouter() {
   // The reason to declare App this way is so that we can use any helper functions we'd need for business logic, in our case auth.

@@ -25,13 +25,13 @@ import AdminLayout from './components/pages/AdminLayout';
 import ConfirmationPage from './components/pages/Confirmation/ConfirmationPage';
 // import Dispatch from './components/pages/Dispatch';
 
-import { APP_AUTHSTATE_UPDATE } from './state/reducers/appReducer';
 import {
+  APP_AUTHSTATE_UPDATE,
   USER_UPDATE,
   USER_RESET,
   USER_FETCHING,
-  USER_ERROR,
-} from './state/reducers/userReducer';
+  APP_ERROR,
+} from './state/reducers/appReducer';
 
 export default function App() {
   const { authState, authService } = useOktaAuth();
@@ -54,7 +54,7 @@ export default function App() {
         .get('user')
         .then(res => {
           // console.log("Retrieved user: ", res.data)
-          const resUser = res.data[0];
+          const resUser = res.data.user;
           const newUser = {
             firstName: resUser.first_name,
             lastName: resUser.last_name,
@@ -68,13 +68,12 @@ export default function App() {
             profileUrl: resUser.profile_url,
             visits: resUser.visits,
             reservations: resUser.reservations,
-            // role: resUser.role_id,  // uncomment to set user's role
+            roleId: resUser.role_id, // uncomment to set user's role
           };
           dispatch({ type: USER_UPDATE, payload: newUser });
         })
         .catch(err => {
-          dispatch({ type: USER_ERROR, payload: 'Error retrieving user' });
-          // console.log(user.errors)
+          dispatch({ type: APP_ERROR, payload: 'Error retrieving user' });
           // console.log("Error retrieving user", err)
         });
       // perform backend API call to retrieve user data

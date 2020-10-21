@@ -16,6 +16,7 @@
     "craco-less": "^1.17.0",
     "plotly.js": "^1.54.6",
     "react": "^16.13.1",
+    "react-csv": "^2.0.3",
     "react-dom": "^16.13.1",
     "react-plotly.js": "^2.4.0",
     "react-redux": "^7.2.1",
@@ -33,7 +34,7 @@
     "prettier:mac": "prettier --write \"**/*.+(js|jsx|json|css|scss|md|less)\"",
     "prettier:win": "prettier --write \"**/*.{js,jsx,json,css,scss,md,less}\"",
     "coverage": "npm test -- --coverage --watchAll=false",
-    "lint": "eslint 'src/**/*.{js,jsx}' --fix",
+    "lint": "eslint src/**/*.{js,jsx} --fix",
     "storybook": "start-storybook",
     "deploy-storybook": "storybook-to-ghpages"
   },
