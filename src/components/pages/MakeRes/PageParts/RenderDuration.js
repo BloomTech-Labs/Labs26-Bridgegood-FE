@@ -40,11 +40,16 @@ export default function RenderDuration() {
 
           <div>
             <div className="radio-group">
-              <Radio.Group onChange={onDurationChange} value={selectedDuration}>
+              <Radio.Group
+                onChange={onDurationChange}
+                value={selectedDuration}
+                data-test="radio-group"
+              >
                 <Radio
                   style={radioStyle}
                   value={2}
                   checked={selectedDuration === 2}
+                  data-test="radio-1"
                 >
                   1 - 2 Hours
                 </Radio>
@@ -52,6 +57,7 @@ export default function RenderDuration() {
                   style={radioStyle}
                   value={4}
                   checked={selectedDuration === 4}
+                  data-test="radio-2"
                 >
                   3 - 4 Hours
                 </Radio>
@@ -59,6 +65,7 @@ export default function RenderDuration() {
                   style={radioStyle}
                   value={6}
                   checked={selectedDuration === 6}
+                  data-test="radio-3"
                 >
                   6 Hours
                 </Radio>

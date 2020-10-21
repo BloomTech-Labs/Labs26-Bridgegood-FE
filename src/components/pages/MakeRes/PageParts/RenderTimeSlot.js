@@ -42,6 +42,7 @@ export default function RenderTimeSlot() {
                 return (
                   <div
                     key={index}
+                    value={timeSlot.value}
                     onClick={
                       room === 'None'
                         ? null
@@ -80,6 +81,7 @@ export default function RenderTimeSlot() {
                 return (
                   <div
                     key={index}
+                    value={timeSlot.value}
                     onClick={
                       room === 'None'
                         ? null

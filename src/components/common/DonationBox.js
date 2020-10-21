@@ -17,8 +17,6 @@ export default function DonationBox() {
     room,
     currentStep,
     donation,
-    user,
-    reservations,
   } = useSelector(state => state.reservation);
 
   const clicked = donation;
@@ -95,7 +93,7 @@ export default function DonationBox() {
           the donation funds the space.
         </p>
         {currentStep === 2 && (
-          <Link onClick={handleClick} to="/">
+          <Link onClick={handleClick} to="/confirmation/:resid">
             <p>I'll donate another time, finish my reservation</p>
           </Link>
         )}
