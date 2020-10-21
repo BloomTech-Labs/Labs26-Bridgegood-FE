@@ -1,3 +1,8 @@
+/*====================================
+=            BREAK POINTS            =
+====================================*/
+@small-phone-down: ~'(max-width: 991px)';
+
 .FAQ {
   display: flex;
   flex-direction: column;
@@ -5,6 +10,9 @@
   height: 449px;
   margin: 0 auto;
   color: #000000;
+  @media @small-phone-down {
+    height: fit-content;
+  }
   h4 {
     font-size: 16px;
     font-weight: bold;
@@ -16,11 +24,17 @@
       font-weight: bold;
       line-height: 19px;
       margin-bottom: 20px;
+      @media @small-phone-down {
+        font-size: 14px;
+      }
     }
     p {
       font-size: 22px;
       line-height: 26px;
       font-weight: 300;
+      @media @small-phone-down {
+        font-size: 12px;
+      }
     }
   }
 }
