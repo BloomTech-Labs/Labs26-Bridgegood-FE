@@ -16,9 +16,16 @@ export default function RenderRoomPick() {
           return (
             <div
               key={index}
-              onClick={() =>
-                dispatch({ type: UPDATE_ROOM, payload: roomType.type })
+              onClick={
+                date === '2011-11-11'
+                  ? null
+                  : () =>
+                      dispatch({
+                        type: UPDATE_ROOM,
+                        payload: roomType.type,
+                      })
               }
+              value={roomType.type}
               className={
                 date === '2011-11-11'
                   ? 'room-btn-disabled'
