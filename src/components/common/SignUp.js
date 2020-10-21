@@ -61,10 +61,6 @@ const allowedAccounts = new Set([
 export default function SignUp({ enabled }) {
   const { authService } = useOktaAuth();
 
-  const app = useSelector(state => state.app);
-  const user = useSelector(state => state.user);
-  const dispatch = useDispatch();
-
   const [form] = Form.useForm();
 
   const onFinish = values => {
