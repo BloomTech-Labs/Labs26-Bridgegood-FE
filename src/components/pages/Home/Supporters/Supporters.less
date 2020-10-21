@@ -1,8 +1,20 @@
+/*====================================
+=            BREAK POINTS            =
+====================================*/
+@wide-screen-down: ~'(max-width: 1440px)';
+@desktop-down: ~'(max-width: 991px)';
+@tablet-down: ~'(max-width: 767px)';
+@phone-down: ~'(max-width: 480px)';
+@small-phone-down: ~'(max-width: 320px)';
+
 .Supporters {
   height: 520px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  @media @small-phone-down {
+    height: fit-content;
+  }
   h4 {
     color: #000;
     font-weight: bold;
@@ -13,10 +25,18 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @media @small-phone-down {
+      flex-direction: column;
+    }
     div {
       display: flex;
       justify-content: center;
       align-items: center;
+      @media @small-phone-down {
+        img {
+          width: 25px;
+        }
+      }
     }
   }
 }
