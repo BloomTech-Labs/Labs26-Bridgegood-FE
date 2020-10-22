@@ -77,9 +77,16 @@ You can find the deployed project at [BRIDGEGOOD.dev](https://bridgegood.dev).
 
 In order for the app to function correctly, the user must set up their own environment variables. There should be a .env file containing the following:
 
-    *  REACT_APP_CLIENT_ID=example
-    *  REACT_APP_OKTA_ISSUER_URI="https://example-882474.okta.com"
-    *  REACT_APP_API_URI=http://localhost:3000
+> REACT_APP_CLIENT_ID=example
+> REACT_APP_OKTA_ISSUER_URI="https://example-882474.okta.com"
+> REACT_APP_API_URI=http://localhost:3000
+> REACT_APP_VENMO_CLIENT_ID=example
+> REACT_APP_BRAINTREE_TOKENIZATION_KEY=example
+> REACT_APP_CUSTOM_ENV=dev
+
+The variables **REACT_APP_VENMO_CLIENT_ID** and **REACT_APP_BRAINTREE_TOKENIZATION_KEY** are necessary for connecting to Venmo through the Braintree API.
+
+Set the **REACT_APP_CUSTOM_ENV** env variable for certain app behavior. For example, setting it to dev will enable the Redux logger
 
 ### Other Scripts
 
