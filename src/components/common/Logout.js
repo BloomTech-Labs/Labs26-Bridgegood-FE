@@ -3,10 +3,8 @@ import { useOktaAuth } from '@okta/okta-react';
 
 const Logout = () => {
   const { authState, authService } = useOktaAuth();
-
-  authService.logout('/');
   localStorage.removeItem('roleId');
-
+  authService.logout('/');
   return (
     <>
       <h1>Logging out, please wait...</h1>
