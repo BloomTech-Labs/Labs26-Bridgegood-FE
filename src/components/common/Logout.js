@@ -5,6 +5,7 @@ const Logout = () => {
   const { authState, authService } = useOktaAuth();
 
   authService.logout('/');
+  localStorage.removeItem('roleId');
 
   return (
     <>
