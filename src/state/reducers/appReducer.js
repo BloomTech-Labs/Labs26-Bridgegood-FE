@@ -28,7 +28,7 @@ const initialUser = {
   profileUrl: '',
   visits: 0,
   reservations: 0,
-  roleId: 2, // default to non-admin
+  roleId: 0, // default to non-admin
   // isFetching: false,
 };
 
