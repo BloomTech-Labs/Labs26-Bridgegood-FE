@@ -86,7 +86,7 @@ In order for the app to function correctly, the user must set up their own envir
 
 The variables **REACT_APP_VENMO_CLIENT_ID** and **REACT_APP_BRAINTREE_TOKENIZATION_KEY** are necessary for connecting to Venmo through the Braintree API.
 
-Set the **REACT_APP_CUSTOM_ENV** env variable for certain app behavior. For example, setting it to dev will enable the Redux logger
+The **REACT_APP_CUSTOM_ENV** variable is used to configure app behavior based on environment. For example, setting it to dev will enable the Redux logger
 
 ### Other Scripts
 
