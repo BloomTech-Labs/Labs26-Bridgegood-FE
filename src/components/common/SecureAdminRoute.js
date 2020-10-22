@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import React from 'react';
+import { Redirect } from 'react-router-dom';
 import { SecureRoute } from '@okta/okta-react';
 import { useSelector } from 'react-redux';
 
 const SecureAdminRoute = ({ component: Component, ...rest }) => {
-  const app = useSelector(state => state.app);
   const roleId = useSelector(state => state.app.user.roleId);
 
   return (
