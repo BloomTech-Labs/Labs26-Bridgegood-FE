@@ -1,8 +1,17 @@
+/*====================================
+=            BREAK POINTS            =
+====================================*/
+@small-phone-down: ~'(max-width: 991px)';
+
 .WhoWeServe {
   height: 562px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  @media @small-phone-down {
+    height: fit-content;
+    margin-top: 5%;
+  }
   p {
     line-height: 19px;
     font-weight: bold;
@@ -12,6 +21,9 @@
   .SubWhoWeServe {
     display: flex;
     justify-content: space-around;
+    @media @small-phone-down {
+      display: inline;
+    }
     div {
       display: flex;
       flex-direction: column;
@@ -20,6 +32,9 @@
       h3 {
         font-weight: bold;
         font-size: 22px;
+        @media @small-phone-down {
+          font-size: 16px;
+        }
       }
       img {
         width: 100%;

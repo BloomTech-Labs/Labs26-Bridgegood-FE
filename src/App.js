@@ -71,6 +71,7 @@ export default function App() {
             roleId: resUser.role_id, // uncomment to set user's role
           };
           dispatch({ type: USER_UPDATE, payload: newUser });
+          localStorage.setItem('roleId', newUser.roleId);
         })
         .catch(err => {
           dispatch({ type: APP_ERROR, payload: 'Error retrieving user' });
