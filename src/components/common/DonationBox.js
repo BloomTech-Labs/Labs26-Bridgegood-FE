@@ -5,17 +5,10 @@ import { Row, Col } from 'antd';
 
 import { UPDATE_STEP } from '../../state/reducers/MakeResReducer';
 import { UPDATE_DONATION } from '../../state/reducers/MakeResReducer';
-import '../pages/MakeRes/MakeRes.css';
+import '../pages/MakeRes/MakeRes.less';
 import { ADD_RESERVATION } from '../../state/actions/AddResAction';
-import { useHistory } from 'react-router-dom';
 
-export default function DonationBox() {
-  let history = useHistory();
-
-  function handleClick() {
-    history.push('/confirmation/:resid');
-  }
-
+export default function DonationBox(props) {
   const dispatch = useDispatch();
   const {
     date,
@@ -95,11 +88,7 @@ export default function DonationBox() {
           Your $5 donation gives 1 student access to the <br /> studio. 100% of
           the donation funds the space.
         </p>
-        {currentStep === 2 && (
-          <Link onClick={handleClick}>
-            <p>I'll donate another time, finish my reservation</p>
-          </Link>
-        )}
+        {props.children}
       </div>
     </div>
   );

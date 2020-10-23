@@ -4,7 +4,7 @@ import 'antd/dist/antd.css';
 import { Radio } from 'antd';
 import { UPDATE_DURATION } from '../../../../state/reducers/MakeResReducer';
 import { UPDATE_STEP } from '../../../../state/reducers/MakeResReducer';
-import '../MakeRes.css';
+import '../MakeRes.less';
 
 const radioStyle = {
   display: 'block',

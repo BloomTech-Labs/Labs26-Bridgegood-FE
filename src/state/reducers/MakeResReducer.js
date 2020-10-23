@@ -15,6 +15,7 @@ export const initialState = {
   duration: 0, // 1-2 hours, 3-4 hours, 6 hours
   date: '2011-11-11', //'Any present or future date'
   room: 'None', // 'CoWorker or Media'
+  roomId: '',
   time_slot: 'None', // Examples of times 10,11,12,13,14,15,16,17 (10am - 5pm)
   currentStep: 0, // 0-2 (Pick time), (date/ room/ time slot), (finalize/ donate)
   donation: 0, // 1, 5, 10, 20, Other Amount
@@ -39,7 +40,8 @@ export const makeResReducer = (state = initialState, action) => {
     case UPDATE_ROOM:
       return {
         ...state,
-        room: action.payload,
+        room: action.payload.type,
+        roomId: action.payload.id,
       };
     case UPDATE_TIME_SLOT:
       return {

@@ -13,28 +13,17 @@ const LoginContainer = () => {
   const location = useLocation();
 
   return (
-    <div className="signUpBox">
-      <section>
+    <Row className="signUpBox">
+      <Col span={1}></Col>
+      <Col span={10}>
         <Login enabled={location.pathname === '/login'} />
-      </section>
-      <section>
+      </Col>
+      <Col span={1}></Col>
+      <Col span={11}>
         <SignUp enabled={location.pathname === '/signup'} />
-      </section>
-      {/* <section className="main-container">
-        <div className="welcome-text"></div>
-        <div id="sign-in-widget" />
-        <Divider orientation="left"></Divider>
-        <Row>
-          <Col flex={1}>
-            <Login enabled={true} />
-          </Col>
-          <Col flex={1}>
-            <SignUp enabled={false} />
-          </Col>
-        </Row>
-        <Divider orientation="left"></Divider>
-      </section> */}
-    </div>
+      </Col>
+      <Col span={1}></Col>
+    </Row>
   );
 };
 

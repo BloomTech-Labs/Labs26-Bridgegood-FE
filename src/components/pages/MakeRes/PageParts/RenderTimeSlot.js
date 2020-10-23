@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { UPDATE_TIME_SLOT } from '../../../../state/reducers/MakeResReducer';
 import { UPDATE_STEP } from '../../../../state/reducers/MakeResReducer';
-import '../MakeRes.css';
+import '../MakeRes.less';
 
 export default function RenderTimeSlot() {
   const dispatch = useDispatch();
