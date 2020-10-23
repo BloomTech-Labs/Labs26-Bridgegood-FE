@@ -159,9 +159,9 @@ export default function RenderFinalizeRes() {
           </div>
         </div>
         <DonationBox>
-          <p className="finalize-link" onClick={finalizeClick}>
+          <span className="finalize-link" onClick={finalizeClick}>
             I'll donate another time, finish my reservation
-          </p>
+          </span>
           {/* <Link onClick={finalizeClick}></Link> */}
         </DonationBox>
       </div>
