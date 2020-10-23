@@ -40,6 +40,9 @@ export default function DonatePage() {
                 <h1>Logged In as {user.email} </h1>
               )} */}
               {/* <DonationAmount /> */}
+              <h1 className="donate-header">
+              KEEP CREATIVITY ALIVE FOR DESIGNERS OF COLOR
+              </h1>
               <DonationBox />
               {/* <VenmoPay containerId={Math.ceil(Math.random() * 1000)} /> */}
             </Col>
@@ -49,7 +52,7 @@ export default function DonatePage() {
                   <h2 className="donate-title">FUNDED BY THE COMMUNITY</h2>
                 </Col>
                 <Col span={15}>
-                  <p className="donate-content">
+                  <p>
                     100% of your donations help fund the BRIDGEGOOD Community
                     Studio, which serves the Bay Area students of design.
                   </p>
@@ -60,7 +63,7 @@ export default function DonatePage() {
                   <h2 className="donate-title">PAY IT FORWARD</h2>
                 </Col>
                 <Col span={15}>
-                  <p className="donate-content">
+                  <p>
                   By making a donation now, you are able to support students
                   in the community to use the space and connect with other
                   creatives of color.
