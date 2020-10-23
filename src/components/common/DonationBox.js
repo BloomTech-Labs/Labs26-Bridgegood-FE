@@ -94,7 +94,7 @@ export default function DonationBox() {
           the donation funds the space.
         </p>
         {currentStep === 2 && (
-          <Link onClick={handleClick}>
+          <Link to="/confirmation/:resid" onClick={handleClick}>
             <p>I'll donate another time, finish my reservation</p>
           </Link>
         )}

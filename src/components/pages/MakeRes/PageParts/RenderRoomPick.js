@@ -11,10 +11,20 @@ export default function RenderRoomPick() {
 
   return (
     <>
-      <div className={date === '2011-11-11' ? 'room-box-disabled' : 'room-box'}>
+      <div
+        data-testid="room-picker"
+        className={date === '2011-11-11' ? 'room-box-disabled' : 'room-box'}
+      >
         {roomTypes.map((roomType, index) => {
           return (
             <div
+              data-testid={
+                date === '2011-11-11'
+                  ? 'room-disabled'
+                  : roomType.type === 'CoWorking Room'
+                  ? 'room-CoWorking'
+                  : 'room-Media'
+              }
               key={index}
               onClick={
                 date === '2011-11-11'

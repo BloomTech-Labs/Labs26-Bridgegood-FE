@@ -34,7 +34,10 @@ export default function RenderTimeSlot() {
 
   return (
     <>
-      <div className={room === 'None' ? 'timeSlotBox-greyOut' : 'timeSlotBox'}>
+      <div
+        data-testid="time-picker"
+        className={room === 'None' ? 'timeSlotBox-greyOut' : 'timeSlotBox'}
+      >
         <div className="row-ts">
           <div className="col-ts">
             <>
@@ -115,6 +118,7 @@ export default function RenderTimeSlot() {
           </div>
         </div>
         <div
+          data-testid="finalize"
           className={
             isClicked || isClicked2 ? 'finalBtn' : 'final-btn-disabled'
           }
