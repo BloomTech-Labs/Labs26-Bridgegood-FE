@@ -10,9 +10,11 @@ import {
 
 import VenmoPay from './VenmoPay';
 import DonationAmount from './DonationAmount';
+import DonationBox from '../../common/DonationBox';
 
 import img from '../../../assets/images/bridgegood_group_1.png';
 import './DonatePage.css';
+
 
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
@@ -32,21 +34,25 @@ export default function DonatePage() {
         <Content>
           <Row gutter={[16, 16]} justify="space-around" align="middle">
             <Col span={10}>
-              {!app.isLoggedIn && <h1>Not logged in</h1>}
+              {/* {!app.isLoggedIn && <h1>Not logged in</h1>}
               {app.isLoggedIn && !user && <h1>Loading Profile</h1>}
               {app.isLoggedIn && user.email && (
                 <h1>Logged In as {user.email} </h1>
-              )}
-              <DonationAmount />
-              <VenmoPay containerId={Math.ceil(Math.random() * 1000)} />
+              )} */}
+              {/* <DonationAmount /> */}
+              <h1 className="donate-header">
+              KEEP CREATIVITY ALIVE FOR DESIGNERS OF COLOR
+              </h1>
+              <DonationBox />
+              {/* <VenmoPay containerId={Math.ceil(Math.random() * 1000)} /> */}
             </Col>
             <Col span={10}>
               <Row gutter={[2, 16]} justify="space-around" align="middle">
                 <Col span={7}>
-                  <h2 className="donate-title">Funded By The Community</h2>
+                  <h2 className="donate-title">FUNDED BY THE COMMUNITY</h2>
                 </Col>
                 <Col span={15}>
-                  <p className="donate-content">
+                  <p>
                     100% of your donations help fund the BRIDGEGOOD Community
                     Studio, which serves the Bay Area students of design.
                   </p>
@@ -54,12 +60,13 @@ export default function DonatePage() {
               </Row>
               <Row gutter={[2, 16]} justify="space-around" align="middle">
                 <Col span={7}>
-                  <h2 className="donate-title">Funded By The Community</h2>
+                  <h2 className="donate-title">PAY IT FORWARD</h2>
                 </Col>
                 <Col span={15}>
-                  <p className="donate-content">
-                    100% of your donations help fund the BRIDGEGOOD Community
-                    Studio, which serves the Bay Area students of design.
+                  <p>
+                  By making a donation now, you are able to support students
+                  in the community to use the space and connect with other
+                  creatives of color.
                   </p>
                 </Col>
               </Row>

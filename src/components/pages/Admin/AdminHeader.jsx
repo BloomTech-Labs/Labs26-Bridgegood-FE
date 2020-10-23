@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Layout, Button, Space, Typography, Row, Col, Divider } from 'antd';
 import ImageWrapper from './TestWrapper';
 
 import logoSrc from '../../../assets/images/bridgegood_logo_admin.png';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import newAxios from '../../../utils/axiosUtils';
+import { getOktaAuthToken } from '../../../utils/oktaUtils';
+import { useOktaAuth } from '@okta/okta-react/dist/OktaContext';
 
 export default function AdminHeader() {
-  const user = useSelector(state => state.user);
+  const user = useSelector(state => state.app.user);
+  const dispatch = useDispatch();
+  const { authState } = useOktaAuth();
+  useEffect(() => {
+    const axios = newAxios(getOktaAuthToken(authState));
+    axios.get('/users').then(({ data }) => {
+      console.log(data);
+      dispatch({ type: 'ADMIN_SET_USERS', payload: data });
+    });
+  }, []);
   return (
     <Layout.Header>
       <Row>

@@ -7,7 +7,7 @@ import RenderTimeSlot from './PageParts/RenderTimeSlot';
 import ResSteps from './PageParts/RenderResSteps';
 import RenderDuration from './PageParts/RenderDuration';
 import RenderFinalizeRes from './PageParts/RenderFinalizeRes';
-import './MakeRes.css';
+import './MakeRes.less';
 
 export default function ResContainer() {
   const { currentStep, room, date } = useSelector(state => state.reservation);
