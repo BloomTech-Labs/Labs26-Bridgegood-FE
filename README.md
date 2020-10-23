@@ -17,6 +17,8 @@ You can find the deployed project at [BRIDGEGOOD.dev](https://bridgegood.dev).
 
 ## Project Overview
 
+[Product Demo Video on Youtube](https://youtu.be/6rptqTJ-36o)
+
 [Labs 26 Trello Board](https://trello.com/b/nW5Qz4yT/bridgegood-ana)
 
 ### [Key Features](https://www.notion.so/Bridgegood-Roadmap-42978540fee14397a27189f5d815949c)
