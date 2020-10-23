@@ -6,5 +6,18 @@ const initialState = {
 };
 
 export function adminReducer(state = initialState, action) {
-  return state;
+  switch (action.type) {
+    case 'ADMIN_SET_USERS':
+      return {
+        ...state,
+        users: action.payload,
+      };
+    case 'ADMIN_SET_RESERVATIONS':
+      return {
+        ...state,
+        reservations: action.payload,
+      };
+    default:
+      return state;
+  }
 }

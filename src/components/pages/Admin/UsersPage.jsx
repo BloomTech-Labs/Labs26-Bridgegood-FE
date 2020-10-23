@@ -6,12 +6,22 @@ import { CSVLink } from 'react-csv';
 import newAxios from '../../../utils/axiosUtils';
 import { getOktaAuthToken } from '../../../utils/oktaUtils';
 import { useOktaAuth } from '@okta/okta-react/dist/OktaContext';
+import EditUserModal from './EditUserModal';
+import { useSelector } from 'react-redux';
 
 export default function AdminPage() {
-  const { authState } = useOktaAuth();
+  // const { authState } = useOktaAuth();
+  const users = useSelector(state => state.admin.users);
   const [allUsers, setAllUsers] = useState([]);
   const [searchUsers, setSearchUsers] = useState(allUsers);
   const [search, setSearch] = useState('');
+  const [editingUser, setEditingUser] = useState(null);
+  const [editingUserId, setEditingUserId] = useState(null);
+
+  useEffect(() => {
+    setEditingUser(users.filter(user => user.id === editingUserId)[0]);
+  }, [editingUserId]);
+
   useEffect(() => {
     if (search) {
       setSearchUsers(
@@ -25,24 +35,28 @@ export default function AdminPage() {
   }, [search]);
 
   useEffect(() => {
+    console.log('All users', allUsers);
     setSearch('');
     setSearchUsers(allUsers);
   }, [allUsers]);
 
   useEffect(() => {
-    const axios = newAxios(getOktaAuthToken(authState));
-    axios
-      .get('/users')
-      .then(({ data }) => {
-        setAllUsers(
-          data.map(person => ({
-            ...person,
-            name: person.first_name + ' ' + person.last_name,
-          }))
-        );
+    setAllUsers(
+      users.map(user => {
+        return {
+          id: user.id,
+          name: `${user.first_name} ${user.last_name}`,
+          email: user.email,
+          visits: user.visits,
+          praises: user.praises,
+          demerits: user.demerits,
+          created_at: user.created_at,
+          lastVisit: new Date(),
+          donationTotal: Math.floor(Math.random() * Math.floor(30)),
+        };
       })
-      .catch(err => console.error(err.message));
-  }, []);
+    );
+  }, [users]);
 
   return (
     <Layout.Content
@@ -97,14 +111,19 @@ export default function AdminPage() {
       </Row>
       <Row>
         <Col span="24">
-          <UsersTable users={searchUsers} />
+          <EditUserModal
+            visible={editingUserId !== null}
+            setEditingUserId={setEditingUserId}
+            user={editingUser}
+          />
+          <UsersTable setEditingUserId={setEditingUserId} users={searchUsers} />
         </Col>
       </Row>
     </Layout.Content>
   );
 }
 
-const UsersTable = ({ users }) => {
+const UsersTable = ({ users, setEditingUserId }) => {
   const columns = [
     {
       title: 'Name',
@@ -150,10 +169,14 @@ const UsersTable = ({ users }) => {
       render: date => date.split('T')[0],
     },
     {
+      dataIndex: 'id',
       key: 'controls',
-      render: () => (
+      render: id => (
         <>
-          <Pencil className={'hover hover-blue'} />
+          <Pencil
+            className={'hover hover-blue'}
+            onClick={() => setEditingUserId(id)}
+          />
           <TrashCan
             className={'hover'}
             style={{
