@@ -33,10 +33,10 @@ export default function ResSteps() {
 
   return (
     <>
-      <Steps current={currentStep}>
-        <Step onClick={stepOne} />
-        <Step onClick={stepTwo} />
-        <Step onClick={stepThree} />
+      <Steps data-testid="steps" current={currentStep}>
+        <Step data-testid="step-one" onClick={stepOne} />
+        <Step data-testid="step-two" onClick={stepTwo} />
+        <Step data-testid="step-three" onClick={stepThree} />
       </Steps>
       <div className="step-def">
         <div onClick={stepOne} className="step-1">

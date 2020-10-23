@@ -15,7 +15,7 @@ const Main = props => {
           </h1>
           <div>
             <button>
-              <Link to="/reservation">
+              <Link to="/reservation" data-test="reservation-link">
                 Reserve a spot now
                 <span>
                   <img src={Arrow} alt="arrow icon" />

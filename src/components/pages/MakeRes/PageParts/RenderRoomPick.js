@@ -14,12 +14,31 @@ export default function RenderRoomPick() {
 
   return (
     <>
-      <div className={date === '2011-11-11' ? 'room-box-disabled' : 'room-box'}>
+      <div
+        data-testid="room-picker"
+        className={date === '2011-11-11' ? 'room-box-disabled' : 'room-box'}
+      >
         {roomTypes.map((roomType, index) => {
           return (
             <div
+              data-testid={
+                date === '2011-11-11'
+                  ? 'room-disabled'
+                  : roomType.type === 'Co-working Room'
+                  ? 'room-CoWorking'
+                  : 'room-Media'
+              }
               key={index}
-              onClick={() => dispatch({ type: UPDATE_ROOM, payload: roomType })}
+              onClick={
+                date === '2011-11-11'
+                  ? null
+                  : () =>
+                      dispatch({
+                        type: UPDATE_ROOM,
+                        payload: roomType,
+                      })
+              }
+              value={roomType.type}
               className={
                 date === '2011-11-11'
                   ? 'room-btn-disabled'

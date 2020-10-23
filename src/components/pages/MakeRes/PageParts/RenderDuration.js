@@ -33,18 +33,23 @@ export default function RenderDuration() {
     <>
       <div className="duration-page">
         <div className="radio-box">
-          <h1>
+          <h1 className="durationH1">
             How much time will you need at the <br /> Community Co-Working
             Space?{' '}
           </h1>
 
           <div>
             <div className="radio-group">
-              <Radio.Group onChange={onDurationChange} value={selectedDuration}>
+              <Radio.Group
+                onChange={onDurationChange}
+                value={selectedDuration}
+                id="radio-group"
+              >
                 <Radio
                   style={radioStyle}
                   value={2}
                   checked={selectedDuration === 2}
+                  data-testid="radio-1"
                 >
                   1 - 2 Hours
                 </Radio>
@@ -52,6 +57,7 @@ export default function RenderDuration() {
                   style={radioStyle}
                   value={4}
                   checked={selectedDuration === 4}
+                  data-testid="radio-2"
                 >
                   3 - 4 Hours
                 </Radio>
@@ -59,12 +65,14 @@ export default function RenderDuration() {
                   style={radioStyle}
                   value={6}
                   checked={selectedDuration === 6}
+                  data-testid="radio-3"
                 >
                   6 Hours
                 </Radio>
               </Radio.Group>
             </div>
             <div
+              data-testid="nextButton"
               className={
                 selectedDuration === 0 ? 'radioBtn-inactive' : 'radioBtn-active'
               }

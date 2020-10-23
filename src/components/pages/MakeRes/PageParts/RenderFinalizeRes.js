@@ -144,17 +144,17 @@ export default function RenderFinalizeRes() {
             <Col span={6}>
               <p>{`${user.firstName} ${user.lastName}`}</p>
             </Col>
-            <Col span={6}>
+            <Col span={6} data-test="room-choice">
               <p>{room}</p>
             </Col>
-            <Col span={6}>
+            <Col span={6} data-test="date-choice">
               <p>{formattedDate()}</p>
             </Col>
-            <Col span={6}>
+            <Col span={6} data-test="time-choice">
               <p>{formattedTime()}</p>
             </Col>
           </Row>
-          <div className="edit-res" onClick={prevStep}>
+          <div data-test="edit-res" className="edit-res" onClick={prevStep}>
             Edit my reservation
           </div>
         </div>
