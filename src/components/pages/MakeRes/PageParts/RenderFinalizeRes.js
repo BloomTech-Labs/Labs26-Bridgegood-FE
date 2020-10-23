@@ -1,16 +1,21 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Row, Col } from 'antd';
+import { Anchor, Row, Col } from 'antd';
 import DonationBox from '../../../common/DonationBox';
+import { useHistory } from 'react-router-dom';
+import newAxios from '../../../../utils/axiosUtils';
 
 import { UPDATE_STEP } from '../../../../state/reducers/MakeResReducer';
-import '../MakeRes.css';
+import '../MakeRes.less';
 
 export default function RenderFinalizeRes() {
+  let history = useHistory();
   const dispatch = useDispatch();
-  const { date, time_slot, duration, room, user } = useSelector(
+  const { date, time_slot, duration, room, roomId } = useSelector(
     state => state.reservation
   );
+  const user = useSelector(state => state.app.user);
+  const authToken = useSelector(state => state.app.oktaToken);
 
   const prevStep = () => {
     dispatch({ type: UPDATE_STEP, payload: 1 });
@@ -78,6 +83,31 @@ export default function RenderFinalizeRes() {
     return time_window;
   };
 
+  function finalizeClick(e) {
+    e.preventDefault();
+
+    let reservation;
+
+    // call api with data
+    const axios = newAxios(authToken);
+    const resData = {
+      datetime: date,
+      duration: String(duration),
+      room_id: roomId,
+    };
+    console.log(resData);
+    axios
+      .post('/reservation', resData)
+      .then(res => {
+        reservation = res.data.reservation;
+        history.push(`/confirmation/${reservation.id}`);
+      })
+      .catch(err => {
+        console.log('Failed to make a reservation on the backend');
+        console.log(err);
+      });
+  }
+
   return (
     <>
       <div className="finalize-box">
@@ -110,9 +140,9 @@ export default function RenderFinalizeRes() {
               <p>Time</p>
             </Col>
           </Row>
-          <Row className="user-res-info">
+          <Row style={{ fontWeight: 'bold' }} className="user-res-info">
             <Col span={6}>
-              <p>{user}</p>
+              <p>{`${user.firstName} ${user.lastName}`}</p>
             </Col>
             <Col span={6}>
               <p>{room}</p>
@@ -128,7 +158,12 @@ export default function RenderFinalizeRes() {
             Edit my reservation
           </div>
         </div>
-        <DonationBox />
+        <DonationBox>
+          <span className="finalize-link" onClick={finalizeClick}>
+            I'll donate another time, finish my reservation
+          </span>
+          {/* <Link onClick={finalizeClick}></Link> */}
+        </DonationBox>
       </div>
     </>
   );

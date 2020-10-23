@@ -1,20 +1,42 @@
-.donate-title {
+h1 {
   font-family: Roboto;
+  font-size: 32px;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+h2 {
+  font-family: Roboto;
   font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
   line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+p {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.donate-title {
   color: #002171;
 }
 
-.donate-content {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
-  color: #000000;
+.donate-header {
+  color: #c5922c;
+  margin: 0 0 68px 0;
 }
+
 .layout div {
   width: 100%;
   height: 100%;
