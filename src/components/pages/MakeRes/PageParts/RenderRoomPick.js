@@ -24,7 +24,7 @@ export default function RenderRoomPick() {
               data-testid={
                 date === '2011-11-11'
                   ? 'room-disabled'
-                  : roomType.type === 'CoWorking Room'
+                  : roomType.type === 'Co-working Room'
                   ? 'room-CoWorking'
                   : 'room-Media'
               }
